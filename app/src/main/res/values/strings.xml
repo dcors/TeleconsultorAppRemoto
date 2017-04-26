@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">TeleconsultorApp</string>
+
+
+    <!-- Strings related to login -->
+    <string name="title_activity_user_login">Acesse sua Conta</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha </string>
+    <string name="action_sign_in">ACESSAR</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Endereço de email inválido</string>
+    <string name="error_invalid_password">Senha muito curta. Escolha uma senha com 04 caracteres ou mais</string>
+    <string name="error_incorrect_password">Senha Incorreta</string>
+    <string name="error_field_required">Preencha este campo</string>
+    <string name="permission_rationale">É necessário conceder permissão de acesso aos contatos</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+
+
+    <string name="action_settings">Oções</string>
+
+    <!-- Strings relativas a Novo Usuario -->
+    <string name="full_name">Nome Completo</string>
+    <string name="cpf">CPF - Apenas Números</string>
+    <string name="prof">Profissão</string>
+    <string name="id_prof">Número de Conselho</string>
+    <string name="tel">Telefone</string>
+    <string name="email">Email</string>
+    <string name="reg_prof">Registro Profissional</string>
+    <string name="password">Senha</string>
+    <string name="rep_password">Repita a Senha</string>
+    <string name="photo">Insira sua Foto</string>
+    <string name="orgao_reg">Órgão do Registro</string>
+    <string name="unidade">Unidade de Atendimento</string>
+    <string name="type_user">Tipo de Usuário</string>
+    <string name="type_agente">Agente de Saúde</string>
+    <string name="type_doctor">Consultor Especialista</string>
+    <string name="tx_cv">Insira seu Curriculo</string>
+    <string name="btn_save">Salvar Conta</string>
+    <string name="title_activity_novo_usuario">Novo Usuario</string>
+
+    <!--Strings relativas a nav_header-->
+    <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
+    <string name="email_usuario">Email Cadastrado - Recuperar do BD</string>
+    <string name="cpf_usuario_ativo">Cpf do Usuário - Recuperar do BD</string>
+
+    <!--Strings relativas ao drawer_dashboard -->
+    <string name="drawer_settings">Alterar seus dados</string>
+    <string name="drawer_logout">Fazer logout desta conta</string>
+
+    <!--Strings relativas ao content_dashboard-->
+    <string name="titulo_arquivo">Verificar Minhas Consultas</string>
+    <string name="new_check">Abrir Nova Consulta</string>
+    <string name="title_activity_user__dashboard">Dashboard</string>
+
+    <string name="navigation_drawer_open">Abrir drawer</string>
+    <string name="navigation_drawer_close">Fechar drawer</string>
+    <string name="title_activity_nova_consulta">Nova Consulta</string>
+
+    <!--Strings relativas ao content_nova Consulta-->
+    <string name="fem">Feminino</string>
+    <string name="masc">Masculino</string>
+    <string name="tipo">Area</string>
+    <string name="subArea">Sub-Area</string>
+    <string name="save">Salvar Consulta</string>
+
+    <!--Strings relativas ao ListView de consultas-->
+    <string name="title_activity_consult_list_view">Lista de Consultas</string>
+    <string name="title_home">abrir lista de itens</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
