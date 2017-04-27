@@ -28,7 +28,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.TeleconsultoriaDAO;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,9 +79,13 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         mPasswordView = (EditText) findViewById(R.id.userLogin_senha);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent){
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
+                    try {
+                        attemptLogin();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     return true;
                 }
                 return false;
@@ -87,7 +96,11 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                try {
+                    attemptLogin();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -154,10 +167,20 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    private void attemptLogin() {
+    private void attemptLogin() throws MalformedURLException, Exception{
 
-        Intent it3 = new Intent(UserLogin.this, UserDashboard.class);
-        startActivity(it3);
+        String email = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+        Toast.makeText(this,"Logando usuário "+email,Toast.LENGTH_LONG).show();
+
+        if((email != null )&&(password != null)) {
+            TeleconsultoriaDAO dao = new TeleconsultoriaDAO();
+            String usuario = dao.getLogin(email,password);
+            Toast.makeText(this,usuario,Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Logado com sucesso",Toast.LENGTH_LONG).show();
+            Intent it3 = new Intent(UserLogin.this, UserDashboard.class);
+            startActivity(it3);
+        }
 
 /*
         if (mAuthTask != null) {
