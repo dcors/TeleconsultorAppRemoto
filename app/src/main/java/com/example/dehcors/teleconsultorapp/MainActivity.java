@@ -14,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
+
         //botao 1
-        ImageButton main_logar = (ImageButton)findViewById(R.id.main_logar);
-        main_logar.setOnClickListener(new View.OnClickListener() {
+        ImageButton main_acessarConta = (ImageButton)findViewById(R.id.main_acessarConta);
+        main_acessarConta.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             do_login();
@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //botão 2
-        ImageButton main_registrar = (ImageButton)findViewById(R.id.main_registrar);
-        main_registrar.setOnClickListener(new View.OnClickListener() {
+        ImageButton main_criarConta = (ImageButton)findViewById(R.id.main_criarConta);
+        main_criarConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 register();
             }
         });
-*/
+
 
     }
     public void do_login(){
