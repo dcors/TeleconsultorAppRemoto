@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Teleconsultoriast</string>
-
+    <string name="app_name">Teleconsultoria</string>
+    <string name="acesse">Acesse sua conta</string>
+    <string name="criar">Criar conta</string>
 
     <!-- Strings related to login -->
     <string name="title_activity_user_login">Acesse sua Conta</string>

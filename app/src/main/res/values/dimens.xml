@@ -5,4 +5,8 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">300dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="criar_size">56dp</dimen>
+    <dimen name="acess_size">56dp</dimen>
+    <dimen name="btn_elevation">2dp</dimen>
+    <dimen name="btn_press_elev">8dp</dimen>
 </resources>
