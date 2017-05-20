@@ -58,11 +58,42 @@
     <string name="title_activity_nova_consulta">Nova Consulta</string>
 
     <!--Strings relativas ao content_nova Consulta-->
-    <string name="fem">Feminino</string>
-    <string name="masc">Masculino</string>
-    <string name="tipo">Area</string>
-    <string name="subArea">Sub-Area</string>
+    <string name="ncons">Realize uma Nova Consulta</string>
+    <string name="usuario">Nome do usuario - recupera banco</string>
+    <string name="id">Id da consulta - autoincrement banco</string>
     <string name="save">Salvar Consulta</string>
+
+    <string-array name="spGenero">
+        <item>Feminino</item>
+        <item>Masculino</item>
+    </string-array>
+
+    <string-array name="spRegiao">
+        <item>Grande Rio</item>
+        <item>Zona Oeste</item>
+        <item>Zona Norte</item>
+        <item>Zona Sul</item>
+        <item>Baixada Fluminense</item>
+    </string-array>
+
+    <string-array name="spDuvida">
+        <item>Fratura</item>
+        <item>Dor</item>
+        <item>Mobilidade Reduzida</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="spArea">
+        <item>Cardiologia</item>
+        <item>Neurologia</item>
+        <item>Ortopedia</item>
+        <item>Gastroenterolgia</item>
+        <item>Dermatologia</item>
+        <item>Otorrinolaringologia</item>
+        <item>Não Identificado</item>
+    </string-array>
+
+
 
     <!--Strings relativas ao ListView de consultas-->
     <string name="title_activity_consult_list_view">Lista de Consultas</string>

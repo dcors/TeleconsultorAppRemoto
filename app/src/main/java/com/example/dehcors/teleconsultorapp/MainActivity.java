@@ -1,11 +1,10 @@
 package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
-import android.graphics.Outline;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewOutlineProvider;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {

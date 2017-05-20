@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,13 +11,14 @@
     tools:showIn="@layout/activity_nova_consulta">
 
     <ScrollView
-        android:layout_width="344dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1">
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,20 +26,34 @@
             android:orientation="vertical"
             android:weightSum="1">
 
+            <!-- Quando o paciente já for cadastrado, o cpf recupera as informações de nome e nascimento -->
             <EditText
-                android:id="@+id/novaConsulta_nomePaciente"
+                android:id="@+id/nvConsul_cpfPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="18dp"
+                android:hint="CPF do paciente - Apenas números"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/nvConsulnomePaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
                 android:hint="Nome completo do paciente"
                 android:inputType="text" />
 
+
             <EditText
-                android:id="@+id/novaConsulta_cpfPaciente"
+                android:id="@+id/nvConsulnascPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -45,19 +61,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="18dp"
-                android:hint="CPF - Apenas números"
-                android:inputType="number" />
-
-
-            <EditText
-                android:id="@+id/novaConsulta_nascPaciente"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
                 android:hint="Data Nascimento"
                 android:inputType="date" />
 
@@ -65,80 +69,78 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/novaConsulta_idadePaciente"
-                    android:layout_width="107dp"
-                    android:layout_height="33dp"
+
+                <Spinner
+                    android:id="@+id/nvConsul_spGenero"
+                    style="@android:style/Widget.Material.Light.Spinner.Underlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="-5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:inputType="date"
-                    android:text="tem x anos"
-                    android:textSize="18dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:minWidth="250dp"
+                    app:layout_constraintBottom_toTopOf="@+id/nvConsul_txCaso"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
-                <RadioButton
-                    android:id="@+id/novaConsulta_genFem"
+                <Spinner
+                    android:id="@+id/nvConsul_idRegiao"
+                    style="@android:style/Widget.Material.Light.Spinner.Underlined"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_height="35dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/fem"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.502"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <RadioButton
-                    android:id="@+id/novaConsulta_genMasc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/masc"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.965"
-                    app:layout_constraintLeft_toLeftOf="@+id/novaConsulta_idadePaciente"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ListView
-                    android:layout_width="252dp"
-                    android:layout_height="39dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:clickable="true"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:minWidth="250dp"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/novaConsulta_idadePaciente"
-                    app:layout_constraintVertical_bias="0.043"
-                    tools:listitem="abv"
-                    tools:ignore="NestedScrolling" />
+                    app:layout_constraintTop_toBottomOf="@+id/nvConsul_spGenero">
+
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/nvConsul_idArea"
+                    style="@android:style/Widget.Material.Light.Spinner.Underlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:elevation="1dp"
+                    android:minWidth="250dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nvConsul_idRegiao" />
+
+                <Spinner
+                    android:id="@+id/nvConsul_tipoDuvida"
+                    style="@android:style/Widget.Material.Light.Spinner.Underlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:minWidth="250dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nvConsul_idArea" />
+
 
                 <EditText
-                    android:id="@+id/novaConsulta_descricao"
+                    android:id="@+id/nvConsul_txCaso"
                     android:layout_width="334dp"
                     android:layout_height="113dp"
                     android:ems="10"
@@ -146,20 +148,27 @@
                     android:inputType="text|textMultiLine"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    android:layout_marginTop="101dp"
-                    app:layout_constraintTop_toBottomOf="@+id/novaConsulta_genFem" />
+                    android:layout_marginTop="224dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" />
 
                 <Button
-                    android:id="@+id/novaConsulta_saveConsulta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/nvConsul_saveConsulta"
+                    android:layout_width="151dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/button_cust"
                     android:onClick="salvar_consulta"
                     android:text="@string/save"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nvConsul_txCaso"
                     tools:ignore="HardcodedText"
-                    android:layout_marginTop="17dp"
-                    app:layout_constraintTop_toBottomOf="@+id/novaConsulta_descricao" />
+                    app:layout_constraintHorizontal_bias="0.504" />
 
 
             </android.support.constraint.ConstraintLayout>
