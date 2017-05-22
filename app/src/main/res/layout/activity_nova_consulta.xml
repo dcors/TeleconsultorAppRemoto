@@ -49,7 +49,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/id"
-                android:textAppearance="@style/TextAppearance.StatusBar.EventContent"
+                android:textAppearance="@style/TextAppearance.Design.Tab"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toLeftOf="parent"
