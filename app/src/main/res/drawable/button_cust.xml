@@ -10,10 +10,7 @@
         <solid
             android:color="@color/colorSecondary"
             />
-        <stroke
-            android:width="3dp"
-            android:color="#80ffffff"
-            />
+
 
 
 

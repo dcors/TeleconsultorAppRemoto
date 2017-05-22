@@ -8,4 +8,5 @@
     <color name="colorSecondaryAccent">#768fff</color>
     <color name="indigo">#5c6bc0</color>
     <color name="deepPurple">#813ab7</color>
+    <color name="newBackground">#d6d6d6</color>
 </resources>
