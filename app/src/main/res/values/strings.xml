@@ -15,6 +15,8 @@
     <string name="error_field_required">Preencha este campo</string>
     <string name="permission_rationale">É necessário conceder permissão de acesso aos contatos</string>
     <string name="forgot_password">Esqueci minha senha</string>
+    <string name="acess_count">Acessar</string>
+    <string name="create_count">Criar</string>
 
 
     <string name="action_settings">Oções</string>
@@ -43,21 +45,23 @@
     <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
     <string name="email_usuario">Email Cadastrado - Recuperar do BD</string>
     <string name="cpf_usuario_ativo">Cpf do Usuário - Recuperar do BD</string>
+    <string name="pict">Foto do usuario</string>
 
     <!--Strings relativas ao drawer_dashboard -->
     <string name="drawer_settings">Alterar seus dados</string>
     <string name="drawer_logout">Fazer logout desta conta</string>
 
     <!--Strings relativas ao content_dashboard-->
-    <string name="titulo_arquivo">Verificar Minhas Consultas</string>
+    <string name="titulo_arquivo">Ver Minhas Consultas</string>
     <string name="new_check">Abrir Nova Consulta</string>
     <string name="title_activity_user__dashboard">Dashboard</string>
-
     <string name="navigation_drawer_open">Abrir drawer</string>
     <string name="navigation_drawer_close">Fechar drawer</string>
-    <string name="title_activity_nova_consulta">Nova Consulta</string>
+    <string name="rotas">Verificar Rotas</string>
+    <string name="relatorio">Relatórios</string>
 
     <!--Strings relativas ao content_nova Consulta-->
+    <string name="title_activity_nova_consulta">Nova Consulta</string>
     <string name="ncons">Realize uma Nova Consulta</string>
     <string name="usuario">Nome do usuario - recupera banco</string>
     <string name="id">Id da consulta - autoincrement banco</string>
@@ -94,10 +98,21 @@
     </string-array>
 
 
-
     <!--Strings relativas ao ListView de consultas-->
     <string name="title_activity_consult_list_view">Lista de Consultas</string>
     <string name="title_home">abrir lista de itens</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--Strings relativas a tela de rotas -->
+
+    <string name="title_activity_rota">Rotas</string>
+    <string name="title_home_rota">Rotas Realizadas</string>
+    <string name="title_dashboard_rota">Programar Rota</string>
+    <string name="title_notifications_rota">Alertas</string>
+
+    <!--String relativas à tela de relatorios -->
+    <string name="act_rel_title">Relatorios</string>
+
+
 </resources>

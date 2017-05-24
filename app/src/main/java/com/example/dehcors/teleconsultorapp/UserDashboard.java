@@ -2,6 +2,7 @@ package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -32,19 +33,36 @@ public class UserDashboard extends AppCompatActivity
             }
         });
 
-        ImageButton contentDash_newConsulta = (ImageButton)findViewById(R.id.contentDash_newConsulta);
-        contentDash_newConsulta.setOnClickListener(new View.OnClickListener(){
+       ImageButton userDash_newConsulta = (ImageButton)findViewById(R.id.userDash_newConsul);
+        userDash_newConsulta.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 nova_consulta();
             }
         });
 
-        ImageButton contentDash_verConsultas = (ImageButton)findViewById(R.id.contentDash_verConsultas);
-        contentDash_verConsultas.setOnClickListener(new View.OnClickListener() {
+        ImageButton userDash_verConsulta = (ImageButton)findViewById(R.id.userDash_verConsulta);
+        userDash_verConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listar_consultas();
+            }
+        });
+
+        ImageButton userDash_rotas = (ImageButton)findViewById(R.id.userDash_rotas);
+        userDash_rotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                historico_rotas();
+            }
+        });
+
+        ImageButton userDash_relatorios = (ImageButton)findViewById(R.id.userDash_relatorios);
+        userDash_relatorios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irelat = new Intent(UserDashboard.this, RelatoriosActivity.class);
+                startActivity(irelat);
             }
         });
 
@@ -100,5 +118,11 @@ public class UserDashboard extends AppCompatActivity
         Intent lc = new Intent(UserDashboard.this, ConsultListView.class);
         startActivity(lc);
     }
+
+    public void historico_rotas(){
+        Intent ir = new Intent(UserDashboard.this, RotaActivity.class);
+        startActivity(ir);
+    }
+
 
 }

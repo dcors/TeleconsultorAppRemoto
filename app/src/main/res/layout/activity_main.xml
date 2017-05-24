@@ -16,7 +16,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/logo3a" />
+        app:srcCompat="@drawable/imagem"
+        tools:ignore="ContentDescription" />
 
 
     <ImageButton
@@ -42,7 +43,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.629"
-        app:srcCompat="@drawable/ic_account_plus_black_24dp" />
+        app:srcCompat="@drawable/ic_account_plus_black_24dp"
+        android:contentDescription="@string/create_count"/>
 
     <ImageButton
         android:id="@+id/main_acessarConta"
@@ -62,7 +64,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.629"
-        app:srcCompat="@drawable/ic_account_black_24dp" />
+        app:srcCompat="@drawable/ic_account_black_24dp"
+        android:contentDescription="@string/acess_count" />
 
     <TextView
         android:id="@+id/txtAcesse"
@@ -79,7 +82,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_acessarConta"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.106"
+        tools:ignore="RtlHardcoded" />
 
     <TextView
         android:id="@+id/txtCriar"

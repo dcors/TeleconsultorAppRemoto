@@ -81,8 +81,9 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="bottom|left"
+        android:layout_margin="8dp"
         app:layout_anchor="@+id/nConsul_content"
         app:layout_anchorGravity="top|right"
-        app:srcCompat="@drawable/logo3a" />
+        app:srcCompat="@drawable/imagem" />
 
 </android.support.design.widget.CoordinatorLayout>
