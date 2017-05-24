@@ -46,6 +46,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo3a" />
+        app:srcCompat="@drawable/imagem" />
 
 </android.support.design.widget.CoordinatorLayout>

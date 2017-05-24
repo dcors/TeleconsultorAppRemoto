@@ -2,6 +2,7 @@ package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -28,25 +29,40 @@ public class UserDashboard extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Clique para retornar à tela inicial", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                inicio();
+                finishAffinity();
             }
         });
 
-        ImageButton contentDash_newConsulta = (ImageButton)findViewById(R.id.contentDash_newConsulta);
-        contentDash_newConsulta.setOnClickListener(new View.OnClickListener(){
+       ImageButton userDash_newConsulta = (ImageButton)findViewById(R.id.userDash_newConsul);
+        userDash_newConsulta.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 nova_consulta();
             }
         });
 
-        ImageButton contentDash_verConsultas = (ImageButton)findViewById(R.id.contentDash_verConsultas);
-        contentDash_verConsultas.setOnClickListener(new View.OnClickListener() {
+        ImageButton userDash_verConsulta = (ImageButton)findViewById(R.id.userDash_verConsulta);
+        userDash_verConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listar_consultas();
+            }
+        });
+
+        ImageButton userDash_rotas = (ImageButton)findViewById(R.id.userDash_rotas);
+        userDash_rotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                historico_rotas();
+            }
+        });
+
+        ImageButton userDash_relatorios = (ImageButton)findViewById(R.id.userDash_relatorios);
+        userDash_relatorios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irelat = new Intent(UserDashboard.this, RelatoriosActivity.class);
+                startActivity(irelat);
             }
         });
 
@@ -60,6 +76,7 @@ public class UserDashboard extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -69,29 +86,11 @@ public class UserDashboard extends AppCompatActivity
             super.onBackPressed();
         }
     }
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.user__dashboard, menu);
-        return true;
-    }
-    */
+
+
+
 //tentar tirar este item
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -120,8 +119,10 @@ public class UserDashboard extends AppCompatActivity
         startActivity(lc);
     }
 
-    public void inicio(){
-        Intent ini = new Intent(UserDashboard.this, MainActivity.class);
-        startActivity(ini);
+    public void historico_rotas(){
+        Intent ir = new Intent(UserDashboard.this, RotaActivity.class);
+        startActivity(ir);
     }
+
+
 }

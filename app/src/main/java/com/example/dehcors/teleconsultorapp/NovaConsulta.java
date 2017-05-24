@@ -9,7 +9,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class NovaConsulta extends AppCompatActivity {
@@ -21,7 +23,27 @@ public class NovaConsulta extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.novaConsulta_Sair);
+        //lista de genero feminino/masculino
+        Spinner nvConsul_spGenero = (Spinner)findViewById(R.id.nvConsul_spGenero);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.spGenero, android.R.layout.simple_spinner_dropdown_item);
+        nvConsul_spGenero.setAdapter(adapter1);
+
+        //lista de áreas da medicina
+        Spinner nvConsul_idArea = (Spinner)findViewById(R.id.nvConsul_idArea);
+        ArrayAdapter adapter2 = ArrayAdapter.createFromResource(this, R.array.spArea, android.R.layout.simple_spinner_dropdown_item);
+        nvConsul_idArea.setAdapter(adapter2);
+
+        //lista de regiões geograficas
+        Spinner nvConsult_idRegiao = (Spinner)findViewById(R.id.nvConsul_idRegiao);
+        ArrayAdapter adapter3 = ArrayAdapter.createFromResource(this, R.array.spRegiao, android.R.layout.simple_spinner_dropdown_item);
+        nvConsult_idRegiao.setAdapter(adapter3);
+
+        //lista de tipos de dúvidas
+        Spinner nvConsult_tipoDuvida = (Spinner)findViewById(R.id.nvConsul_tipoDuvida);
+        ArrayAdapter adapter4 = ArrayAdapter.createFromResource(this, R.array.spDuvida, android.R.layout.simple_spinner_dropdown_item);
+        nvConsult_tipoDuvida.setAdapter(adapter4);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.nvConsul_Sair);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,13 +53,15 @@ public class NovaConsulta extends AppCompatActivity {
             }
         });
 
-        Button novaConsulta_saveConsulta = (Button)findViewById(R.id.novaConsulta_saveConsulta);
-        novaConsulta_saveConsulta.setOnClickListener(new View.OnClickListener(){
+        Button nvConsul_saveConsulta = (Button)findViewById(R.id.nvConsul_saveConsulta);
+        nvConsul_saveConsulta.setOnClickListener(new View.OnClickListener(){
             @Override
                 public void onClick (View v){
                 salvar_consulta();
             }
         });
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

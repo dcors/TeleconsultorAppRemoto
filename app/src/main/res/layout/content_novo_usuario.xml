@@ -270,7 +270,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.10"
-                    android:background="@drawable/button_cust"
+                    android:background="@drawable/btn_text_custom"
                     android:text="@string/btn_save"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
