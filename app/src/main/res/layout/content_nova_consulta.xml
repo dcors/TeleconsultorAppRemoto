@@ -193,14 +193,15 @@
 
             <Button
                 android:id="@+id/nvConsul_saveConsulta"
-                style="@android:style/Widget.Material.Button.Inset"
-                android:layout_width="151dp"
+                style="@android:style/Widget.Material.Button.Colored"
+                android:layout_width="180dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="24dp"
                 android:layout_marginTop="8dp"
                 android:onClick="salvar_consulta"
-                android:text="@string/save" />
+                android:text="@string/save"
+                android:textColorLink="@color/colorAccent" />
 
 
         </LinearLayout>
