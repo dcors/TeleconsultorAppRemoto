@@ -19,44 +19,38 @@
             android:background="?attr/colorPrimary">
 
 
-        <android.support.constraint.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 
             <TextView
-                android:id="@+id/nConsul_idUsuario"
-                android:layout_width="180dp"
-                android:layout_height="32dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/usuario"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.625" />
+                android:id="@+id/toolbar_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Nova Consulta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
 
             <TextView
                 android:id="@+id/nConsul_idConsulta"
                 android:layout_width="100dp"
-                android:layout_height="32dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
+                android:gravity="center"
                 android:text="@string/id"
-                android:textAppearance="@style/TextAppearance.Design.Tab"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        </android.support.constraint.ConstraintLayout>
+
+        </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
@@ -71,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="@android:color/holo_orange_light"
+        app:backgroundTint="@color/colorSecondaryAccent"
         app:srcCompat="@drawable/ic_logout_variant_white_24dp" />
 
 

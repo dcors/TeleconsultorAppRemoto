@@ -9,4 +9,6 @@
     <dimen name="acess_size">56dp</dimen>
     <dimen name="btn_elevation">2dp</dimen>
     <dimen name="btn_press_elev">8dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

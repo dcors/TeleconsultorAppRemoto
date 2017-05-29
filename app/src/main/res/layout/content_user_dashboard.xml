@@ -30,42 +30,43 @@
 
     <TextView
         android:id="@+id/userDash_tx_verConsulta"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/titulo_arquivo"
-        android:textSize="18sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/consulta"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintHorizontal_bias="0.036"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/userDash_verConsulta"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/userDash_verConsulta" />
 
     <TextView
         android:id="@+id/userDash_tx_novaConsulta"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:text="Abrir Nova Consulta"
-        android:textSize="18sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/new_check"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/userDash_newConsul"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/userDash_newConsul" />
 
     <ImageButton
         android:id="@+id/userDash_relatorios"
         android:layout_width="124dp"
         android:layout_height="124dp"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="136dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,23 +75,30 @@
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/relatorio1"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/relatorio"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/userDash_tx_novaConsulta"
+        app:layout_constraintVertical_bias="0.987" />
 
     <ImageButton
         android:id="@+id/userDash_rotas"
         android:layout_width="124dp"
         android:layout_height="124dp"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="136dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/map_icon1"
-        tools:ignore="MissingConstraints,RtlHardcoded"
+        android:contentDescription="@string/rotas"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/userDash_tx_verConsulta"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/userDash_newConsul"
@@ -104,12 +112,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/document_icon"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/new_check"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/userDash_relatorios"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/userDash_verConsulta"
@@ -118,43 +126,46 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="98dp"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/search_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/consulta"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/userDash_rotas"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/userDash_tx_verRota"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:text="@string/rotas"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDash_rotas"
-        app:layout_constraintHorizontal_bias="0.151"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:textSize="18sp"/>
+        android:layout_marginTop="17dp"
+        android:text="@string/rotas"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDash_rotas" />
 
     <TextView
         android:id="@+id/userDash_tx_verRelatorio"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:text="@string/relatorio"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/userDash_relatorios"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/userDash_tx_verRota"
-        app:layout_constraintHorizontal_bias="0.719"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp" />
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/relatorio"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintLeft_toRightOf="@+id/userDash_tx_verRota"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDash_relatorios" />
 
 </android.support.constraint.ConstraintLayout>

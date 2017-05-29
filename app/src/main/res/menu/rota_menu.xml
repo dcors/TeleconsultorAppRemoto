@@ -7,7 +7,7 @@
         android:title="@string/title_home_rota" />
 
     <item
-        android:id="@+id/rota_menu_dashboard"
+        android:id="@+id/rota_menu_programar"
         android:icon="@android:drawable/ic_menu_mylocation"
         android:title="@string/title_dashboard_rota" />
 
