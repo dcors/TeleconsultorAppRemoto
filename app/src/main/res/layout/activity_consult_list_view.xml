@@ -8,11 +8,21 @@
     android:orientation="vertical"
     tools:context="com.example.dehcors.teleconsultorapp.ConsultListView">
 
+
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/imagem"
+            android:layout_gravity="right"/>
 
         <ExpandableListView
             android:id="@+id/listaConsultas_emAberto"

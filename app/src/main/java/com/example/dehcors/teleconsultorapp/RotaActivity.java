@@ -19,15 +19,15 @@ public class RotaActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.rota_menu_home:
-
-                    return true;
+                    //permanecer nesta activity
+                    break;
                 case R.id.rota_menu_programar:
-              //      Intent itMap = new Intent(RotaActivity.this, Mapa.class);
-
-                    return true;
+                    Intent itMap = new Intent(RotaActivity.this, MapsActivity.class);
+                    startActivity(itMap);
+                    break;
                 case R.id.rota_menu_alertas:
 
-                    return true;
+                    break;
             }
             return false;
         }

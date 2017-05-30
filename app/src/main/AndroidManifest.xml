@@ -93,12 +93,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity android:name=".UsuarioLogado"
+        <activity
+            android:name=".UsuarioLogado"
             android:label="@string/title_logado"
             android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserDashboard"/>
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
+        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
         </activity>
     </application>
 

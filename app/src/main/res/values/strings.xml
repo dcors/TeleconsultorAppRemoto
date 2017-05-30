@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Teleconsultoria</string>
+
+    <!-- Main -->
     <string name="acesse">Acesse sua conta</string>
     <string name="criar">Criar conta</string>
+    <string name="encontre">Unidades de Atendimento</string>
+    <string name="saude_wo">Saúde da Mulher</string>
+    <string name="saude_bb">Saúde da Criança</string>
+    <string name="saude_vo">Saúde do Idoso</string>
 
     <!-- Strings related to login -->
     <string name="title_activity_user_login">Acesse sua Conta</string>
@@ -161,8 +167,11 @@
 
     <string name="title_activity_rota">Rotas</string>
     <string name="title_home_rota">Rotas Realizadas</string>
-    <string name="title_dashboard_rota">Programar Rota</string>
+    <string name="title_dashboard_rota">Visualizar Rota</string>
     <string name="title_notifications_rota">Alertas</string>
+
+    <!--Strings relativas a tela de mapa -->
+    <string name="title_activity_maps">Veja o Melhor Caminho</string>
 
     <!--String relativas à tela de relatorios -->
     <string name="act_rel_title">Relatorios</string>
@@ -172,6 +181,7 @@
     <string name="title_logado">Suas Informações</string>
     <string name="edit_info">Editar Dados</string>
     <string name="change_password">Trocar Senha</string>
+
 
 
 

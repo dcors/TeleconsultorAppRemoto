@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -18,6 +19,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/userDash_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/imagem" />
 
     <ScrollView
         android:id="@+id/login_form"
@@ -73,7 +81,7 @@
                 android:layout_marginTop="40dp"
                 android:elevation="2dp"
                 android:text="@string/action_sign_in"
-                android:textColorLink="@color/colorAccent" />
+                android:textColorLink="@color/colorSecondaryAccent" />
 
             <TextView
                 android:id="@+id/userLogin_esqueceuSenha"
@@ -83,8 +91,10 @@
                 android:layout_marginTop="35dp"
                 android:text="@string/forgot_password"
                 android:textAlignment="center"
+                android:textColorLink="@color/colorSecondaryAccent"
                 android:textIsSelectable="true"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
