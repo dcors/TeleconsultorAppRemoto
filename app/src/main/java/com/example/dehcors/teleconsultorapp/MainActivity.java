@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,30 +19,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
 
         //botao 1
         ImageButton main_acessarConta = (ImageButton) findViewById(R.id.main_acessarConta);
         main_acessarConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                do_login();
+            do_login();
             }
         });
 
         //botão 2
         ImageButton main_criarConta = (ImageButton) findViewById(R.id.main_criarConta);
         main_criarConta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                register();
-            }
-        });
+        @Override
+        public void onClick(View v) {
+        register();
+        }
+    });
 
 
+        //webview
+        WebView wv = (WebView)findViewById(R.id.main_webView);
 
+        WebSettings ws = wv.getSettings();
+        ws.setJavaScriptEnabled(true);
+        ws.setSupportZoom(false);
 
-
+        //acessar url
+        wv.loadUrl("https://smsrio.org/subpav/ondeseratendido/");
 
     }
 

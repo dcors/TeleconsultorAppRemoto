@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Teleconsultoria</string>
+
+    <!-- Main -->
     <string name="acesse">Acesse sua conta</string>
     <string name="criar">Criar conta</string>
+    <string name="encontre">Unidades de Atendimento</string>
+    <string name="saude_wo">Saúde da Mulher</string>
+    <string name="saude_bb">Saúde da Criança</string>
+    <string name="saude_vo">Saúde do Idoso</string>
 
     <!-- Strings related to login -->
     <string name="title_activity_user_login">Acesse sua Conta</string>
@@ -32,7 +38,7 @@
     <string name="password">Senha</string>
     <string name="rep_password">Repita a Senha</string>
     <string name="photo">Insira sua Foto</string>
-    <string name="orgao_reg">Órgão do Registro</string>
+    <string name="orgao_reg">Órgão e UF do Registro </string>
     <string name="unidade">Unidade de Atendimento</string>
     <string name="type_user">Tipo de Usuário</string>
     <string name="type_agente">Agente de Saúde</string>
@@ -40,6 +46,53 @@
     <string name="tx_cv">Insira seu Curriculo</string>
     <string name="btn_save">Salvar Conta</string>
     <string name="title_activity_novo_usuario">Novo Usuario</string>
+    <string-array name="tipo_user">
+        <item>Agente de Saúde</item>
+        <item>Especialista</item>
+        <item>Paciente</item>
+    </string-array>
+
+    <string-array name="tipo_profis_especial">
+        <item>Ortopedia</item>
+        <item>Cardiologia</item>
+        <item>Neurologia</item>
+        <item>Dermatologia</item>
+        <item>Clinica Geral</item>
+        <item>Gastroenterolgia</item>
+        <item>Otorrinolaringologia</item>
+        <item>Odontologia Geral</item>
+        <item>Ortodontia</item>
+        <item>Periodontia</item>
+    </string-array>
+
+    <string-array name="tipo_profis_agente">
+        <item>Enfermagem</item>
+        <item>Tecnico de Enfermagem</item>
+        <item>Estagiário</item>
+        <item>Agente Comunitário de Saúde</item>
+        <item>Auxiliar de Enfermagem</item>
+    </string-array>
+
+    <string-array name="tipo_profis_paciente">
+        <item>Encanador</item>
+        <item>Soldador</item>
+        <item>Mestre de obras</item>
+        <item>Motorista</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="unidade_atendimento">
+        <item>Freguesia</item>
+        <item>Taquara</item>
+        <item>Curicica</item>
+        <item>General Osório</item>
+        <item>Recreio</item>
+        <item>Laranjeiras</item>
+        <item>Santa Cruz</item>
+        <item>Sacadura</item>
+        <item>Caju</item>
+    </string-array>
+
 
     <!--Strings relativas a nav_header-->
     <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
@@ -52,9 +105,9 @@
     <string name="drawer_logout">Fazer logout desta conta</string>
 
     <!--Strings relativas ao content_dashboard-->
-    <string name="titulo_arquivo">Ver Minhas Consultas</string>
-    <string name="new_check">Abrir Nova Consulta</string>
-    <string name="title_activity_user__dashboard">Dashboard</string>
+    <string name="consulta">Minhas Consultas</string>
+    <string name="new_check">Nova Consulta</string>
+    <string name="title_activity_user__dashboard">Área de Trabalho</string>
     <string name="navigation_drawer_open">Abrir drawer</string>
     <string name="navigation_drawer_close">Fechar drawer</string>
     <string name="rotas">Verificar Rotas</string>
@@ -77,42 +130,59 @@
         <item>Zona Oeste</item>
         <item>Zona Norte</item>
         <item>Zona Sul</item>
-        <item>Baixada Fluminense</item>
+        <item>Ilha do Governador</item>
     </string-array>
 
     <string-array name="spDuvida">
         <item>Fratura</item>
         <item>Dor</item>
         <item>Mobilidade Reduzida</item>
+        <item>Vacina</item>
+        <item>Exames</item>
         <item>Outros</item>
     </string-array>
 
     <string-array name="spArea">
+        <item>Clinica Geral</item>
         <item>Cardiologia</item>
+        <item>Pre-natal</item>
         <item>Neurologia</item>
         <item>Ortopedia</item>
         <item>Gastroenterolgia</item>
         <item>Dermatologia</item>
         <item>Otorrinolaringologia</item>
-        <item>Não Identificado</item>
+        <item>Odontologia</item>
+        <item>Não sei</item>
     </string-array>
 
 
     <!--Strings relativas ao ListView de consultas-->
     <string name="title_activity_consult_list_view">Lista de Consultas</string>
-    <string name="title_home">abrir lista de itens</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Consultas em Aberto</string>
+    <string name="title_dashboard">Consultas Analisadas</string>
     <string name="title_notifications">Notifications</string>
+
 
     <!--Strings relativas a tela de rotas -->
 
     <string name="title_activity_rota">Rotas</string>
     <string name="title_home_rota">Rotas Realizadas</string>
-    <string name="title_dashboard_rota">Programar Rota</string>
+    <string name="title_dashboard_rota">Visualizar Rota</string>
     <string name="title_notifications_rota">Alertas</string>
+
+    <!--Strings relativas a tela de mapa -->
+    <string name="title_activity_maps">Veja o Melhor Caminho</string>
 
     <!--String relativas à tela de relatorios -->
     <string name="act_rel_title">Relatorios</string>
+
+
+    <!-- String relativas a tela de usuario logado -->
+    <string name="title_logado">Suas Informações</string>
+    <string name="edit_info">Editar Dados</string>
+    <string name="change_password">Trocar Senha</string>
+
+
 
 
 </resources>

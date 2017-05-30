@@ -7,25 +7,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.dehcors.teleconsultorapp.RotaActivity">
+    tools:context="com.example.dehcors.teleconsultorapp.RotaActivity"
+    android:weightSum="1">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <ImageView
+        android:id="@+id/userDash_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/imagem"
+        android:layout_gravity="right"/>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/message"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home_rota" />
+            android:orientation="vertical">
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/rota_view1"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:cropToPadding="false"
+                android:elevation="2dp"
+                android:theme="@android:style/Theme.Material.Light.Panel"
+                app:srcCompat="@drawable/imagem1" />
+
+            <ImageView
+                android:id="@+id/rota_view2"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:theme="@android:style/Theme.Material.Light.Panel"
+                app:srcCompat="@drawable/imagem3" />
+
+            <ImageView
+                android:id="@+id/rota_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="124dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:theme="@android:style/Theme.Material.Light.Panel"
+                app:srcCompat="@drawable/imagem4" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/rotaMenu"
@@ -34,5 +69,7 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/rota_menu" />
+
+
 
 </LinearLayout>

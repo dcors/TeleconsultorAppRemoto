@@ -1,5 +1,6 @@
 package com.example.dehcors.teleconsultorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 
 public class RotaActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -18,14 +19,15 @@ public class RotaActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.rota_menu_home:
-                    mTextMessage.setText(R.string.title_home_rota);
-                    return true;
-                case R.id.rota_menu_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard_rota);
-                    return true;
+                    //permanecer nesta activity
+                    break;
+                case R.id.rota_menu_programar:
+                    Intent itMap = new Intent(RotaActivity.this, MapsActivity.class);
+                    startActivity(itMap);
+                    break;
                 case R.id.rota_menu_alertas:
-                    mTextMessage.setText(R.string.title_notifications_rota);
-                    return true;
+
+                    break;
             }
             return false;
         }
@@ -37,9 +39,9 @@ public class RotaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rota);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+
         BottomNavigationView rotaMenu = (BottomNavigationView) findViewById(R.id.rotaMenu);
         rotaMenu.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
+   }
 
 }

@@ -1,10 +1,12 @@
 package com.example.dehcors.teleconsultorapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,7 +15,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class UserDashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -99,9 +103,30 @@ public class UserDashboard extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.navHeader_altDados) {
-       // mostrar dados do usuário ativo
+            Intent ituser = new Intent(UserDashboard.this, UsuarioLogado.class);
+            startActivity(ituser);
         } else if (id == R.id.navHeader_logOut) {
-        //inserir método para deslogar da conta ativa
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserDashboard.this);
+            alertDialog.setTitle("DESLOGAR");
+            alertDialog.setMessage("Você realmente deseja sair da sua conta?");
+            alertDialog.setIcon(R.drawable.ic_logout_variant_black_36dp);
+            alertDialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int wich) {
+                    Toast.makeText(UserDashboard.this.getApplicationContext(),
+                            "Até breve...", Toast.LENGTH_SHORT).show();
+                    UserDashboard.this.finish();
+                }
+            });
+            alertDialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int wich) {
+                    Toast.makeText(UserDashboard.this.getApplicationContext(),
+                            "Seguindo em frente!", Toast.LENGTH_SHORT).show();
+                    dialog.cancel();
+                }
+            });
+            alertDialog.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
