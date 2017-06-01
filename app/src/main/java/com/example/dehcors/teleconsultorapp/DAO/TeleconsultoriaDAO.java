@@ -1,16 +1,8 @@
 package com.example.dehcors.teleconsultorapp.DAO;
 
 import android.os.AsyncTask;
-import android.widget.Toast;
 
-import com.example.dehcors.teleconsultorapp.NovoUsuario;
-import com.example.dehcors.teleconsultorapp.Usuario;
-
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;

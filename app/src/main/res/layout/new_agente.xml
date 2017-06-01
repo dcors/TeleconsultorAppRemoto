@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.dehcors.teleconsultorapp.NovoUsuario"
-    tools:showIn="@layout/novo_usuario">
+    tools:context="com.example.dehcors.teleconsultorapp.NewAgente"
+    tools:showIn="@layout/activity_new_agente">
 
 
     <ScrollView
@@ -190,7 +190,34 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 tools:layout_editor_absoluteY="68dp" />
 
-   
+            <ImageButton
+                android:id="@+id/novoUsuario_tx_curriculo"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/ic_file_document_black_36dp" />
+
+            <TextView
+                android:id="@+id/novoUsuario_curriculum"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/tx_cv"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="44dp" />
+
+
+
+
 
             <Button
                 android:id="@+id/novoUsuario_btnSalvar"

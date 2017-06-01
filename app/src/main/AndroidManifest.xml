@@ -22,35 +22,39 @@
         android:icon="@mipmap/doctor_droid"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".UserLogin"
             android:label="@string/title_activity_user_login"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
         </activity>
         <activity
+            android:name=".NewUserPop"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity
             android:name=".UserDashboard"
             android:label="@string/title_activity_user__dashboard"
             android:parentActivityName=".UserLogin"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserLogin" />
         </activity>
         <activity
-            android:name=".NovoUsuario"
+            android:name=".NewAgente"
             android:label="@string/title_activity_novo_usuario"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
@@ -59,7 +63,7 @@
             android:name=".NovaConsulta"
             android:label="@string/title_activity_nova_consulta"
             android:parentActivityName=".UserDashboard"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
@@ -67,7 +71,7 @@
         <activity
             android:name=".ConsultListView"
             android:label="@string/title_activity_consult_list_view"
-            android:parentActivityName=".UserDashboard" >
+            android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
@@ -80,7 +84,7 @@
         <activity
             android:name=".RotaActivity"
             android:label="@string/title_activity_rota"
-            android:parentActivityName=".UserDashboard" >
+            android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
@@ -88,7 +92,7 @@
         <activity
             android:name=".RelatoriosActivity"
             android:label="@string/act_rel_title"
-            android:parentActivityName=".UserDashboard" >
+            android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
@@ -96,18 +100,19 @@
         <activity
             android:name=".UsuarioLogado"
             android:label="@string/title_logado"
-            android:parentActivityName=".UserDashboard" >
+            android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" >
+            android:label="@string/title_activity_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
         </activity>
+        <activity android:name=".NewEspecialista"></activity>
     </application>
 
 </manifest>

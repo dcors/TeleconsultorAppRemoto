@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it1);
     }
     public void register(){
-        Intent it2 = new Intent(MainActivity.this, NovoUsuario.class);
+        Intent it2 = new Intent(MainActivity.this, NewUserPop.class);
         startActivity(it2);
     }
 

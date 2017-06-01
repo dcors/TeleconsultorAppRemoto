@@ -4,25 +4,21 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import static com.example.dehcors.teleconsultorapp.R.id.novoUsuario_spTipoUsuario;
-
-public class NovoUsuario extends AppCompatActivity {
+public class NewAgente extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.novo_usuario);
+        setContentView(R.layout.activity_new_agente);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -50,7 +46,7 @@ public class NovoUsuario extends AppCompatActivity {
         novoUsuario_btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itsalvar = new Intent(NovoUsuario.this, MainActivity.class);
+                Intent itsalvar = new Intent(NewAgente.this, MainActivity.class);
                 startActivity(itsalvar);
             }
         }
@@ -68,22 +64,22 @@ public class NovoUsuario extends AppCompatActivity {
     }
 
     public void cancel_click(View v) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(NovoUsuario.this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(NewAgente.this);
         alertDialog.setTitle("Cancelar Cadastro...");
         alertDialog.setMessage("Você realmente deseja cancelar? Todas as informações serão perdidas");
         alertDialog.setIcon(R.drawable.ic_logout_variant_black_36dp);
         alertDialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int wich) {
-                Toast.makeText(NovoUsuario.this.getApplicationContext(),
+                Toast.makeText(NewAgente.this.getApplicationContext(),
                         "Até breve...", Toast.LENGTH_SHORT).show();
-                NovoUsuario.this.finish();
+                NewAgente.this.finish();
             }
         });
         alertDialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int wich) {
-                Toast.makeText(NovoUsuario.this.getApplicationContext(),
+                Toast.makeText(NewAgente.this.getApplicationContext(),
                         "Seguindo em frente!", Toast.LENGTH_SHORT).show();
                 dialog.cancel();
             }
