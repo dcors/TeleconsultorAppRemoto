@@ -10,24 +10,17 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="@string/title_activity_maps"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@android:style/Theme.Material.Light.LightStatusBar"
+        android:title="@string/title_activity_maps">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@android:style/Theme.Material.Light.LightStatusBar" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <ImageView
-        android:id="@+id/userDash_logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        app:srcCompat="@drawable/imagem"
-        android:layout_gravity="right"/>
 
     <include layout="@layout/content_maps"/>
 

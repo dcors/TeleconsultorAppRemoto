@@ -29,6 +29,8 @@ public class UserDashboard extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.userDash_Sair);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +39,7 @@ public class UserDashboard extends AppCompatActivity
             }
         });
 
-       ImageButton userDash_newConsulta = (ImageButton)findViewById(R.id.userDash_newConsul);
+        ImageButton userDash_newConsulta = (ImageButton)findViewById(R.id.userDash_newConsul);
         userDash_newConsulta.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

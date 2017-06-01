@@ -17,11 +17,11 @@
         android:layout_weight="1">
 
         <ImageView
-            android:id="@+id/main_logo"
+            android:id="@+id/list_logo"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginRight="8dp"
-            app:srcCompat="@drawable/imagem"
+            app:srcCompat="@drawable/logo1"
             android:layout_gravity="right"/>
 
         <ExpandableListView

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dehcors.teleconsultorapp.NewAgente"
+    tools:showIn="@layout/activity_new_agente">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+              >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <Spinner
+                android:id="@+id/novoUsuario_spTipoUsuario"
+                style="@android:style/Widget.Material.Light.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/type_doctor" />
+
+            <EditText
+                android:id="@+id/novoUsuario_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+            />
+
+            <EditText
+                android:id="@+id/novoUsuario_nu_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/cpf"
+                android:singleLine="true"
+                 />
+
+            <EditText
+                android:id="@+id/novoUsuario_nu_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/tel"
+                android:inputType="phone"
+                />
+
+            <EditText
+                android:id="@+id/novoUsuario_ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+               />
+
+            <Spinner
+                android:id="@+id/novoUsuario_spProfissao"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                style="@android:style/Widget.Material.Light.Spinner.Underlined"/>
+
+            <EditText
+                android:id="@+id/novoUsuario_nu_reg_profissional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/reg_prof"
+                android:inputType="number"
+             />
+
+            <EditText
+                android:id="@+id/novoUsuario_sg_uf_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/orgao_reg"
+                android:inputType="textShortMessage"
+                android:singleLine="true"
+                 />
+
+            <Spinner
+                android:id="@+id/novoUsuario_spUnidade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/unidade"
+                android:inputType="text"
+                style="@android:style/Widget.Material.Light.Spinner.Underlined"/>
+
+            <EditText
+                android:id="@+id/novoUsuario_tx_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textWebPassword"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/novoUsuario_repete_tx_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="textWebPassword"
+                android:ems="10"
+                android:hint="@string/rep_password"/>
+
+
+            <ImageButton
+                android:id="@+id/novoUsuario_inserirFoto"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="inserir foto"
+                app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+
+            <TextView
+                android:id="@+id/novoUsuario_tx_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/photo"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <ImageButton
+                android:id="@+id/novoUsuario_tx_curriculo"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/ic_file_document_black_36dp" />
+
+            <TextView
+                android:id="@+id/novoUsuario_curriculum"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/tx_cv"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="44dp" />
+
+
+
+
+
+            <Button
+                android:id="@+id/novoUsuario_btnSalvar"
+                style="@android:style/Widget.Material.Button.Colored"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

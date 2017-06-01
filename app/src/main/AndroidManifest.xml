@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.dehcors.teleconsultorapp">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
@@ -14,6 +15,7 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +24,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            android:label=""
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,6 +39,9 @@
                 android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
         </activity>
         <activity
+            android:name=".NewUserPop"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity
             android:name=".UserDashboard"
             android:label="@string/title_activity_user__dashboard"
             android:parentActivityName=".UserLogin"
@@ -47,7 +51,7 @@
                 android:value="com.example.dehcors.teleconsultorapp.UserLogin" />
         </activity>
         <activity
-            android:name=".NovoUsuario"
+            android:name=".NewAgente"
             android:label="@string/title_activity_novo_usuario"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -108,6 +112,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
         </activity>
+        <activity android:name=".NewEspecialista"></activity>
     </application>
 
 </manifest>

@@ -9,10 +9,7 @@
     <item
         android:id="@+id/rota_menu_programar"
         android:icon="@drawable/ic_local_black"
-        android:title="@string/title_dashboard_rota" />
+        android:title="@string/title_ver_rota" />
 
-    <item
-        android:id="@+id/rota_menu_alertas"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications_rota" />
+
 </menu>
