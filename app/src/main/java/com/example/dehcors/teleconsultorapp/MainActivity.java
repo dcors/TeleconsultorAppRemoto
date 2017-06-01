@@ -39,16 +39,6 @@ public class MainActivity extends AppCompatActivity {
     });
 
 
-        //webview
-        WebView wv = (WebView)findViewById(R.id.main_webView);
-
-        WebSettings ws = wv.getSettings();
-        ws.setJavaScriptEnabled(true);
-        ws.setSupportZoom(false);
-
-        //acessar url
-        wv.loadUrl("https://smsrio.org/subpav/ondeseratendido/");
-
     }
 
 
