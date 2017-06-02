@@ -30,8 +30,12 @@
     <string name="pop_newU_title">Qual é o Seu Perfil?"</string>
     <string name="pop_newU_sub">Escolha abaixo o tipo do seu perfil profissional</string>
 
+    <string name="title_activity_novo_usuario">Novo Usuario</string>
+    <string name="title_new_esp">Novo Especialista</string>
 
-    <!-- Strings relativas a Novo Agente -->
+
+
+    <!-- Strings relativas a Novo Usuario -->
     <string name="full_name">Nome Completo</string>
     <string name="cpf">CPF - Apenas Números</string>
     <string name="prof">Profissão</string>
@@ -44,31 +48,10 @@
     <string name="photo">Insira sua Foto</string>
     <string name="orgao_reg">Órgão e UF do Registro </string>
     <string name="unidade">Unidade de Atendimento</string>
-    <string name="type_user">Tipo de Usuário</string>
-    <string name="type_agente">Agente de Saúde</string>
-    <string name="type_doctor">Consultor Especialista</string>
     <string name="tx_cv">Insira seu Curriculo</string>
     <string name="btn_save">Salvar Conta</string>
-    <string name="title_activity_novo_usuario">Novo Usuario</string>
-    <string-array name="tipo_user">
-        <item>Agente de Saúde</item>
-        <item>Especialista</item>
-        <item>Paciente</item>
-    </string-array>
 
-    <string-array name="tipo_profis_especial">
-        <item>Ortopedia</item>
-        <item>Cardiologia</item>
-        <item>Neurologia</item>
-        <item>Dermatologia</item>
-        <item>Clinica Geral</item>
-        <item>Gastroenterolgia</item>
-        <item>Otorrinolaringologia</item>
-        <item>Odontologia Geral</item>
-        <item>Ortodontia</item>
-        <item>Periodontia</item>
-    </string-array>
-
+<!--Novo Agente -->
     <string-array name="tipo_profis_agente">
         <item>Enfermagem</item>
         <item>Tecnico de Enfermagem</item>
@@ -77,13 +60,6 @@
         <item>Auxiliar de Enfermagem</item>
     </string-array>
 
-    <string-array name="tipo_profis_paciente">
-        <item>Encanador</item>
-        <item>Soldador</item>
-        <item>Mestre de obras</item>
-        <item>Motorista</item>
-        <item>Outros</item>
-    </string-array>
 
     <string-array name="unidade_atendimento">
         <item>Freguesia</item>
@@ -97,6 +73,21 @@
         <item>Caju</item>
     </string-array>
 
+
+
+    <!-- Novo Especialista -->
+    <string-array name="tipo_profis_especial">
+        <item>Ortopedia</item>
+        <item>Cardiologia</item>
+        <item>Neurologia</item>
+        <item>Dermatologia</item>
+        <item>Clinica Geral</item>
+        <item>Gastroenterolgia</item>
+        <item>Otorrinolaringologia</item>
+        <item>Odontologia Geral</item>
+        <item>Ortodontia</item>
+        <item>Periodontia</item>
+    </string-array>
 
     <!--Strings relativas a nav_header-->
     <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>

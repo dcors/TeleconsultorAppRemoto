@@ -20,47 +20,38 @@ public class NewAgente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_agente);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //lista de profissoes do agente
+        Spinner nAgente_spProfissao = (Spinner)findViewById(R.id.newAgente_spProfissao);
+        ArrayAdapter adAgPro = ArrayAdapter.createFromResource(this, R.array.tipo_profis_agente, android.R.layout.simple_spinner_dropdown_item);
+        nAgente_spProfissao.setAdapter(adAgPro);
 
-        //lista de tipos de usuários
-        Spinner novoUsuario_spTipoUsuario = (Spinner)findViewById(R.id.novoUsuario_spTipoUsuario);
-        ArrayAdapter adapter5 = ArrayAdapter.createFromResource(this, R.array.tipo_user, android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spTipoUsuario.setAdapter(adapter5);
+        //lista de unidades de atendimento
+        Spinner nAgente_spUnidade = (Spinner)findViewById(R.id.newAgente_spUnidade);
+        ArrayAdapter adAgUni = ArrayAdapter.createFromResource(this, R.array.unidade_atendimento, android.R.layout.simple_spinner_dropdown_item);
+        nAgente_spUnidade.setAdapter(adAgUni);
 
-        //lista de profissão de acordo com tipo de usuario
-        Spinner novoUsuario_spProfissao = (Spinner)findViewById(R.id.novoUsuario_spProfissao);
-        //colocar condição para chamar o spiner de acordo com o tipo de usuario escolhido
-        //if spTipoUsuario = 1 {}
-        ArrayAdapter adapter7a = ArrayAdapter.createFromResource(this, R.array.tipo_profis_agente, android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spProfissao.setAdapter(adapter7a);
-
-
-        //Lista de regioes do usuario
-        Spinner novoUsuario_spUnidade = (Spinner)findViewById(R.id.novoUsuario_spUnidade);
-        ArrayAdapter adapter6 = ArrayAdapter.createFromResource(this,R.array.unidade_atendimento,android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spUnidade.setAdapter(adapter6);
-
-        //botão salvar novo usuário
-        Button novoUsuario_btnSalvar = (Button) findViewById(R.id.novoUsuario_btnSalvar);
-        novoUsuario_btnSalvar.setOnClickListener(new View.OnClickListener() {
+        //botao salvar estes dados
+        Button save = (Button)findViewById(R.id.newAgente_btnSalvar);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itsalvar = new Intent(NewAgente.this, MainActivity.class);
-                startActivity(itsalvar);
-            }
-        }
-    );
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.novoUsuario_floatSair);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               cancel_click(view);
+                Intent it = new Intent(NewAgente.this, MainActivity.class);
+                startActivity(it);
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        //float button cancelar
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.newAgent_floatSair);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancel_click(v);
+            }
+        });
+
+
+
     }
 
     public void cancel_click(View v) {

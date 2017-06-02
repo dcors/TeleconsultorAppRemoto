@@ -26,7 +26,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,7 +39,8 @@
         </activity>
         <activity
             android:name=".NewUserPop"
-            android:theme="@style/AppTheme.CustomTheme"></activity>
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
         <activity
             android:name=".UserDashboard"
             android:label="@string/title_activity_user__dashboard"
@@ -53,6 +53,14 @@
         <activity
             android:name=".NewAgente"
             android:label="@string/title_activity_novo_usuario"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
+        </activity>
+        <activity android:name=".NewEspecialista"
+            android:label="@string/title_new_esp"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -112,7 +120,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
         </activity>
-        <activity android:name=".NewEspecialista"></activity>
+
     </application>
 
 </manifest>
