@@ -14,11 +14,8 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+       android:layout_margin="8dp"
         />
 
     <TextView
@@ -30,15 +27,16 @@
         android:layout_marginStart="8dp"
         android:text="@string/pop_newU_sub"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
         android:textSize="18sp"
        />
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="56dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="46dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp">
 
@@ -48,27 +46,23 @@
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:backgroundTint="@color/white"
-            android:elevation="2dp"
-            android:layout_marginLeft="16dp"
+            android:elevation="6dp"
             android:text="Agente de Saúde"
             android:textColor="@color/colorSecondaryDark"
-            android:textColorLink="@color/colorAccent"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            />
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/new_especial"
-            style="@android:style/Widget.Material.Button"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:layout_marginLeft="16dp"
-            android:elevation="2dp"
-            android:text="Especialista"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/white"
+            android:elevation="6dp"
+            android:text="Especialista"
             android:textColor="@color/colorSecondaryDark"
-            android:textColorLink="@color/colorAccent"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -24,7 +24,6 @@ public class NewUserPop extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(dmNew);
         int width = dmNew.widthPixels;
         int height = dmNew.heightPixels;
-
         getWindow().setLayout((int)(width*.9),(int)(height*.5)); //.8 significa 80% da tela
 
         Button new_agent = (Button)findViewById(R.id.new_agente);
@@ -45,5 +44,11 @@ public class NewUserPop extends Activity {
             }
         });
 
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 }

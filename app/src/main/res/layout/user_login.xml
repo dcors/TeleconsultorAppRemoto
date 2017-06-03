@@ -25,7 +25,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="right"
-        app:srcCompat="@drawable/imagem" />
+        app:srcCompat="@drawable/logo" />
 
     <ScrollView
         android:id="@+id/login_form"

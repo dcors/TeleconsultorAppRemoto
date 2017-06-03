@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_weight="0.00"
         android:weightSum="1">
 
@@ -35,12 +36,12 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.69"
-            android:text="CONSULTAS CONCLUÍDAS"
+            android:text="@string/concluidas"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView1"
             android:layout_width="74dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -70,7 +71,7 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.69"
-            android:text="CONSULTAS EM ABERTO"
+            android:text="@string/abertas"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -79,7 +80,7 @@
             android:layout_width="74dp"
             android:layout_height="75dp"
             android:gravity="center"
-            android:text="123"
+            android:text="56"
             android:textAlignment="center"
             android:textColor="@color/colorSecondaryDark"
             android:textSize="24sp"
@@ -96,7 +97,7 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageView2"
             android:layout_width="74dp"
             android:layout_height="75dp"
             app:srcCompat="@drawable/ficha_verde_icon" />
@@ -105,7 +106,44 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.69"
-            android:text="EXAMES ENCAMINHADOS"
+            android:text="@string/exames"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="74dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:text="39"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.view.menu.ListMenuItemView>
+
+    <android.support.v7.view.menu.ListMenuItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:layout_weight="0.00"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="74dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/ficha_verde_icon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.69"
+            android:layout_gravity="center_vertical"
+            android:text="@string/aguardando"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -114,7 +152,7 @@
             android:layout_width="74dp"
             android:layout_height="75dp"
             android:gravity="center"
-            android:text="29"
+            android:text="6"
             android:textAlignment="center"
             android:textColor="@color/colorSecondaryDark"
             android:textSize="24sp"

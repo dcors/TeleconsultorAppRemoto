@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -19,48 +20,72 @@ public class NewAgente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_agente);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.agt_toolbar);
         setSupportActionBar(toolbar);
 
-        //lista de tipos de usuários
-        Spinner novoUsuario_spTipoUsuario = (Spinner)findViewById(R.id.novoUsuario_spTipoUsuario);
-        ArrayAdapter adapter5 = ArrayAdapter.createFromResource(this, R.array.tipo_user, android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spTipoUsuario.setAdapter(adapter5);
+        //lista de profissoes do agente
+        final Spinner nAgPro = (Spinner)findViewById(R.id.newAgente_spProfissao);
+        ArrayAdapter adAgPro = ArrayAdapter.createFromResource(this, R.array.tipo_profis_agente, android.R.layout.simple_spinner_dropdown_item);
+        nAgPro.setAdapter(adAgPro);
 
-        //lista de profissão de acordo com tipo de usuario
-        Spinner novoUsuario_spProfissao = (Spinner)findViewById(R.id.novoUsuario_spProfissao);
-        //colocar condição para chamar o spiner de acordo com o tipo de usuario escolhido
-        //if spTipoUsuario = 1 {}
-        ArrayAdapter adapter7a = ArrayAdapter.createFromResource(this, R.array.tipo_profis_agente, android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spProfissao.setAdapter(adapter7a);
+        AdapterView.OnItemSelectedListener escolherPro = new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (!nAgPro.getSelectedItem().toString().equalsIgnoreCase("Sua profissão é:")){
+                    Toast.makeText(NewAgente.this,
+                            nAgPro.getSelectedItem().toString(),
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        }; nAgPro.setOnItemSelectedListener(escolherPro);
 
 
-        //Lista de regioes do usuario
-        Spinner novoUsuario_spUnidade = (Spinner)findViewById(R.id.novoUsuario_spUnidade);
-        ArrayAdapter adapter6 = ArrayAdapter.createFromResource(this,R.array.unidade_atendimento,android.R.layout.simple_spinner_dropdown_item);
-        novoUsuario_spUnidade.setAdapter(adapter6);
 
-        //botão salvar novo usuário
-        Button novoUsuario_btnSalvar = (Button) findViewById(R.id.novoUsuario_btnSalvar);
-        novoUsuario_btnSalvar.setOnClickListener(new View.OnClickListener() {
+        //lista de unidades de atendimento
+       final Spinner nAgUni = (Spinner)findViewById(R.id.newAgente_spUnidade);
+        ArrayAdapter adAgUni = ArrayAdapter.createFromResource(this, R.array.uni_atendimento, android.R.layout.simple_spinner_dropdown_item);
+        nAgUni.setAdapter(adAgUni);
+
+        AdapterView.OnItemSelectedListener escolherUni = new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (!nAgUni.getSelectedItem().toString().equalsIgnoreCase("Unidade de atendimento:")){
+                    Toast.makeText(NewAgente.this,
+                            nAgUni.getSelectedItem().toString(),
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        }; nAgUni.setOnItemSelectedListener(escolherUni);
+
+
+
+        //botao salvar estes dados
+        Button save = (Button)findViewById(R.id.newAgente_btnSalvar);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itsalvar = new Intent(NewAgente.this, MainActivity.class);
-                startActivity(itsalvar);
-            }
-        }
-    );
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.novoUsuario_floatSair);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               cancel_click(view);
+                Intent it = new Intent(NewAgente.this, MainActivity.class);
+                startActivity(it);
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        //float button cancelar
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.newAgent_floatSair);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancel_click(v);
+            }
+        });
     }
 
     public void cancel_click(View v) {

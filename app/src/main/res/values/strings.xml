@@ -2,6 +2,7 @@
     <string name="app_name">Teleconsultoria</string>
 
     <!-- Main -->
+    <string name="title_in">Teleconsultoria e Diagnóstico</string>
     <string name="acesse">Acesse sua conta</string>
     <string name="criar">Criar conta</string>
     <string name="encontre">Unidades de Atendimento</string>
@@ -23,15 +24,18 @@
     <string name="forgot_password">Esqueci minha senha</string>
     <string name="acess_count">Acessar</string>
     <string name="create_count">Criar</string>
-
+    <string name="primSoc">Primeiros Socorros</string>
 
     <string name="action_settings">Oções</string>
 
     <string name="pop_newU_title">Qual é o Seu Perfil?"</string>
     <string name="pop_newU_sub">Escolha abaixo o tipo do seu perfil profissional</string>
 
+    <string name="title_new_agente">Novo Agente</string>
+    <string name="title_new_esp">Novo Especialista</string>
 
-    <!-- Strings relativas a Novo Agente -->
+
+    <!-- Strings relativas a Novo Usuario -->
     <string name="full_name">Nome Completo</string>
     <string name="cpf">CPF - Apenas Números</string>
     <string name="prof">Profissão</string>
@@ -44,32 +48,12 @@
     <string name="photo">Insira sua Foto</string>
     <string name="orgao_reg">Órgão e UF do Registro </string>
     <string name="unidade">Unidade de Atendimento</string>
-    <string name="type_user">Tipo de Usuário</string>
-    <string name="type_agente">Agente de Saúde</string>
-    <string name="type_doctor">Consultor Especialista</string>
     <string name="tx_cv">Insira seu Curriculo</string>
     <string name="btn_save">Salvar Conta</string>
-    <string name="title_activity_novo_usuario">Novo Usuario</string>
-    <string-array name="tipo_user">
-        <item>Agente de Saúde</item>
-        <item>Especialista</item>
-        <item>Paciente</item>
-    </string-array>
 
-    <string-array name="tipo_profis_especial">
-        <item>Ortopedia</item>
-        <item>Cardiologia</item>
-        <item>Neurologia</item>
-        <item>Dermatologia</item>
-        <item>Clinica Geral</item>
-        <item>Gastroenterolgia</item>
-        <item>Otorrinolaringologia</item>
-        <item>Odontologia Geral</item>
-        <item>Ortodontia</item>
-        <item>Periodontia</item>
-    </string-array>
-
+    <!--Novo Agente -->
     <string-array name="tipo_profis_agente">
+        <item>Sua profissão é:</item>
         <item>Enfermagem</item>
         <item>Tecnico de Enfermagem</item>
         <item>Estagiário</item>
@@ -77,15 +61,9 @@
         <item>Auxiliar de Enfermagem</item>
     </string-array>
 
-    <string-array name="tipo_profis_paciente">
-        <item>Encanador</item>
-        <item>Soldador</item>
-        <item>Mestre de obras</item>
-        <item>Motorista</item>
-        <item>Outros</item>
-    </string-array>
 
-    <string-array name="unidade_atendimento">
+    <string-array name="uni_atendimento">
+        <item>Unidade de atendimento:</item>
         <item>Freguesia</item>
         <item>Taquara</item>
         <item>Curicica</item>
@@ -97,6 +75,21 @@
         <item>Caju</item>
     </string-array>
 
+
+    <!-- Novo Especialista -->
+    <string-array name="tipo_profis_especial">
+        <item>Sua especialidade é:</item>
+        <item>Ortopedia</item>
+        <item>Cardiologia</item>
+        <item>Neurologia</item>
+        <item>Dermatologia</item>
+        <item>Clinica Geral</item>
+        <item>Gastroenterolgia</item>
+        <item>Otorrinolaringologia</item>
+        <item>Odontologia Geral</item>
+        <item>Ortodontia</item>
+        <item>Periodontia</item>
+    </string-array>
 
     <!--Strings relativas a nav_header-->
     <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
@@ -125,11 +118,13 @@
     <string name="save">Salvar Consulta</string>
 
     <string-array name="spGenero">
+        <item>Genero</item>
         <item>Feminino</item>
         <item>Masculino</item>
     </string-array>
 
     <string-array name="spRegiao">
+        <item>Região de Atendimento</item>
         <item>Grande Rio</item>
         <item>Zona Oeste</item>
         <item>Zona Norte</item>
@@ -138,6 +133,7 @@
     </string-array>
 
     <string-array name="spDuvida">
+        <item>Sua dúvida é sobre:</item>
         <item>Fratura</item>
         <item>Dor</item>
         <item>Mobilidade Reduzida</item>
@@ -147,6 +143,7 @@
     </string-array>
 
     <string-array name="spArea">
+        <item>Qual sua área?</item>
         <item>Clinica Geral</item>
         <item>Cardiologia</item>
         <item>Pre-natal</item>
@@ -164,7 +161,7 @@
     <string name="title_activity_consult_list_view">Lista de Consultas</string>
     <string name="title_home">Consultas em Aberto</string>
     <string name="title_dashboard">Consultas Analisadas</string>
-    <string name="title_notifications">Notifications</string>
+
 
 
     <!--Strings relativas a tela de rotas -->
@@ -178,24 +175,20 @@
 
     <!--String relativas à tela de relatorios -->
     <string name="act_rel_title">Relatorios</string>
+    <string name="concluidas">CONSULTAS CONCLUÍDAS</string>
+    <string name="abertas">CONSULTAS EM ABERTO</string>
+    <string name="exames">ENCAMINHAMENTOS</string>
+    <string name="aguardando">CONSULTAS AGUARDANDO PARECER ESPECIALISTA</string>
 
 
     <!-- String relativas a tela de usuario logado -->
     <string name="title_logado">Suas Informações</string>
     <string name="edit_info">Editar Dados</string>
     <string name="change_password">Trocar Senha</string>
+    <string name="alter_title">ALTERE SUA SENHA</string>
+    <string name="alter_confirm">CONFIRMAR</string>
+    <string name="alter_quit">CANCELAR</string>
 
-    <string name="alertas_activity_notification_title_template">Alertas activity: %1$s</string>
-
-    <!-- TODO: remove this placeholder text -->
-    <string name="alertas_activity_notification_placeholder_text_template">You said %1$s and lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit
-        vel semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
-        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
-        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
-        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
-        tortor.
-    </string>
 
     <string name="action_share">Share</string>
     <string name="action_reply">Reply</string>
