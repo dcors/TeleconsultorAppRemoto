@@ -6,7 +6,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -18,13 +20,33 @@ public class NewEspecialista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_especialista);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.esp_toolbar);
+        setSupportActionBar(toolbar);
+
 
         //Lista de profissoes do especialista
-        Spinner nEspPro = (Spinner)findViewById(R.id.newEsp_spProfissao);
+        final Spinner nEspPro = (Spinner)findViewById(R.id.newEsp_spProfissao);
         ArrayAdapter adEs = ArrayAdapter.createFromResource(this, R.array.tipo_profis_especial, android.R.layout.simple_spinner_dropdown_item);
         nEspPro.setAdapter(adEs);
 
-        //botao salvar estes dados
+        AdapterView.OnItemSelectedListener escolher = new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+              if (!nEspPro.getSelectedItem().toString().equalsIgnoreCase("Sua especialidade é:")){
+                  Toast.makeText(NewEspecialista.this,
+                          nEspPro.getSelectedItem().toString(),
+                          Toast.LENGTH_SHORT).show();
+              }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        }; nEspPro.setOnItemSelectedListener(escolher);
+
+
+
+            //botao salvar estes dados
         Button saveEsp = (Button)findViewById(R.id.newEspec_btnSalvar);
         saveEsp.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,21 +6,18 @@
             >
         <gradient
             android:startColor="#fff"
-            android:centerColor="@color/colorSecondary"
-            android:endColor="#ffe8e8e8"
+            android:centerColor="#b9efb9"
+            android:endColor="@color/primaryAcent"
             android:type="linear"
             android:angle="45"
-            android:centerX="55%">
+            android:centerX="85%">
 
         </gradient>
         <corners
             android:radius="6dp"
             />
 
-        <stroke
-            android:color="@color/colorSecondaryDark"
-            android:width="4dp">
-        </stroke>
+
 
 
     </shape>

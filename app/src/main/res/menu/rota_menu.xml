@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/rota_menu_home"
@@ -8,8 +9,9 @@
 
     <item
         android:id="@+id/rota_menu_programar"
-        android:icon="@drawable/ic_local_black"
-        android:title="@string/title_ver_rota" />
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/title_ver_rota"
+         />
 
 
 </menu>

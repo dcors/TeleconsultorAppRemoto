@@ -20,10 +20,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/doctor_droid"
-        android:label="@string/app_name"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+            android:label="@string/title_in">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -44,25 +46,28 @@
         <activity
             android:name=".UserDashboard"
             android:label="@string/title_activity_user__dashboard"
-            android:parentActivityName=".UserLogin"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserLogin" />
-        </activity>
-        <activity
-            android:name=".NewAgente"
-            android:label="@string/title_activity_novo_usuario"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
         </activity>
-        <activity android:name=".NewEspecialista"
-            android:label="@string/title_new_esp"
+        <activity
+            android:name=".NewAgente"
+            android:label="@string/title_new_agente"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewEspecialista"
+            android:label="@string/title_new_esp"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+           >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
@@ -98,6 +103,14 @@
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
         <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
+        </activity>
+        <activity
             android:name=".RelatoriosActivity"
             android:label="@string/act_rel_title"
             android:parentActivityName=".UserDashboard">
@@ -113,14 +126,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.RotaActivity" />
-        </activity>
-
     </application>
 
 </manifest>
