@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.dehcors.teleconsultorapp.UserLogin">
+    tools:context="com.example.dehcors.teleconsultorapp.UserLogin"
+    >
 
     <!-- Login progress -->
     <ProgressBar
@@ -20,17 +21,12 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/userDash_logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="right"
-        app:srcCompat="@drawable/logo" />
 
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -76,24 +72,33 @@
                 android:layout_width="180dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="35dp"
+                android:layout_marginBottom="15dp"
                 android:layout_marginTop="40dp"
                 android:elevation="2dp"
                 android:text="@string/action_sign_in"
+                android:textColorLink="@color/primaryAcent"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/userLogin_esqueceuSenha"
+                style="@android:style/Widget.Material.Light.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="55dp"
+                android:layout_marginTop="8dp"
+                android:elevation="0dp"
+                android:text="@string/forgot_password"
                 android:textColorLink="@color/colorSecondaryAccent" />
 
-            <TextView
-                android:id="@+id/userLogin_esqueceuSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="35dp"
-                android:layout_marginTop="35dp"
-                android:text="@string/forgot_password"
-                android:textAlignment="center"
-                android:textColorLink="@color/colorSecondaryAccent"
-                android:textIsSelectable="true"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+            <Button
+                android:id="@+id/login_novaConta"
+                android:layout_width="180dp"
+                android:layout_height="48dp"
+                android:text="@string/create_account"
+                android:layout_gravity="center"
+                style="@android:style/Widget.Material.Button.Colored"
+                />
 
         </LinearLayout>
     </ScrollView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dehcors.teleconsultorapp.NovoDiagnostico"
+    tools:showIn="@layout/activity_novo_diagnostico">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/nvDiagno_nuProntuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/nu_prontuario"/>
+
+            <Spinner
+                android:id="@+id/nvDiagno_genPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                style="@android:style/Widget.Material.Light.Spinner.Underlined">
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/nvDiagno_areaMedic"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                style="@android:style/Widget.Material.Light.Spinner.Underlined">
+            </Spinner>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:text="@string/anex_exam"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/nvDiagno_btn_anexExam"
+                    style="@android:style/Widget.ImageButton"
+                    android:layout_width="56dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_attachment_black_24dp" />
+
+                <ImageButton
+                    android:id="@+id/nvDiagno_camera"
+                    style="@android:style/Widget.ImageButton"
+                    android:layout_width="56dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/nvDiagno_txCaso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:allowUndo="true"
+                android:background="@color/dColorTest"
+                android:hint="@string/descreva_caso"
+                android:inputType="text|textMultiLine"
+                android:minHeight="200dp"
+                android:textAlignment="viewStart"
+                android:theme="@style/AppTheme" />
+
+            <Button
+                android:id="@+id/nvDiagno_btn_enviar"
+                android:layout_marginTop="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_sol_diagn"
+                android:layout_gravity="center"
+                style="@android:style/Widget.Material.Button.Colored"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

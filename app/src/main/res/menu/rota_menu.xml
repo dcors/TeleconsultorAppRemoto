@@ -4,14 +4,7 @@
 
     <item
         android:id="@+id/rota_menu_home"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="@string/title_home_rota" />
-
-    <item
-        android:id="@+id/rota_menu_programar"
         android:icon="@android:drawable/ic_dialog_map"
-        android:title="@string/title_ver_rota"
-         />
-
+        android:title="@string/title_home_rota" />
 
 </menu>

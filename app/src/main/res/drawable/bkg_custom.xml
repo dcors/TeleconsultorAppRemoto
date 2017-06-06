@@ -7,14 +7,13 @@
         <gradient
             android:startColor="#fff"
             android:centerColor="#b9efb9"
-            android:endColor="@color/primaryAcent"
-            android:type="linear"
-            android:angle="45"
-            android:centerX="85%">
+            android:endColor="#fff"
+            android:type="radial"
+            android:gradientRadius="360">
 
         </gradient>
         <corners
-            android:radius="6dp"
+            android:radius="2dp"
             />
 
 

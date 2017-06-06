@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"
-        android:orientation="vertical">
+        >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -18,20 +18,18 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary">
 
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/logo1"
+                app:layout_anchor="@+id/nConsul_content"
+                app:layout_anchorGravity="top|right"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
 
-            <TextView
-                android:id="@+id/toolbar_titulo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="Nova Consulta"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
-
-        </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
@@ -51,14 +49,6 @@
 
 
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="bottom|left"
-        android:layout_margin="8dp"
-        app:layout_anchor="@+id/nConsul_content"
-        app:layout_anchorGravity="top|right"
-        app:srcCompat="@drawable/logo1" />
+
 
 </android.support.design.widget.CoordinatorLayout>

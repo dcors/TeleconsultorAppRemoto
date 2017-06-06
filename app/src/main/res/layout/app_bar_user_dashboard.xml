@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context="com.example.dehcors.teleconsultorapp.UserDashboard">
 
+    <include layout="@layout/content_user_dashboard"
+        android:id="@+id/user_dash"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/userDash_Sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorSecondaryAccent"
+        app:srcCompat="@drawable/ic_logout_variant_white_18dp" />
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,19 +29,21 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/logo1"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                app:layout_anchor="@+id/user_dash"
+                app:layout_anchorGravity="top|right"/>
+        </android.support.v7.widget.Toolbar>
+
+
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_user_dashboard" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/userDash_Sair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="@color/colorSecondaryAccent"
-        app:srcCompat="@drawable/ic_logout_variant_white_18dp" />
 
 </android.support.design.widget.CoordinatorLayout>
