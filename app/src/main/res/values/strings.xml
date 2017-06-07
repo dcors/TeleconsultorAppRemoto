@@ -98,9 +98,9 @@
     <string name="drawer_logout">Fazer logout desta conta</string>
 
     <!--Strings relativas ao content_dashboard-->
-    <string name="consulta">Ver Arquivos</string>
+    <string name="verArq">Ver Arquivos</string>
     <string name="new_check">Nova Consulta</string>
-    <string name="title_activity_user__dashboard">Área de Trabalho</string>
+    <string name="title_activity_user_dashboard">Área de Trabalho</string>
     <string name="navigation_drawer_open">Abrir drawer</string>
     <string name="navigation_drawer_close">Fechar drawer</string>
     <string name="diagn">Novo Diagnóstico</string>
@@ -158,7 +158,7 @@
         <item>Outros</item>
     </string-array>
 
-    <!--Strings relativas ao ListView de consultas-->
+    <!--Strings relativas a tela de arquivos-->
     <string name="title_activity_consult_list_view">Lista de Arquivos</string>
     <string name="title_consult_navigation">Consultas</string>
     <string name="title_diagn_navigation">Diagnósticos</string>

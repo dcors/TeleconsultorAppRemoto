@@ -120,6 +120,7 @@
                     android:layout_margin="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
+                    android:background="@color/dColorTest"
                     android:allowUndo="true"
                     android:hint="@string/descreva_caso"
                     android:inputType="text|textMultiLine"

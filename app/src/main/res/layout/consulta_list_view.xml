@@ -1,32 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container_arq"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_arquivos"
-    tools:context="com.example.dehcors.teleconsultorapp.ConsultaListView">
+    tools:context="com.example.dehcors.teleconsultorapp.ArquivosActivity">
 
-
-    <FrameLayout
-        android:id="@+id/content_consulta"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
-       <ExpandableListView
-            android:id="@+id/view_listarConsultas"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                app:layout_anchor="@+id/layout_prin"
+                app:layout_anchorGravity="top|right"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/logo1" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_prin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"/>
-    </FrameLayout>
+            android:layout_above="@+id/bottomBar">
+
+            <FrameLayout
+                android:id="@+id/content_consulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <ExpandableListView
+                    android:id="@+id/view_listarConsultas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:id="@+id/bottomBar"
+    android:layout_alignParentBottom="true">
+
+</RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/listarArquivos_btNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/colorSecondaryDark"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/navigation" />
 
 
 
 
-</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -6,12 +6,12 @@
         android:id="@+id/menu_listar_Consultas"
         android:icon="@drawable/ic_file_document_black_24dp"
         android:title="@string/title_consult_navigation"
-        app:showAsAction="ifRoom"/>
+     />
 
     <item
         android:id="@+id/menu_listar_Diagnostico"
         android:icon="@drawable/ic_folder_black_24dp"
         android:title="@string/title_diagn_navigation"
-        app:showAsAction="ifRoom"/>
+       />
 
 </menu>

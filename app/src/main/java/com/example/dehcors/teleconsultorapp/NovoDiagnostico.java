@@ -14,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ * Created by cors on 06/06/17.
+ */
 public class NovoDiagnostico extends AppCompatActivity {
 
     @Override

@@ -46,13 +46,13 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
+                android:layout_margin="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="8dp"
+                    android:layout_marginLeft="8dp"
                     android:text="@string/anex_exam"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorPrimaryDark"
@@ -60,22 +60,24 @@
 
                 <ImageView
                     android:id="@+id/nvDiagno_btn_anexExam"
-                    style="@android:style/Widget.ImageButton"
+                    style="@android:style/Widget.Material.Button"
                     android:layout_width="56dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_height="56dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:elevation="2dp"
                     app:srcCompat="@drawable/ic_attachment_black_24dp" />
 
                 <ImageButton
                     android:id="@+id/nvDiagno_camera"
-                    style="@android:style/Widget.ImageButton"
+                    style="@android:style/Widget.Material.ImageButton"
                     android:layout_width="56dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_height="56dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:elevation="2dp"
                     app:srcCompat="@drawable/ic_menu_camera" />
             </LinearLayout>
 
@@ -84,19 +86,19 @@
                 android:id="@+id/nvDiagno_txCaso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_margin="8dp"
+                android:gravity="top"
                 android:allowUndo="true"
                 android:background="@color/dColorTest"
                 android:hint="@string/descreva_caso"
                 android:inputType="text|textMultiLine"
                 android:minHeight="200dp"
-                android:textAlignment="viewStart"
                 android:theme="@style/AppTheme" />
 
             <Button
                 android:id="@+id/nvDiagno_btn_enviar"
                 android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_sol_diagn"
