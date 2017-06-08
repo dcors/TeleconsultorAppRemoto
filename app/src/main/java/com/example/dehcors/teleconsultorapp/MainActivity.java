@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +19,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //logo
+        ImageView logo = (ImageView)findViewById(R.id.main_logo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.telessaude.uerj.br/nucleorj/";
+                Intent itInfo = new Intent(Intent.ACTION_VIEW);
+                itInfo.setData(Uri.parse(url));
+                startActivity(itInfo);
+            }
+        });
 
         //botao 1
         ImageButton main_acessarConta = (ImageButton) findViewById(R.id.main_acessarConta);
@@ -27,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //botão 2
-        ImageButton main_criarConta = (ImageButton) findViewById(R.id.main_criarConta);
-        main_criarConta.setOnClickListener(new View.OnClickListener() {
+        ImageButton clinicas = (ImageButton) findViewById(R.id.main_clinicas);
+        clinicas.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-        register();
+        encontrar();
         }
     });
 
@@ -47,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(itM);
             }
         });
-
-//"http://189.28.128.100/dab/docs/portaldab/publicacoes/protocolo_saude_mulher.pdf
 
 
         //botao saúde do idoso
@@ -75,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //botão primeiros socorros
-        ImageButton sPs = (ImageButton)findViewById(R.id.main_primSoc);
+        //botão atençao basica
+        ImageButton sPs = (ImageButton)findViewById(R.id.main_atPrimaria);
         sPs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.youtube.com/watch?v=a_dlsNm5HsU";
+                String url = "http://aps.bvs.br";
                 Intent itP = new Intent(Intent.ACTION_VIEW);
                 itP.setData(Uri.parse(url));
                 startActivity(itP);
@@ -88,18 +100,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//http://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_crescimento_desenvolvimento.pdf
-//http://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_materiais_infomativos.pdf
-//http://www.prefeiturarp.usp.br/pages/cipa/manual_primeiros_socorros.htm
-//https://www.youtube.com/watch?v=a_dlsNm5HsU
-//http://lproweb.procempa.com.br/pmpa/prefpoa/sma/usu_doc/samu.pdf
+
 
     public void do_login(){
         Intent it1 = new Intent(MainActivity.this, UserLogin.class);
         startActivity(it1);
     }
-    public void register(){
-        Intent it2 = new Intent(MainActivity.this, NewUserPop.class);
+    public void encontrar(){
+        Intent it2 = new Intent(MainActivity.this, VerClinicas.class);
         startActivity(it2);
     }
 

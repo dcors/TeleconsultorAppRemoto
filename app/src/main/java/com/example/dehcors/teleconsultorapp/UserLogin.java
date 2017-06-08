@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -19,6 +20,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,6 +46,7 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -66,6 +69,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,8 +108,37 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
             }
         });
 
+
+        Button novo = (Button)findViewById(R.id.login_novaConta);
+        novo.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent itNc = new Intent(UserLogin.this, NewUserPop.class);
+                startActivity(itNc);
+            }
+        });
+
+        Button forgot = (Button)findViewById(R.id.userLogin_esqueceuSenha);
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserLogin.this);
+        View mView = getLayoutInflater().inflate(R.layout.pop_esqueci_senha, null);
+        alertDialog.setView(mView);
+        AlertDialog dialog = alertDialog.create();
+        dialog.show();
+            }
+        });
+
+
+
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    public void sendMessEmail(){
+
     }
 
     private void populateAutoComplete() {
@@ -151,9 +184,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         }
     }
 
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
+
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void setupActionBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -162,11 +193,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         }
     }
 
-    /**
-     * Attempts to sign in or register the account specified by the login form.
-     * If there are form errors (invalid email, missing fields, etc.), the
-     * errors are presented and no actual login attempt is made.
-     */
+
     private void attemptLogin() throws MalformedURLException, Exception{
 
         String email = mEmailView.getText().toString();
@@ -385,6 +412,12 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
             mAuthTask = null;
             showProgress(false);
         }
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        finish();
     }
 }
 

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,9 @@ public class UsuarioLogado extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.usuario_logado);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
     }
@@ -26,8 +30,7 @@ public class UsuarioLogado extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu_usuario_logado, menu);
+        getMenuInflater().inflate(R.menu.menu_user_logado, menu);
         return true;
     }
 
@@ -36,6 +39,7 @@ public class UsuarioLogado extends AppCompatActivity {
           int id = item.getItemId();
         if (id == R.id.userLogado_info){
     //mostrar informações editaveis do usuario que está logado
+
             return true;
            }
 
@@ -52,11 +56,9 @@ public class UsuarioLogado extends AppCompatActivity {
             Button btCancel = (Button)mView.findViewById(R.id.btn_alterSenha_cancela); //botao cancela
 
 
-
             alertDialog.setView(mView);
             AlertDialog dialog = alertDialog.create();
             dialog.show();
-
             return true;
         }
 

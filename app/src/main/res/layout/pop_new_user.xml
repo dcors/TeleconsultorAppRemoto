@@ -10,13 +10,12 @@
         android:id="@+id/newU_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="@string/pop_newU_title"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
         android:textColor="@color/colorPrimaryDark"
-       android:layout_margin="8dp"
-        />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/newU_subTitle"
@@ -27,7 +26,6 @@
         android:layout_marginStart="8dp"
         android:text="@string/pop_newU_sub"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
         android:textSize="18sp"
        />
@@ -36,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="24dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp">
 
@@ -57,11 +55,11 @@
             android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="@color/white"
             android:elevation="6dp"
             android:text="Especialista"
-            android:textColor="@color/colorSecondaryDark"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
             android:textStyle="bold" />
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/recupera_senha"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/popEsenha_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_recupera_senha"
+        android:inputType="number"
+        android:textSize="16sp"
+        tools:textColorHint="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="42dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_alterSenha_cancela"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:elevation="2dp"
+            android:text="@string/btn_cancela"
+            android:textColor="@color/colorSecondaryDark"
+            android:textColorLink="@color/primaryAcent" />
+
+        <Button
+            android:id="@+id/btn_alterSenha_confirma"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="2dp"
+            android:text="@string/btn_enviar"
+            android:textColor="@color/colorSecondaryDark"
+            android:textColorLink="@color/primaryAcent"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
