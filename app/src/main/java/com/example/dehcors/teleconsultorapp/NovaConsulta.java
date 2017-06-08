@@ -3,6 +3,7 @@ package com.example.dehcors.teleconsultorapp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -12,10 +13,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class NovaConsulta extends AppCompatActivity {
+
+    private EditText nvConsul_txCaso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,15 +109,6 @@ public class NovaConsulta extends AppCompatActivity {
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.nvConsul_Sair);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Cancelar esta consulta", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                cancel_click(view);
-            }
-        });
 
         Button nvConsul_saveConsulta = (Button)findViewById(R.id.nvConsul_saveConsulta);
         nvConsul_saveConsulta.setOnClickListener(new View.OnClickListener(){
@@ -120,10 +118,37 @@ public class NovaConsulta extends AppCompatActivity {
             }
         });
 
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
+
+    public void getSpeechInput(View view){
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+            if (intent.resolveActivity(getPackageManager()) !=null){
+                startActivityForResult(intent, 10);
+            }else{
+                Toast.makeText(this, "Seu aparelho não suporta comando de voz", Toast.LENGTH_SHORT).show();
+            }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+            switch (requestCode){
+                case 10:
+                    if (resultCode == RESULT_OK && data != null){
+                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        nvConsul_txCaso.setText(result.get(0));
+                    } break;
+            }
+    }
+
+
 
     public void cancel_click(View v) {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(NovaConsulta.this);
@@ -153,4 +178,5 @@ public class NovaConsulta extends AppCompatActivity {
         Intent it5 = new Intent(NovaConsulta.this, UserDashboard.class);
         startActivity(it5);
     }
+
 }

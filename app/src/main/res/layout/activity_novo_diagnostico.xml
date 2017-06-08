@@ -36,13 +36,6 @@
     <include layout="@layout/content_novo_diagnostico"
         android:id="@+id/layout_nvDiag"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="@color/colorSecondaryAccent"
-        app:srcCompat="@drawable/ic_logout_variant_white_24dp" />
+    <!--FLOAT BUTTON android.support.design.widget.FloatingActionButton-->
 
 </android.support.design.widget.CoordinatorLayout>

@@ -65,16 +65,6 @@ public class NovoDiagnostico extends AppCompatActivity {
         }; nuAt.setOnItemSelectedListener(especialidade);
 
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Cancelar esta solicitação", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                            cancel_click(view);
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

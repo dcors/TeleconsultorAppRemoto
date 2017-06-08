@@ -13,8 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        >
+        android:layout_marginTop="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,8 +27,6 @@
                 style="@android:style/Widget.Material.Light.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginTop="16dp">
             </Spinner>
 
@@ -38,8 +35,6 @@
                 style="@android:style/Widget.Material.Light.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginTop="16dp"
                  />
 
@@ -48,8 +43,6 @@
                 style="@android:style/Widget.Material.Light.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginTop="16dp"
                 />
 
@@ -67,9 +60,6 @@
                 android:id="@+id/nvConsul_cpfPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
                 android:enabled="true"
                 android:hint="@string/cpf_pac"
                 android:inputType="number" />
@@ -78,8 +68,6 @@
                 android:id="@+id/nvConsul_nomePaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginTop="12dp"
                 android:hint="@string/nm_paciente"
                 android:inputType="text" />
@@ -89,9 +77,7 @@
                 android:id="@+id/nvConsul_nascPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="12dp"
                 android:hint="@string/data_nasc"
                 android:inputType="date" />
 
@@ -100,8 +86,6 @@
                 style="@android:style/Widget.Material.Light.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginTop="16dp"
                />
 
@@ -115,11 +99,10 @@
 
                 <EditText
                     android:id="@+id/nvConsul_txCaso"
-                    android:layout_width="279dp"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
+                    android:padding="2dp"
+                    android:minHeight="200dp"
                     android:background="@color/dColorTest"
                     android:allowUndo="true"
                     android:hint="@string/descreva_caso"
@@ -135,18 +118,17 @@
 
                 <ImageButton
                     android:id="@+id/nvConsul_botaoFalar"
-                    style="@style/Widget.AppCompat.ImageButton"
+                    style="@android:style/Theme.Material.Voice"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_margin="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                    android:elevation="2dp"
                     android:longClickable="true"
+                    android:onClick="getSpeechInput"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.586"
                     app:layout_constraintLeft_toRightOf="@+id/nvConsul_txCaso"
@@ -159,15 +141,44 @@
             </android.support.constraint.ConstraintLayout>
 
 
-            <ImageButton
-                android:id="@+id/nvConsul_foto"
-                style="@android:style/Widget.ImageButton"
-                android:layout_width="200dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="16dp"
-                app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/anex_exam"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/nvConsul_btn_anexar"
+                    style="@android:style/Widget.Material.Button"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="2dp"
+                    app:srcCompat="@drawable/ic_attachment_black_24dp" />
+
+                <ImageButton
+                    android:id="@+id/nvConsul_btn_amera"
+                    style="@android:style/Widget.Material.ImageButton"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="2dp"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+            </LinearLayout>
 
 
             <Button
@@ -176,8 +187,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="36dp"
                 android:onClick="salvar_consulta"
                 android:text="@string/save"
                 android:textColorLink="@color/colorAccent" />

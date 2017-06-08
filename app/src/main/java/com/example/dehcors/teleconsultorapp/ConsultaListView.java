@@ -53,6 +53,7 @@ public class ConsultaListView extends AppCompatActivity {
         ExpandableListView activity_consulta_list_view = (ExpandableListView) findViewById(R.id.view_listarConsultas);
 
 
+
        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.dehcors.teleconsultorapp.RelatoriosView"
     android:weightSum="1">
 
@@ -64,6 +65,7 @@
         android:layout_height="36dp"
         android:gravity="center"
         android:text="@string/title1"
+        android:textColor="@color/colorPrimaryDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:layout_weight="0.98" />
 
@@ -90,7 +92,7 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.98"
-            android:text="@string/concluidas"
+            android:text="@string/consul_solicitada"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -125,7 +127,7 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.98"
-            android:text="@string/abertas"
+            android:text="@string/consult_respondida"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -160,7 +162,7 @@
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.98"
-            android:text="@string/exames"
+            android:text="@string/diag_solicitado"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -198,7 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.98"
             android:layout_gravity="center_vertical"
-            android:text="@string/aguardando"
+            android:text="@string/diag_respondido"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

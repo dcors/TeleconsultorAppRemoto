@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/relatorio_extrair"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:title="@string/extrair">
+        <menu>
+            <item
+                android:id="@+id/extr_excel"
+                android:icon="@drawable/excel"
+                android:title="@string/r_excel"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/relatorio_compartilhar"
+        android:icon="@drawable/ic_menu_share"
+        android:title="@string/enviar">
+        <menu>
+            <item
+                android:id="@+id/share_email"
+                android:icon="@drawable/email1"
+                android:title="@string/r_email"/>
+        <item
+        android:id="@+id/share_btooth"
+        android:icon="@android:drawable/stat_sys_data_bluetooth"
+        android:title="@string/r_btooth">
+        </item>
+            <item
+                android:id="@+id/share_message"
+                android:icon="@drawable/message1"
+                android:title="@string/r_messag"/>
+        </menu>
+    </item>
+
+
+</menu>

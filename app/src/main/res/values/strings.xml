@@ -3,7 +3,7 @@
 
     <!-- Main -->
     <string name="title_in">Teleconsultoria e Diagnóstico</string>
-    <string name="acesse">Acessar</string>
+    <string name="acesse">Acessar Conta</string>
     <string name="find">Clínicas</string>
     <string name="atPrim">Atenção Primária</string>
     <string name="saude_wo">Saúde da Mulher</string>
@@ -33,7 +33,34 @@
     <string name="btn_cancela">CANCELAR</string>
 
 
+    <!--Strings relativas a nav_header-->
+    <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
+    <string name="email_usuario">Email Cadastrado - Recuperar do BD</string>
+    <string name="cpf_usuario_ativo">Cpf do Usuário - Recuperar do BD</string>
+    <string name="pict">Foto do usuario</string>
+
+    <!--Strings relativas ao drawer_dashboard -->
+    <string name="drawer_settings">Alterar seus dados</string>
+    <string name="drawer_logout">Fazer logout desta conta</string>
+
+    <!--Strings relativas ao content_dashboard-->
+    <string name="verArq">Ver Arquivos</string>
+    <string name="new_check">Nova Consulta</string>
+    <string name="title_activity_user_dashboard">Área de Trabalho</string>
+    <string name="diagn">Novo Diagnóstico</string>
+    <string name="relatorio">Relatórios</string>
     <string name="action_settings">Oções</string>
+    <string name="navigation_drawer_open">Abrir drawer</string>
+    <string name="navigation_drawer_close">Fechar drawer</string>
+
+
+    <!-- String relativas a tela de usuario logado -->
+    <string name="title_logado">Suas Informações</string>
+    <string name="edit_info">Editar Dados</string>
+    <string name="change_password">Trocar Senha</string>
+    <string name="alter_title">ALTERE SUA SENHA</string>
+    <string name="alter_confirm">CONFIRMAR</string>
+    <string name="alter_quit">CANCELAR</string>
 
 
     <!-- Strings related a Novo Usuario -->
@@ -87,24 +114,8 @@
     </string-array>
 
 
-    <!--Strings relativas a nav_header-->
-    <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
-    <string name="email_usuario">Email Cadastrado - Recuperar do BD</string>
-    <string name="cpf_usuario_ativo">Cpf do Usuário - Recuperar do BD</string>
-    <string name="pict">Foto do usuario</string>
 
-    <!--Strings relativas ao drawer_dashboard -->
-    <string name="drawer_settings">Alterar seus dados</string>
-    <string name="drawer_logout">Fazer logout desta conta</string>
 
-    <!--Strings relativas ao content_dashboard-->
-    <string name="verArq">Ver Arquivos</string>
-    <string name="new_check">Nova Consulta</string>
-    <string name="title_activity_user_dashboard">Área de Trabalho</string>
-    <string name="navigation_drawer_open">Abrir drawer</string>
-    <string name="navigation_drawer_close">Fechar drawer</string>
-    <string name="diagn">Novo Diagnóstico</string>
-    <string name="relatorio">Relatórios</string>
 
     <!--Strings relativas ao content_nova Consulta-->
     <string name="title_activity_nova_consulta">Nova Consulta</string>
@@ -121,7 +132,7 @@
     <string name="nu_prontuario">Numero do prontuário</string>
     <string name="anex_exam">Anexar Exames/Prontuário</string>
     <string name="btn_sol_diagn">e-DIAGNÓSTICO</string>
-
+    <string name="title_activity_novo_diagnostico">Novo Diagnostico</string>
 
 <!-- spinners -->
     <string-array name="spGenero">
@@ -173,26 +184,24 @@
     <!--String relativas à tela de relatorios -->
     <string name="title1">Índices desta Conta</string>
     <string name="act_rel_title">Relatorios</string>
-    <string name="concluidas">CONSULTAS ENCERRADAS</string>
-    <string name="abertas">CONSULTAS EM ABERTO</string>
-    <string name="exames">DIAGNÓSTICOS SOLICITADOS</string>
-    <string name="aguardando">DIAGNÓSTICOS RESPONDIDOS</string>
+    <string name="consul_solicitada">CONSULTAS SOLICITADAS</string>
+    <string name="consult_respondida">CONSULTAS RESPONDIDAS</string>
+    <string name="consult_aguarda"></string>
+    <string name="diag_solicitado">DIAGNÓSTICOS SOLICITADOS</string>
+    <string name="diag_respondido">DIAGNÓSTICOS RESPONDIDOS</string>
+    <string name="extrair">Extrair Relatório</string>
+    <string name="enviar">Compartilhar</string>
+    <string name="r_email">Email</string>
+    <string name="r_btooth">Bluetooth</string>
+    <string name="r_messag">Mensagens</string>
+    <string name="r_excel">Excel</string>
 
 
-    <!-- String relativas a tela de usuario logado -->
-    <string name="title_logado">Suas Informações</string>
-    <string name="edit_info">Editar Dados</string>
-    <string name="change_password">Trocar Senha</string>
-    <string name="alter_title">ALTERE SUA SENHA</string>
-    <string name="alter_confirm">CONFIRMAR</string>
-    <string name="alter_quit">CANCELAR</string>
 
 
-    <string name="action_share">Share</string>
-    <string name="action_reply">Reply</string>
 
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_novo_diagnostico">NovoDiagnostico</string>
+
+
 
 
 </resources>

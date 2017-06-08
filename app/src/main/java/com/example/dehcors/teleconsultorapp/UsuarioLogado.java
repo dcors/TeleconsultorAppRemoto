@@ -19,7 +19,7 @@ public class UsuarioLogado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_usuario_logado);
+        setContentView(R.layout.usuario_logado);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -30,8 +30,7 @@ public class UsuarioLogado extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu_usuario_logado, menu);
+        getMenuInflater().inflate(R.menu.menu_user_logado, menu);
         return true;
     }
 
@@ -40,6 +39,7 @@ public class UsuarioLogado extends AppCompatActivity {
           int id = item.getItemId();
         if (id == R.id.userLogado_info){
     //mostrar informações editaveis do usuario que está logado
+
             return true;
            }
 
@@ -54,7 +54,6 @@ public class UsuarioLogado extends AppCompatActivity {
             EditText txReSenha = (EditText)mView.findViewById(R.id.altersenha_repeteSenha); //campo para repetir senha
             Button btConfirma = (Button)mView.findViewById(R.id.btn_alterSenha_confirma); //botao confirma
             Button btCancel = (Button)mView.findViewById(R.id.btn_alterSenha_cancela); //botao cancela
-
 
 
             alertDialog.setView(mView);

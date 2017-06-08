@@ -27,7 +27,8 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/hint_recupera_senha"
-        android:inputType="textPassword"
+        android:inputType="number"
+        android:textSize="16sp"
         tools:textColorHint="@android:color/darker_gray" />
 
     <LinearLayout
@@ -45,7 +46,7 @@
             style="@android:style/Widget.Material.Light.Button.Borderless"
             android:layout_width="120dp"
             android:layout_height="48dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
             android:elevation="2dp"
             android:text="@string/btn_cancela"
             android:textColor="@color/colorSecondaryDark"
@@ -56,13 +57,12 @@
             style="@android:style/Widget.Material.Light.Button.Borderless"
             android:layout_width="120dp"
             android:layout_height="48dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:elevation="2dp"
             android:text="@string/btn_enviar"
             android:textColor="@color/colorSecondaryDark"
             android:textColorLink="@color/primaryAcent"
-            android:textStyle="bold"
-            android:onClick="sendMessMail"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
