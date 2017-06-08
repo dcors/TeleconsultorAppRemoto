@@ -11,21 +11,6 @@ import android.webkit.WebView;
 public class VerClinicas extends AppCompatActivity {
 
 
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.rota_menu_home:
-                    break;
-            }
-            return false;
-        }
-
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +23,6 @@ public class VerClinicas extends AppCompatActivity {
 
         //acessar url
         wv.loadUrl("https://smsrio.org/subpav/ondeseratendido/");
-
-        BottomNavigationView rotaMenu = (BottomNavigationView) findViewById(R.id.rotaMenu);
-        rotaMenu.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-
         }
    }
 

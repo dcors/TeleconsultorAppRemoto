@@ -46,7 +46,6 @@
             android:layout_above="@+id/bottomBar">
 
             <FrameLayout
-                android:id="@+id/content_consulta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -79,8 +78,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/colorSecondaryDark"
         app:itemTextColor="@color/black"
         app:menu="@menu/navigation" />
 

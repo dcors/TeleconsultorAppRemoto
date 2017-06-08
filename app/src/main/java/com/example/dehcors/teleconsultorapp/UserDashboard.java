@@ -101,6 +101,22 @@ public class UserDashboard extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if (id == R.id.navHeader_avisos){
+            AlertDialog.Builder alert1 = new AlertDialog.Builder(UserDashboard.this);
+            alert1.setTitle("CONSULTORIAS");
+            alert1.setMessage("Você não possui consultorias pendentes de resposta");
+            alert1.setIcon(R.drawable.ic_stat_alertas_activity);
+            alert1.setPositiveButton("Ok", new DialogInterface.OnClickListener(){
+               @Override
+                public void onClick(DialogInterface dialog1, int wich){
+                   dialog1.cancel();
+               }
+            });alert1.show();
+
+        }else if (id == R.id.navHeader_clinicas){
+            Intent itClin = new Intent(UserDashboard.this, VerClinicas.class);
+            startActivity(itClin);
+        }else
         if (id == R.id.navHeader_altDados) {
             Intent ituser = new Intent(UserDashboard.this, UsuarioLogado.class);
             startActivity(ituser);

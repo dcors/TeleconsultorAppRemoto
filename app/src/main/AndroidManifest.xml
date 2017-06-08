@@ -115,10 +115,10 @@
         <activity
             android:name=".VerClinicas"
             android:label="@string/title_activity_rota"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".UserDashboard">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.MainActivity" />
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
         <activity
             android:name=".RelatoriosView"

@@ -20,7 +20,6 @@
         android:background="?attr/colorPrimary">
 
         <ImageView
-            android:id="@+id/imageView4"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -37,7 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:itemTextColor="@color/black"
         app:menu="@menu/navigation" />
 
 

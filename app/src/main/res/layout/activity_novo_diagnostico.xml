@@ -20,7 +20,6 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:id="@+id/nd_logo"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="end"

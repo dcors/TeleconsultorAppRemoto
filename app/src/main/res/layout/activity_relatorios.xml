@@ -27,7 +27,6 @@
                 android:layout_height="?attr/actionBarSize">
 
                 <TextView
-                    android:id="@+id/toolbar_titulo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -35,7 +34,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
 
                 <ImageView
-                    android:id="@+id/imgLogo"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="bottom|right"
@@ -83,7 +81,6 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="74dp"
             android:layout_height="75dp"
             app:srcCompat="@drawable/ficha_verde_icon" />
@@ -97,7 +94,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -118,7 +114,6 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="74dp"
             android:layout_height="75dp"
             app:srcCompat="@drawable/ficha_verde_icon" />
@@ -132,7 +127,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -153,7 +147,6 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="74dp"
             android:layout_height="75dp"
             app:srcCompat="@drawable/ficha_verde_icon" />
@@ -167,7 +160,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/textView4"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -189,13 +181,11 @@
         android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView3"
             android:layout_width="74dp"
             android:layout_height="75dp"
             app:srcCompat="@drawable/ficha_verde_icon" />
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="187dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.98"
@@ -205,7 +195,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"

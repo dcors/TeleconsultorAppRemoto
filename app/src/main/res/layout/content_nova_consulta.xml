@@ -57,7 +57,6 @@
                 android:textStyle="italic" />
 
             <EditText
-                android:id="@+id/nvConsul_cpfPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"
@@ -65,7 +64,6 @@
                 android:inputType="number" />
 
             <EditText
-                android:id="@+id/nvConsul_nomePaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -74,7 +72,6 @@
 
 
             <EditText
-                android:id="@+id/nvConsul_nascPaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -117,7 +114,6 @@
 
 
                 <ImageButton
-                    android:id="@+id/nvConsul_botaoFalar"
                     style="@android:style/Theme.Material.Voice"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
@@ -158,7 +154,6 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/nvConsul_btn_anexar"
                     style="@android:style/Widget.Material.Button"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -169,7 +164,6 @@
                     app:srcCompat="@drawable/ic_attachment_black_24dp" />
 
                 <ImageButton
-                    android:id="@+id/nvConsul_btn_amera"
                     style="@android:style/Widget.Material.ImageButton"
                     android:layout_width="56dp"
                     android:layout_height="56dp"

@@ -29,7 +29,7 @@ public class DiagnosticoListView extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.listarArquivos_btNavigation);
         Menu menu = navigation.getMenu();
         MenuItem menuItem = menu.getItem(1);
-        menuItem.setChecked(true);
+        menuItem.setChecked(false);
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

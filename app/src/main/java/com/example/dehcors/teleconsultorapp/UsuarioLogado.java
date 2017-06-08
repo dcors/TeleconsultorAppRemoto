@@ -19,7 +19,7 @@ public class UsuarioLogado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.usuario_logado);
+        setContentView(R.layout.us_logado);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -33,6 +33,7 @@ public class UsuarioLogado extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_user_logado, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

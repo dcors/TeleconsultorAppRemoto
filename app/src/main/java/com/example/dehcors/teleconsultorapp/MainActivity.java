@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //botao 1
+        //botão Acessar teleconsultoria e telediagnostico
         ImageButton main_acessarConta = (ImageButton) findViewById(R.id.main_acessarConta);
         main_acessarConta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,12 +40,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //botão 2
-        ImageButton clinicas = (ImageButton) findViewById(R.id.main_clinicas);
-        clinicas.setOnClickListener(new View.OnClickListener() {
+
+        //botão Chat online
+        ImageButton suporte = (ImageButton) findViewById(R.id.main_suporte);
+        suporte.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-        encontrar();
+            String url = "http://www.telessaude.uerj.br/site/br/chat";
+            Intent itChat = new Intent(Intent.ACTION_VIEW);
+            itChat.setData(Uri.parse(url));
+            startActivity(itChat);
         }
     });
 
@@ -75,15 +79,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //botão saúde da criança
-        ImageButton sChil = (ImageButton)findViewById(R.id.main_bb);
-        sChil.setOnClickListener(new View.OnClickListener() {
+        //botão rede universitaria
+        ImageButton sUni = (ImageButton)findViewById(R.id.main_rute);
+        sUni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_materiais_infomativos.pdf   ";
-                Intent itC = new Intent(Intent.ACTION_VIEW);
-                itC.setData(Uri.parse(url));
-                startActivity(itC);
+                String url = "http://rute.rnp.br/sigs";
+                Intent itR = new Intent(Intent.ACTION_VIEW);
+                itR.setData(Uri.parse(url));
+                startActivity(itR);
             }
         });
 
@@ -106,10 +110,5 @@ public class MainActivity extends AppCompatActivity {
         Intent it1 = new Intent(MainActivity.this, UserLogin.class);
         startActivity(it1);
     }
-    public void encontrar(){
-        Intent it2 = new Intent(MainActivity.this, VerClinicas.class);
-        startActivity(it2);
-    }
-
 
 }

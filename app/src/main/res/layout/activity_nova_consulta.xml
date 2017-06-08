@@ -19,7 +19,6 @@
             android:background="?attr/colorPrimary">
 
             <ImageView
-                android:id="@+id/imgLogo"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="end"

@@ -24,7 +24,6 @@
 
 
             <EditText
-                android:id="@+id/newEsp_nu_cpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -36,7 +35,6 @@
 
 
             <EditText
-                android:id="@+id/newEsp_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -51,7 +49,6 @@
 
 
             <EditText
-                android:id="@+id/newEsp_nu_telefone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -64,7 +61,6 @@
                 />
 
             <EditText
-                android:id="@+id/newEsp_ed_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -88,7 +84,6 @@
                 style="@android:style/Widget.Material.Light.Spinner.Underlined"/>
 
             <EditText
-                android:id="@+id/newEsp_nu_reg_profissional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -101,7 +96,6 @@
                 />
 
             <EditText
-                android:id="@+id/newEsp_sg_uf_registro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -116,7 +110,6 @@
 
 
             <EditText
-                android:id="@+id/newEsp_tx_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -130,7 +123,6 @@
                 tools:ignore="LabelFor"/>
 
             <EditText
-                android:id="@+id/newEsp_repete_tx_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -145,7 +137,6 @@
 
 
             <TextView
-                android:id="@+id/newEsp_tx_foto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/photo"
@@ -154,7 +145,6 @@
                 android:textStyle="bold" />
 
             <ImageButton
-                android:id="@+id/newEsp_inserirFoto"
                 style="@android:style/Widget.ImageButton"
                 android:layout_width="200dp"
                 android:layout_height="56dp"
