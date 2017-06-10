@@ -19,7 +19,6 @@
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/navHeader_fotoPerfil"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_gravity="top"
@@ -36,7 +35,6 @@
         android:layout_marginBottom="8dp">
 
         <TextView
-            android:id="@+id/navHeader_nomeUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="Roboto Medium"
@@ -45,7 +43,6 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/navHeader_cpfUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"

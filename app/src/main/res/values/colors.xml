@@ -4,15 +4,12 @@
     <color name="colorPrimaryDark">#338a3e</color>
     <color name="colorAccent">#2962ff</color>
     <color name="primaryAcent">#98ee99</color>
+    <color name="link">#08c618</color>
     <color name="colorSecondary">#2962ff</color>
     <color name="colorSecondaryDark">#0039cb</color>
     <color name="colorSecondaryAccent">#768fff</color>
-    <color name="indigo">#5c6bc0</color>
-    <color name="deepPurple">#813ab7</color>
-    <color name="newBackground">#d6d6d6</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="fundo_btn">#3e5b3c</color>
-    <color name="fundo_2">#78b4b4</color>
     <color name="dColorTest">#efeeee</color>
+    <color name="gelo">#f4f1f1</color>
 </resources>

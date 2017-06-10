@@ -20,7 +20,6 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/nvDiagno_nuProntuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/nu_prontuario"/>
@@ -43,7 +42,6 @@
 
 
             <EditText
-                android:id="@+id/nvDiagno_txCaso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -73,7 +71,6 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/nvDiagno_btn_anexar"
                     style="@android:style/Widget.Material.Button"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -84,7 +81,6 @@
                     app:srcCompat="@drawable/ic_attachment_black_24dp" />
 
                 <ImageButton
-                    android:id="@+id/nvDiagno_btn_camera"
                     style="@android:style/Widget.Material.ImageButton"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -96,7 +92,6 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/nvDiagno_btn_enviar"
                 android:layout_marginTop="36dp"
                 android:layout_marginBottom="36dp"
                 android:layout_width="wrap_content"

@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 /**
  * Created by cors on 06/06/17.
@@ -30,7 +29,7 @@ public class ConsultaListView extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.listarArquivos_btNavigation);
         Menu menu = navigation.getMenu();
         MenuItem menuItem = menu.getItem(0);
-        menuItem.setChecked(true);
+        menuItem.setChecked(false);
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -41,7 +40,7 @@ public class ConsultaListView extends AppCompatActivity {
                         break;
 
                     case R.id.menu_listar_Diagnostico:
-                        Intent it2 =new Intent(ConsultaListView.this, DiagnosticoListView.class);
+                        Intent it2 = new Intent(ConsultaListView.this, DiagnosticoListView.class);
                         startActivity(it2);
                         break;
                 }
@@ -53,10 +52,8 @@ public class ConsultaListView extends AppCompatActivity {
         ExpandableListView activity_consulta_list_view = (ExpandableListView) findViewById(R.id.view_listarConsultas);
 
 
-
-       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 
 
 }

@@ -19,7 +19,6 @@
             android:background="?attr/colorPrimary">
 
             <ImageView
-                android:id="@+id/nEsp_logo"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="right"
@@ -27,7 +26,7 @@
                 android:visibility="visible"
                 app:layout_anchor="@+id/include"
                 app:layout_anchorGravity="top|right"
-                app:srcCompat="@drawable/logo1"/>
+                app:srcCompat="@drawable/logoa" />
 
 
         </android.support.v7.widget.Toolbar>

@@ -1,14 +1,15 @@
 <resources>
-    <string name="app_name">Teleconsultor</string>
+    <string name="app_name">TeleconsultorApp</string>
 
     <!-- Main -->
-    <string name="title_in">Teleconsultoria e Diagnóstico</string>
-    <string name="acesse">Acessar Conta</string>
-    <string name="find">Clínicas</string>
+    <string name="acesse">Consultoria e Diagnóstico</string>
+
     <string name="atPrim">Atenção Primária</string>
     <string name="saude_wo">Saúde da Mulher</string>
-    <string name="saude_bb">Saúde da Criança</string>
+    <string name="rede">Rede Universitária</string>
     <string name="saude_vo">Saúde do Idoso</string>
+    <string name="laboratorio">Laboratório de TeleSSaúde</string>
+    <string name="suporte">Suporte Online</string>
 
     <!-- Strings related to login sccreen-->
     <string name="title_activity_user_login">Acesse sua Conta</string>
@@ -16,15 +17,12 @@
     <string name="prompt_password">Senha </string>
     <string name="action_sign_in">ACESSAR</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">Endereço de email inválido</string>
-    <string name="error_invalid_password">Senha muito curta. Escolha uma senha com 04 caracteres ou mais</string>
     <string name="error_incorrect_password">Senha Incorreta</string>
-    <string name="error_field_required">Preencha este campo</string>
     <string name="permission_rationale">É necessário conceder permissão de acesso aos contatos</string>
     <string name="forgot_password">Esqueci minha Senha/Email</string>
     <string name="create_account">CADASTRE-SE </string>
     <string name="pop_newU_title">Qual é o Seu Perfil?"</string>
-    <string name="pop_newU_sub">Escolha abaixo o tipo do seu perfil profissional</string>
+    <string name="pop_newU_sub">Escolha abaixo o seu perfil profissional</string>
     <string name="title_new_agente">Novo Agente</string>
     <string name="title_new_esp">Novo Especialista</string>
     <string name="recupera_senha">Recuperar sua Senha/Email</string>
@@ -35,21 +33,20 @@
 
     <!--Strings relativas a nav_header-->
     <string name="nome_usuario">Nome do Usuario - Recuperar do BD</string>
-    <string name="email_usuario">Email Cadastrado - Recuperar do BD</string>
     <string name="cpf_usuario_ativo">Cpf do Usuário - Recuperar do BD</string>
-    <string name="pict">Foto do usuario</string>
 
     <!--Strings relativas ao drawer_dashboard -->
     <string name="drawer_settings">Alterar seus dados</string>
     <string name="drawer_logout">Fazer logout desta conta</string>
+    <string name="avisos">Avisos</string>
+    <string name="find">Clínicas</string>
 
     <!--Strings relativas ao content_dashboard-->
     <string name="verArq">Ver Arquivos</string>
-    <string name="new_check">Nova Consulta</string>
+    <string name="new_check">Solicitar Consultoria</string>
     <string name="title_activity_user_dashboard">Área de Trabalho</string>
-    <string name="diagn">Novo Diagnóstico</string>
+    <string name="diagn">Solicitar Diagnóstico</string>
     <string name="relatorio">Relatórios</string>
-    <string name="action_settings">Oções</string>
     <string name="navigation_drawer_open">Abrir drawer</string>
     <string name="navigation_drawer_close">Fechar drawer</string>
 
@@ -66,8 +63,6 @@
     <!-- Strings related a Novo Usuario -->
     <string name="full_name">Nome Completo</string>
     <string name="cpf">CPF - Apenas Números</string>
-    <string name="prof">Profissão</string>
-    <string name="id_prof">Número de Conselho</string>
     <string name="tel">Telefone</string>
     <string name="email">Email</string>
     <string name="reg_prof">Registro Profissional</string>
@@ -75,8 +70,6 @@
     <string name="rep_password">Repita a Senha</string>
     <string name="photo">Insira sua Foto</string>
     <string name="orgao_reg">Órgão e UF do Registro </string>
-    <string name="unidade">Unidade de Atendimento</string>
-    <string name="tx_cv">Insira seu Curriculo</string>
     <string name="btn_save">SALVAR</string>
 
 
@@ -119,7 +112,6 @@
 
     <!--Strings relativas ao content_nova Consulta-->
     <string name="title_activity_nova_consulta">Nova Consulta</string>
-    <string name="ncons">Realize uma Nova Consulta</string>
     <string name="nm_paciente">Nome completo do paciente</string>
     <string name="cpf_pac">CPF do paciente - Apenas numeros</string>
     <string name="data_nasc">Data de nascimento do paciente</string>
@@ -170,15 +162,12 @@
     </string-array>
 
     <!--Strings relativas a tela de arquivos-->
-    <string name="title_activity_consult_list_view">Lista de Arquivos</string>
     <string name="title_consult_navigation">Consultas</string>
     <string name="title_diagn_navigation">Diagnósticos</string>
-    <string name="title_activity_lista_arquivos">Lista de Arquivos</string>
 
 
     <!--Strings relativas a tela de localizar clinicas -->
-    <string name="title_activity_rota">Localize Unidades</string>
-    <string name="title_home_rota">Unidades</string>
+    <string name="title_activity_rota">Clínica da Família - Unidades</string>
 
 
     <!--String relativas à tela de relatorios -->
@@ -186,7 +175,6 @@
     <string name="act_rel_title">Relatorios</string>
     <string name="consul_solicitada">CONSULTAS SOLICITADAS</string>
     <string name="consult_respondida">CONSULTAS RESPONDIDAS</string>
-    <string name="consult_aguarda"></string>
     <string name="diag_solicitado">DIAGNÓSTICOS SOLICITADOS</string>
     <string name="diag_respondido">DIAGNÓSTICOS RESPONDIDOS</string>
     <string name="extrair">Extrair Relatório</string>

@@ -24,51 +24,53 @@ public class NewAgente extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //lista de profissoes do agente
-        final Spinner nAgPro = (Spinner)findViewById(R.id.newAgente_spProfissao);
+        final Spinner nAgPro = (Spinner) findViewById(R.id.newAgente_spProfissao);
         ArrayAdapter adAgPro = ArrayAdapter.createFromResource(this, R.array.tipo_profis_agente, android.R.layout.simple_spinner_dropdown_item);
         nAgPro.setAdapter(adAgPro);
 
         AdapterView.OnItemSelectedListener escolherPro = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (!nAgPro.getSelectedItem().toString().equalsIgnoreCase("Sua profissão é:")){
+                if (!nAgPro.getSelectedItem().toString().equalsIgnoreCase("Sua profissão é:")) {
                     Toast.makeText(NewAgente.this,
                             nAgPro.getSelectedItem().toString(),
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        }; nAgPro.setOnItemSelectedListener(escolherPro);
-
+        };
+        nAgPro.setOnItemSelectedListener(escolherPro);
 
 
         //lista de unidades de atendimento
-       final Spinner nAgUni = (Spinner)findViewById(R.id.newAgente_spUnidade);
+        final Spinner nAgUni = (Spinner) findViewById(R.id.newAgente_spUnidade);
         ArrayAdapter adAgUni = ArrayAdapter.createFromResource(this, R.array.uni_atendimento, android.R.layout.simple_spinner_dropdown_item);
         nAgUni.setAdapter(adAgUni);
 
         AdapterView.OnItemSelectedListener escolherUni = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (!nAgUni.getSelectedItem().toString().equalsIgnoreCase("Unidade de atendimento:")){
+                if (!nAgUni.getSelectedItem().toString().equalsIgnoreCase("Unidade de atendimento:")) {
                     Toast.makeText(NewAgente.this,
                             nAgUni.getSelectedItem().toString(),
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        }; nAgUni.setOnItemSelectedListener(escolherUni);
-
+        };
+        nAgUni.setOnItemSelectedListener(escolherUni);
 
 
         //botao salvar estes dados
-        Button save = (Button)findViewById(R.id.newAgente_btnSalvar);
+        Button save = (Button) findViewById(R.id.newAgente_btnSalvar);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +81,7 @@ public class NewAgente extends AppCompatActivity {
 
 
         //float button cancelar
-        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.newAgent_floatSair);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.newAgent_floatSair);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

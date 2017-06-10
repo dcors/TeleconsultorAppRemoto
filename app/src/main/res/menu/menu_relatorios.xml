@@ -7,7 +7,6 @@
         android:title="@string/extrair">
         <menu>
             <item
-                android:id="@+id/extr_excel"
                 android:icon="@drawable/excel"
                 android:title="@string/r_excel"/>
         </menu>
@@ -18,16 +17,13 @@
         android:title="@string/enviar">
         <menu>
             <item
-                android:id="@+id/share_email"
                 android:icon="@drawable/email1"
                 android:title="@string/r_email"/>
         <item
-        android:id="@+id/share_btooth"
-        android:icon="@android:drawable/stat_sys_data_bluetooth"
+            android:icon="@android:drawable/stat_sys_data_bluetooth"
         android:title="@string/r_btooth">
         </item>
             <item
-                android:id="@+id/share_message"
                 android:icon="@drawable/message1"
                 android:title="@string/r_messag"/>
         </menu>

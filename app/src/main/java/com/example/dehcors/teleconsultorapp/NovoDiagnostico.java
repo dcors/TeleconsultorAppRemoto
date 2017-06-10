@@ -3,8 +3,6 @@ package com.example.dehcors.teleconsultorapp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,7 +25,7 @@ public class NovoDiagnostico extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //spinner genero do paciente
-        final Spinner nDgenero = (Spinner)findViewById(R.id.nvDiagno_genPaciente);
+        final Spinner nDgenero = (Spinner) findViewById(R.id.nvDiagno_genPaciente);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.spGenero, android.R.layout.simple_spinner_dropdown_item);
         nDgenero.setAdapter(adapter1);
         AdapterView.OnItemSelectedListener genero = new AdapterView.OnItemSelectedListener() {
@@ -39,30 +37,33 @@ public class NovoDiagnostico extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        };nDgenero.setOnItemSelectedListener(genero);
-
+        };
+        nDgenero.setOnItemSelectedListener(genero);
 
 
         //spinner para especialidades médicas
-        final Spinner nuAt = (Spinner)findViewById(R.id.nvDiagno_areaMedic);
+        final Spinner nuAt = (Spinner) findViewById(R.id.nvDiagno_areaMedic);
         ArrayAdapter adAt = ArrayAdapter.createFromResource(this, R.array.spAreaConsulta, android.R.layout.simple_spinner_dropdown_item);
         nuAt.setAdapter(adAt);
         AdapterView.OnItemSelectedListener especialidade = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (!nuAt.getSelectedItem().toString().equalsIgnoreCase("Especialidade:")){
+                if (!nuAt.getSelectedItem().toString().equalsIgnoreCase("Especialidade:")) {
                     Toast.makeText(NovoDiagnostico.this,
                             nuAt.getSelectedItem().toString(),
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        }; nuAt.setOnItemSelectedListener(especialidade);
+        };
+        nuAt.setOnItemSelectedListener(especialidade);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -93,7 +94,7 @@ public class NovoDiagnostico extends AppCompatActivity {
         alertDialog.show();
     }
 
-    public void salvar_consulta(){
+    public void salvar_consulta() {
         Intent it5 = new Intent(NovoDiagnostico.this, UserDashboard.class);
         startActivity(it5);
     }

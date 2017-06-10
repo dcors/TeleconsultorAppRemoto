@@ -20,7 +20,6 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:id="@+id/nd_logo"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="end"
@@ -28,7 +27,7 @@
                 app:layout_anchor="@+id/layout_nvDiag"
                 app:layout_anchorGravity="top|right"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/logo1" />
+                app:srcCompat="@drawable/logoa" />
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>

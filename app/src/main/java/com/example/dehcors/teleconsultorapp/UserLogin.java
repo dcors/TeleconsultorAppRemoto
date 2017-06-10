@@ -3,24 +3,21 @@ package com.example.dehcors.teleconsultorapp;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.content.CursorLoader;
 import android.content.Intent;
+import android.content.Loader;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.app.LoaderManager.LoaderCallbacks;
-
-import android.content.CursorLoader;
-import android.content.Loader;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.AsyncTask;
-
-import android.os.Build;
-import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,7 +31,6 @@ import android.widget.Toast;
 
 import com.example.dehcors.teleconsultorapp.DAO.TeleconsultoriaDAO;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +79,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         mPasswordView = (EditText) findViewById(R.id.userLogin_senha);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent){
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
                     try {
                         attemptLogin();
@@ -109,35 +105,33 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         });
 
 
-        Button novo = (Button)findViewById(R.id.login_novaConta);
-        novo.setOnClickListener(new OnClickListener(){
+        Button novo = (Button) findViewById(R.id.login_novaConta);
+        novo.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent itNc = new Intent(UserLogin.this, NewUserPop.class);
                 startActivity(itNc);
             }
         });
 
-        Button forgot = (Button)findViewById(R.id.userLogin_esqueceuSenha);
+        Button forgot = (Button) findViewById(R.id.userLogin_esqueceuSenha);
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserLogin.this);
-        View mView = getLayoutInflater().inflate(R.layout.pop_esqueci_senha, null);
-        alertDialog.setView(mView);
-        AlertDialog dialog = alertDialog.create();
-        dialog.show();
+                View mView = getLayoutInflater().inflate(R.layout.pop_esqueci_senha, null);
+                alertDialog.setView(mView);
+                AlertDialog dialog = alertDialog.create();
+                dialog.show();
             }
         });
-
-
 
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
 
-    public void sendMessEmail(){
+    public void sendMessEmail() {
 
     }
 
@@ -194,17 +188,17 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
     }
 
 
-    private void attemptLogin() throws MalformedURLException, Exception{
+    private void attemptLogin() throws MalformedURLException, Exception {
 
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-        Toast.makeText(this,"Logando usuário "+email,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Logando usuário " + email, Toast.LENGTH_LONG).show();
 
-        if((email != null )&&(password != null)) {
+        if ((email != null) && (password != null)) {
             TeleconsultoriaDAO dao = new TeleconsultoriaDAO();
-            String usuario = dao.getLogin(email,password);
-            Toast.makeText(this,usuario,Toast.LENGTH_LONG).show();
-            Toast.makeText(this, "Logado com sucesso",Toast.LENGTH_LONG).show();
+            String usuario = dao.getLogin(email, password);
+            Toast.makeText(this, usuario, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
             Intent it3 = new Intent(UserLogin.this, UserDashboard.class);
             startActivity(it3);
         }
@@ -415,7 +409,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         finish();
     }

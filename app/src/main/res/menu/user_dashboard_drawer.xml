@@ -3,6 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/navHeader_avisos"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/avisos" />
+        <item
+            android:id="@+id/navHeader_clinicas"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/find" />
+        <item
             android:id="@+id/navHeader_altDados"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/drawer_settings" />
