@@ -2,16 +2,13 @@ package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import java.net.URI;
-
 public class MainActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -20,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //logo
-        ImageView logo = (ImageView)findViewById(R.id.main_logo);
+        ImageView logo = (ImageView) findViewById(R.id.main_logo);
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         main_acessarConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            do_login();
+                do_login();
             }
         });
 
@@ -44,18 +41,18 @@ public class MainActivity extends AppCompatActivity {
         //botão Chat online
         ImageButton suporte = (ImageButton) findViewById(R.id.main_suporte);
         suporte.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String url = "http://www.telessaude.uerj.br/site/br/chat";
-            Intent itChat = new Intent(Intent.ACTION_VIEW);
-            itChat.setData(Uri.parse(url));
-            startActivity(itChat);
-        }
-    });
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.telessaude.uerj.br/site/br/chat";
+                Intent itChat = new Intent(Intent.ACTION_VIEW);
+                itChat.setData(Uri.parse(url));
+                startActivity(itChat);
+            }
+        });
 
 
         //botao saúde da mulher
-        ImageButton sWoman = (ImageButton)findViewById(R.id.main_woman);
+        ImageButton sWoman = (ImageButton) findViewById(R.id.main_woman);
         sWoman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //botao saúde do idoso
-        ImageButton sOld = (ImageButton)findViewById(R.id.main_oldMan);
+        ImageButton sOld = (ImageButton) findViewById(R.id.main_oldMan);
         sOld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //botão rede universitaria
-        ImageButton sUni = (ImageButton)findViewById(R.id.main_rute);
+        ImageButton sUni = (ImageButton) findViewById(R.id.main_rute);
         sUni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //botão atençao basica
-        ImageButton sPs = (ImageButton)findViewById(R.id.main_atPrimaria);
+        ImageButton sPs = (ImageButton) findViewById(R.id.main_atPrimaria);
         sPs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,8 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    public void do_login(){
+    public void do_login() {
         Intent it1 = new Intent(MainActivity.this, UserLogin.class);
         startActivity(it1);
     }

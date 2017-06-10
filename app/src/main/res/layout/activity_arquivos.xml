@@ -25,7 +25,7 @@
             android:layout_weight="1"
             android:layout_gravity="end"
             android:layout_margin="8dp"
-            app:srcCompat="@drawable/logo1" />
+            app:srcCompat="@drawable/logoa" />
 
     </android.support.v7.widget.Toolbar>
 

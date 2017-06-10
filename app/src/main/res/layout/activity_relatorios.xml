@@ -37,7 +37,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="bottom|right"
-                    app:srcCompat="@drawable/logo1"
+                    app:srcCompat="@drawable/logoa"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_centerVertical="true"

@@ -24,9 +24,9 @@ public class NewUserPop extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(dmNew);
         int width = dmNew.widthPixels;
         int height = dmNew.heightPixels;
-        getWindow().setLayout((int)(width*.8),(int)(height*.4)); //.8 significa 80% da tela
+        getWindow().setLayout((int) (width * .8), (int) (height * .4)); //.8 significa 80% da tela
 
-        Button new_agent = (Button)findViewById(R.id.new_agente);
+        Button new_agent = (Button) findViewById(R.id.new_agente);
         new_agent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,7 @@ public class NewUserPop extends Activity {
             }
         });
 
-        Button new_espec = (Button)findViewById(R.id.new_especial);
+        Button new_espec = (Button) findViewById(R.id.new_especial);
         new_espec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +47,7 @@ public class NewUserPop extends Activity {
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         finish();
     }

@@ -1,10 +1,10 @@
 package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,7 +37,7 @@ public class DiagnosticoListView extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.menu_listar_Consultas:
-                        Intent it1 = new Intent(DiagnosticoListView.this,ConsultaListView.class);
+                        Intent it1 = new Intent(DiagnosticoListView.this, ConsultaListView.class);
                         startActivity(it1);
                         break;
 
@@ -48,7 +48,6 @@ public class DiagnosticoListView extends AppCompatActivity {
                 return false;
             }
         });
-
 
 
         //Lista mostrando diagnosticos

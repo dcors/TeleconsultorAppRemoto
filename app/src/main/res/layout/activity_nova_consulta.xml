@@ -22,7 +22,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="end"
-                app:srcCompat="@drawable/logo1"
+                app:srcCompat="@drawable/logoa"
                 app:layout_anchor="@+id/nConsul_content"
                 app:layout_anchorGravity="top|right"
                 android:layout_weight="1"

@@ -4,8 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -32,7 +30,7 @@ public class NovaConsulta extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //lista de genero feminino/masculino
-        final Spinner nvCon_spGenero = (Spinner)findViewById(R.id.nvConsul_spGenero);
+        final Spinner nvCon_spGenero = (Spinner) findViewById(R.id.nvConsul_spGenero);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.spGenero, android.R.layout.simple_spinner_dropdown_item);
         nvCon_spGenero.setAdapter(adapter1);
         AdapterView.OnItemSelectedListener genero = new AdapterView.OnItemSelectedListener() {
@@ -44,14 +42,16 @@ public class NovaConsulta extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        };nvCon_spGenero.setOnItemSelectedListener(genero);
+        };
+        nvCon_spGenero.setOnItemSelectedListener(genero);
 
 
         //lista de áreas da medicina
-        final Spinner nvCon_area = (Spinner)findViewById(R.id.nvConsul_idArea);
+        final Spinner nvCon_area = (Spinner) findViewById(R.id.nvConsul_idArea);
         ArrayAdapter adapter2 = ArrayAdapter.createFromResource(this, R.array.spAreaConsulta, android.R.layout.simple_spinner_dropdown_item);
         nvCon_area.setAdapter(adapter2);
         AdapterView.OnItemSelectedListener area = new AdapterView.OnItemSelectedListener() {
@@ -63,14 +63,16 @@ public class NovaConsulta extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        };nvCon_area.setOnItemSelectedListener(area);
+        };
+        nvCon_area.setOnItemSelectedListener(area);
 
 
         //lista de regiões geograficas
-        final Spinner nvCon_Regiao = (Spinner)findViewById(R.id.nvConsul_idRegiao);
+        final Spinner nvCon_Regiao = (Spinner) findViewById(R.id.nvConsul_idRegiao);
         ArrayAdapter adapter3 = ArrayAdapter.createFromResource(this, R.array.spRegiaoNucleo, android.R.layout.simple_spinner_dropdown_item);
         nvCon_Regiao.setAdapter(adapter3);
         AdapterView.OnItemSelectedListener regiao = new AdapterView.OnItemSelectedListener() {
@@ -82,15 +84,16 @@ public class NovaConsulta extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        };nvCon_Regiao.setOnItemSelectedListener(regiao);
-
+        };
+        nvCon_Regiao.setOnItemSelectedListener(regiao);
 
 
         //lista de tipos de dúvidas
-        final Spinner nvCon_Duvida = (Spinner)findViewById(R.id.nvConsul_tipoDuvida);
+        final Spinner nvCon_Duvida = (Spinner) findViewById(R.id.nvConsul_tipoDuvida);
         ArrayAdapter adapter4 = ArrayAdapter.createFromResource(this, R.array.spDuvida, android.R.layout.simple_spinner_dropdown_item);
         nvCon_Duvida.setAdapter(adapter4);
         AdapterView.OnItemSelectedListener duvida = new AdapterView.OnItemSelectedListener() {
@@ -102,18 +105,18 @@ public class NovaConsulta extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        };nvCon_Duvida.setOnItemSelectedListener(duvida);
+        };
+        nvCon_Duvida.setOnItemSelectedListener(duvida);
 
 
-
-
-        Button nvConsul_saveConsulta = (Button)findViewById(R.id.nvConsul_saveConsulta);
-        nvConsul_saveConsulta.setOnClickListener(new View.OnClickListener(){
+        Button nvConsul_saveConsulta = (Button) findViewById(R.id.nvConsul_saveConsulta);
+        nvConsul_saveConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
-                public void onClick (View v){
+            public void onClick(View v) {
                 salvar_consulta();
             }
         });
@@ -122,32 +125,32 @@ public class NovaConsulta extends AppCompatActivity {
 
     }
 
-    public void getSpeechInput(View view){
+    public void getSpeechInput(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
 
-            if (intent.resolveActivity(getPackageManager()) !=null){
-                startActivityForResult(intent, 10);
-            }else{
-                Toast.makeText(this, "Seu aparelho não suporta comando de voz", Toast.LENGTH_SHORT).show();
-            }
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, 10);
+        } else {
+            Toast.makeText(this, "Seu aparelho não suporta comando de voz", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-            switch (requestCode){
-                case 10:
-                    if (resultCode == RESULT_OK && data != null){
-                        ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                        nvConsul_txCaso.setText(result.get(0));
-                    } break;
-            }
+        switch (requestCode) {
+            case 10:
+                if (resultCode == RESULT_OK && data != null) {
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    nvConsul_txCaso.setText(result.get(0));
+                }
+                break;
+        }
     }
-
 
 
     public void cancel_click(View v) {
@@ -174,7 +177,7 @@ public class NovaConsulta extends AppCompatActivity {
         alertDialog.show();
     }
 
-    public void salvar_consulta(){
+    public void salvar_consulta() {
         Intent it5 = new Intent(NovaConsulta.this, UserDashboard.class);
         startActivity(it5);
     }

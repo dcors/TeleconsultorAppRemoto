@@ -4,15 +4,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -27,7 +27,6 @@ public class UserDashboard extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.userDash_Sair);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,15 +35,15 @@ public class UserDashboard extends AppCompatActivity
             }
         });
 
-        ImageButton userDash_nConsult = (ImageButton)findViewById(R.id.userDash_newConsul);
-        userDash_nConsult.setOnClickListener(new View.OnClickListener(){
+        ImageButton userDash_nConsult = (ImageButton) findViewById(R.id.userDash_newConsul);
+        userDash_nConsult.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 nova_consulta();
             }
         });
 
-        ImageButton userDash_verConsulta = (ImageButton)findViewById(R.id.userDash_verArquivo);
+        ImageButton userDash_verConsulta = (ImageButton) findViewById(R.id.userDash_verArquivo);
         userDash_verConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +51,7 @@ public class UserDashboard extends AppCompatActivity
             }
         });
 
-        ImageButton userDash_newDiag = (ImageButton)findViewById(R.id.userDash_newDiagnostico);
+        ImageButton userDash_newDiag = (ImageButton) findViewById(R.id.userDash_newDiagnostico);
         userDash_newDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +59,7 @@ public class UserDashboard extends AppCompatActivity
             }
         });
 
-        ImageButton userDash_relatorios = (ImageButton)findViewById(R.id.userDash_relatorios);
+        ImageButton userDash_relatorios = (ImageButton) findViewById(R.id.userDash_relatorios);
         userDash_relatorios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,33 +90,29 @@ public class UserDashboard extends AppCompatActivity
     }
 
 
-
-
-
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.navHeader_avisos){
+        if (id == R.id.navHeader_avisos) {
             AlertDialog.Builder alert1 = new AlertDialog.Builder(UserDashboard.this);
             alert1.setTitle("CONSULTORIAS");
             alert1.setMessage("Você não possui consultorias pendentes de resposta");
-            alert1.setIcon(R.drawable.ic_stat_alertas_activity);
-            alert1.setPositiveButton("Ok", new DialogInterface.OnClickListener(){
-               @Override
-                public void onClick(DialogInterface dialog1, int wich){
-                   dialog1.cancel();
-               }
-            });alert1.show();
+            alert1.setIcon(R.drawable.logoa);
+            alert1.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog1, int wich) {
+                    dialog1.cancel();
+                }
+            });
+            alert1.show();
 
-        }else if (id == R.id.navHeader_clinicas){
+        } else if (id == R.id.navHeader_clinicas) {
             Intent itClin = new Intent(UserDashboard.this, VerClinicas.class);
             startActivity(itClin);
-        }else
-        if (id == R.id.navHeader_altDados) {
+        } else if (id == R.id.navHeader_altDados) {
             Intent ituser = new Intent(UserDashboard.this, UsuarioLogado.class);
             startActivity(ituser);
         } else if (id == R.id.navHeader_logOut) {
@@ -149,21 +144,20 @@ public class UserDashboard extends AppCompatActivity
         return true;
     }
 
-    public void nova_consulta(){
+    public void nova_consulta() {
         Intent nc = new Intent(UserDashboard.this, NovaConsulta.class);
         startActivity(nc);
     }
 
-    public void novo_diagnostico(){
+    public void novo_diagnostico() {
         Intent nd = new Intent(UserDashboard.this, NovoDiagnostico.class);
         startActivity(nd);
     }
 
-    public void listar_consultas(){
+    public void listar_consultas() {
         Intent lc = new Intent(UserDashboard.this, ConsultaListView.class);
         startActivity(lc);
     }
-
 
 
 }

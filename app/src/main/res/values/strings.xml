@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Teleconsultor</string>
+    <string name="app_name">TeleconsultorApp</string>
 
     <!-- Main -->
-    <string name="title_in">Teleconsultoria e Diagnóstico</string>
     <string name="acesse">Consultoria e Diagnóstico</string>
 
     <string name="atPrim">Atenção Primária</string>
@@ -10,7 +9,7 @@
     <string name="rede">Rede Universitária</string>
     <string name="saude_vo">Saúde do Idoso</string>
     <string name="laboratorio">Laboratório de TeleSSaúde</string>
-    <string name="suporte">Suporte onLine</string>
+    <string name="suporte">Suporte Online</string>
 
     <!-- Strings related to login sccreen-->
     <string name="title_activity_user_login">Acesse sua Conta</string>
@@ -23,7 +22,7 @@
     <string name="forgot_password">Esqueci minha Senha/Email</string>
     <string name="create_account">CADASTRE-SE </string>
     <string name="pop_newU_title">Qual é o Seu Perfil?"</string>
-    <string name="pop_newU_sub">Escolha abaixo o tipo do seu perfil profissional</string>
+    <string name="pop_newU_sub">Escolha abaixo o seu perfil profissional</string>
     <string name="title_new_agente">Novo Agente</string>
     <string name="title_new_esp">Novo Especialista</string>
     <string name="recupera_senha">Recuperar sua Senha/Email</string>
@@ -168,7 +167,7 @@
 
 
     <!--Strings relativas a tela de localizar clinicas -->
-    <string name="title_activity_rota">Localize Unidades</string>
+    <string name="title_activity_rota">Clínica da Família - Unidades</string>
 
 
     <!--String relativas à tela de relatorios -->
