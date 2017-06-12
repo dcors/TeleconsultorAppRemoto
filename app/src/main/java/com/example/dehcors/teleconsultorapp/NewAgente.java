@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.dehcors.teleconsultorapp.helpers.SolicitanteHelper;
+import com.example.dehcors.teleconsultorapp.models.Solicitante;
 
 public class NewAgente extends AppCompatActivity {
 
@@ -80,7 +81,8 @@ public class NewAgente extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+               Solicitante solicitante= solicitanteHelper.pegaSolicitante();
+                Toast.makeText(NewAgente.this,"Solicitante "+solicitante.getAgenteNome()+" Salvo",Toast.LENGTH_LONG).show();
                 Intent it = new Intent(NewAgente.this, MainActivity.class);
                 startActivity(it);
             }
