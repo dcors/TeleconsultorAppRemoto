@@ -192,11 +192,13 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
 
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-        Toast.makeText(this, "Logando usuário " + email, Toast.LENGTH_LONG).show();
+
 
         if ((email != null) && (password != null)) {
 
             Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(UserLogin.this,UserDashboard.class);
+            startActivity(intent);
 
         }
 
