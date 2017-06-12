@@ -14,12 +14,17 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.helpers.SolicitanteHelper;
+
 public class NewAgente extends AppCompatActivity {
+
+    private SolicitanteHelper solicitanteHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_agente);
+        solicitanteHelper = new SolicitanteHelper(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.agt_toolbar);
         setSupportActionBar(toolbar);
 
@@ -74,6 +79,8 @@ public class NewAgente extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent it = new Intent(NewAgente.this, MainActivity.class);
                 startActivity(it);
             }

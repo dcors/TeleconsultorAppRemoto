@@ -195,12 +195,9 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
         Toast.makeText(this, "Logando usuário " + email, Toast.LENGTH_LONG).show();
 
         if ((email != null) && (password != null)) {
-            TeleconsultoriaDAO dao = new TeleconsultoriaDAO();
-            String usuario = dao.getLogin(email, password);
-            Toast.makeText(this, usuario, Toast.LENGTH_LONG).show();
+
             Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
-            Intent it3 = new Intent(UserLogin.this, UserDashboard.class);
-            startActivity(it3);
+
         }
 
 /*
