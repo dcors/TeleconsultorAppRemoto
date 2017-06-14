@@ -17,6 +17,14 @@ public class GenericDAO extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
+        String sql = "CREATE TABLE Anexo(idAnexo INTEGER,urlAnexo TEXT);" +
+                     "CREATE TABLE Paciente( cpf TEXT,nomePaciente TEXT,nascimento TEXT,sexo TEXT);" +
+                     "CREATE TABLE Consulta(tipoConsulta INTEGER, idConsulta INTEGER,cpfPaciente TEXT,especialidade TEXT, idUsuario INTEGER,idParecer INTEGER);" +
+                     "CREATE TABLE Parecer(idParecer INTEGER, idAnexo INTEGER,textoParecer TEXT);" +
+                     "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);" +
+                     "CREATE TABLE Usuario(idUsuario INTEGER, idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,registroProfissional TEXT,unidadeUsuario,orgaoUFRegistro TEXT,senha TEXT,idArea INTEGE);" +
+                     "CREATE TABLE TipoUsuario(idTipo INTEGER, nomeTipo INTEGER);";
+
         /*
         * Criar todas as tabelas
         *
