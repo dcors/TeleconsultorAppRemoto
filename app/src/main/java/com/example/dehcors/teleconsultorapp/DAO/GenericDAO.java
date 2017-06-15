@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.dehcors.teleconsultorapp.Usuario;
 import com.example.dehcors.teleconsultorapp.models.Consulta;
 import com.example.dehcors.teleconsultorapp.models.Diagnostico;
 import com.example.dehcors.teleconsultorapp.models.Especialista;
@@ -29,7 +30,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 
         String sql1 = "CREATE TABLE Anexo(idAnexo INTEGER,urlAnexo TEXT);" ;
         String sql2 = "CREATE TABLE Paciente( cpf TEXT,nomePaciente TEXT,nascimento TEXT,sexo TEXT);" ;
-        String sql3 = "CREATE TABLE Consulta(caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
+        String sql3 = "CREATE TABLE Consulta(atendida int,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
         String sql4 = "CREATE TABLE Parecer(idParecer INTEGER, idAnexo INTEGER,textoParecer TEXT);";
         String sql5 = "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);";
         String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
@@ -64,7 +65,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 
 
         ContentValues dados = new ContentValues();
-        dados.put("idTipo",solicitante.getIdTipo());
+        dados.put("idTipo",1);
         dados.put("nomeUsuario",solicitante.getAgenteNome());
         dados.put("cpfUsuario",solicitante.getAgenteCPF());
         dados.put("telefoneUsuario",solicitante.getAgenteTelefone());
@@ -81,7 +82,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues dados = new ContentValues();
-        dados.put("idTipo",especialista.getIdTipo());
+        dados.put("idTipo",2);
         dados.put("nomeUsuario",especialista.getEspecialistaNome());
         dados.put("cpfUsuario",especialista.getEspecialistaCPF());
         dados.put("profissao",especialista.getEspecialistaProfissao());
@@ -97,6 +98,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("cpfPaciente",consulta.getCpfPaciente());
         dados.put("especialidade",consulta.getEspecialidade());
         dados.put("tipo","Consultoria");
+        dados.put("atendida",0);
         db.insert("Consulta",null,dados);
     }
 
@@ -108,10 +110,12 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("prontuario",diagnostico.getProntuario());
         dados.put("especialidade",diagnostico.getEspecialidade());
         dados.put("tipo","Diagnóstico");
+        dados.put("atendida",0);
         db.insert("Consulta",null,dados);
     }
 
     public List<Consulta> getConsultas() {
+
         String sql = "SELECT * FROM Consulta";
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(sql,null);
@@ -121,9 +125,27 @@ public class GenericDAO extends SQLiteOpenHelper {
             consulta.setTxCaso(c.getString(c.getColumnIndex("caso")));
             consulta.setCpfPaciente(c.getString(c.getColumnIndex("cpfPaciente")));
             consulta.setEspecialidade(c.getString(c.getColumnIndex("especialidade")));
+            consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
+            consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
             consultas.add(consulta);
         }
         c.close();
         return consultas;
+    }
+
+    public String verificaUsuario(String email, String senha) {
+        SQLiteDatabase db = getWritableDatabase();
+        String cpf =null;
+        String [] params ={email,senha};
+        String sql = "SELECT cpfUsuario FROM Usuario where emailUsuario =? AND senha =?";
+        Cursor c = db.rawQuery(sql,params);
+        if(c.moveToNext()){
+
+             cpf = c.getString(c.getColumnIndex("cpfUsuario")).toString();
+        }
+
+        c.close();
+        return cpf;
+
     }
 }

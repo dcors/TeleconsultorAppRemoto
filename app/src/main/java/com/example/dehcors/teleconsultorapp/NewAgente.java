@@ -83,12 +83,17 @@ public class NewAgente extends AppCompatActivity {
             public void onClick(View v) {
 
                Solicitante solicitante = solicitanteHelper.pegaSolicitante();
-                GenericDAO dao = new GenericDAO(NewAgente.this);
-                dao.insereSolicitante(solicitante);
-                dao.close();
-                Toast.makeText(NewAgente.this,"Solicitante "+solicitante.getAgenteNome()+" Salvo",Toast.LENGTH_LONG).show();
-                Intent it = new Intent(NewAgente.this, MainActivity.class);
-                startActivity(it);
+                if(solicitante.getAgenteSenha().equals(solicitante.getAgenteRepitaSenha())){
+                    GenericDAO dao = new GenericDAO(NewAgente.this);
+                    dao.insereSolicitante(solicitante);
+                    dao.close();
+                    Toast.makeText(NewAgente.this,"Solicitante "+solicitante.getAgenteNome()+" Salvo",Toast.LENGTH_LONG).show();
+                    Intent it = new Intent(NewAgente.this, MainActivity.class);
+                    startActivity(it);
+                }else {
+                    Toast.makeText(NewAgente.this,"As senhas dever ser iguais.",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 

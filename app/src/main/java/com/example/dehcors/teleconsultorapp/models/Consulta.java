@@ -5,13 +5,22 @@ package com.example.dehcors.teleconsultorapp.models;
  */
 
 public class Consulta {
-    private int tipoConsulta ;
+    private String tipoConsulta ;
     private int idConsulta ;
     private String cpfPaciente ;
     private String especialidade ;
     private int idUsuario ;
     private int idParecer ;
     private String txCaso;
+    private int atendida;
+
+    public int getAtendida() {
+        return atendida;
+    }
+
+    public void setAtendida(int atendida) {
+        this.atendida = atendida;
+    }
 
     public String getTxCaso() {
         return txCaso;
@@ -21,11 +30,11 @@ public class Consulta {
         this.txCaso = txCaso;
     }
 
-    public int getTipoConsulta() {
+    public String getTipoConsulta() {
         return tipoConsulta;
     }
 
-    public void setTipoConsulta(int tipoConsulta) {
+    public void setTipoConsulta(String tipoConsulta) {
         this.tipoConsulta = tipoConsulta;
     }
 
@@ -71,6 +80,13 @@ public class Consulta {
 
     @Override
     public String toString() {
-        return getCpfPaciente()+ " - "+getEspecialidade();
+        String atendida ="";
+        if(getAtendida()==0){
+            atendida = "Não atendida";
+        } else {
+            atendida = "Atendida";
+        }
+
+        return getTipoConsulta()+ " -- "+atendida;
     }
 }

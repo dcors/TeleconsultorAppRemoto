@@ -56,14 +56,21 @@ public class NewEspecialista extends AppCompatActivity {
         saveEsp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 EspecialistaHelper helper = new EspecialistaHelper(NewEspecialista.this);
                 Especialista especialista = helper.getEspecialista();
-                GenericDAO dao = new GenericDAO(NewEspecialista.this);
-                dao.insereEspecialista(especialista);
-                dao.close();
-                Toast.makeText(NewEspecialista.this,"Especialista " +especialista.getEspecialistaNome()+" Salvo com sucesso",Toast.LENGTH_LONG).show();
-                Intent it = new Intent(NewEspecialista.this, MainActivity.class);
-                startActivity(it);
+                if(especialista.getEspecialistaSennha().equals(especialista.getEspecialistaRepitaSenha()) ){
+                    GenericDAO dao = new GenericDAO(NewEspecialista.this);
+                    dao.insereEspecialista(especialista);
+                    dao.close();
+                    Toast.makeText(NewEspecialista.this,"Especialista " +especialista.getEspecialistaNome()+" Salvo com sucesso",Toast.LENGTH_LONG).show();
+                    Intent it = new Intent(NewEspecialista.this, MainActivity.class);
+                    startActivity(it);
+                }else {
+
+                    Toast.makeText(NewEspecialista.this,"As senhas devem ser iguais.",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 

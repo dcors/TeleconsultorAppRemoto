@@ -29,6 +29,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
+
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -194,9 +196,17 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
 
         if ((email != null) && (password != null)) {
 
-            Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(UserLogin.this,UserDashboard.class);
-            startActivity(intent);
+            GenericDAO dao = new GenericDAO(UserLogin.this);
+           String cpf = dao.verificaUsuario(email,password);
+            dao.close();
+
+    if(cpf != null) {
+        Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(UserLogin.this, UserDashboard.class);
+        startActivity(intent);
+    } else {
+        Toast.makeText(this, "Email ou Senha incorreto.", Toast.LENGTH_LONG).show();
+    }
 
         }
 
