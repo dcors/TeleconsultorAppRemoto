@@ -47,7 +47,8 @@ public class UserDashboard extends AppCompatActivity
         userDash_verConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listar_consultas();
+                listar_consultas()
+                ;
             }
         });
 
@@ -155,7 +156,7 @@ public class UserDashboard extends AppCompatActivity
     }
 
     public void listar_consultas() {
-        Intent lc = new Intent(UserDashboard.this, ConsultaListView.class);
+        Intent lc = new Intent(UserDashboard.this, ListaDeConsultas.class);
         startActivity(lc);
     }
 

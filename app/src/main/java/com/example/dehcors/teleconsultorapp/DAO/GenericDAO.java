@@ -29,7 +29,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 
         String sql1 = "CREATE TABLE Anexo(idAnexo INTEGER,urlAnexo TEXT);" ;
         String sql2 = "CREATE TABLE Paciente( cpf TEXT,nomePaciente TEXT,nascimento TEXT,sexo TEXT);" ;
-        String sql3 = "CREATE TABLE Consulta(caso TEXT,cpfPaciente TEXT,especialidade TEXT);";
+        String sql3 = "CREATE TABLE Consulta(caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
         String sql4 = "CREATE TABLE Parecer(idParecer INTEGER, idAnexo INTEGER,textoParecer TEXT);";
         String sql5 = "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);";
         String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
@@ -96,6 +96,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("caso",consulta.getTxCaso());
         dados.put("cpfPaciente",consulta.getCpfPaciente());
         dados.put("especialidade",consulta.getEspecialidade());
+        dados.put("tipo","Consultoria");
         db.insert("Consulta",null,dados);
     }
 
@@ -106,6 +107,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("caso",diagnostico.getCaso());
         dados.put("prontuario",diagnostico.getProntuario());
         dados.put("especialidade",diagnostico.getEspecialidade());
+        dados.put("tipo","Diagnóstico");
         db.insert("Consulta",null,dados);
     }
 

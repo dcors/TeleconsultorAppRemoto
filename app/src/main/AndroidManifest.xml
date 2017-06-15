@@ -84,9 +84,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity android:name=".ArquivosActivity">
-
-        </activity>
+        <activity android:name=".ArquivosActivity"></activity>
         <activity
             android:name=".ConsultaListView"
             android:label="@string/title_consult_navigation"
@@ -94,18 +92,16 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserDashboard">
-            </meta-data>
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard"></meta-data>
         </activity>
-
-        <activity android:name=".DiagnosticoListView"
+        <activity
+            android:name=".DiagnosticoListView"
             android:label="@string/title_diagn_navigation"
             android:parentActivityName=".UserDashboard"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserDashboard">
-            </meta-data>
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard"></meta-data>
         </activity>
 
         <meta-data
@@ -138,7 +134,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-
         <activity
             android:name=".NovoDiagnostico"
             android:label="@string/title_activity_novo_diagnostico"
@@ -148,6 +143,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
+        <activity android:name=".ListaDeConsultas"></activity>
     </application>
 
 </manifest>

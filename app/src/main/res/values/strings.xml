@@ -107,9 +107,6 @@
     </string-array>
 
 
-
-
-
     <!--Strings relativas ao content_nova Consulta-->
     <string name="title_activity_nova_consulta">Nova Consulta</string>
     <string name="nm_paciente">Nome completo do paciente</string>
@@ -126,7 +123,7 @@
     <string name="btn_sol_diagn">e-DIAGNÓSTICO</string>
     <string name="title_activity_novo_diagnostico">Novo Diagnostico</string>
 
-<!-- spinners -->
+    <!-- spinners -->
     <string-array name="spGenero">
         <item>Genero do paciente:</item>
         <item>Feminino</item>
@@ -183,13 +180,6 @@
     <string name="r_btooth">Bluetooth</string>
     <string name="r_messag">Mensagens</string>
     <string name="r_excel">Excel</string>
-
-
-
-
-
-
-
 
 
 </resources>
