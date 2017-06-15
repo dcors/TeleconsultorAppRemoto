@@ -5,11 +5,20 @@ package com.example.dehcors.teleconsultorapp.models;
  */
 
 public class Especialista {
+    private int idTipo;
     private String especialistaCPF;
     private String especialistaNome;
     private String especialistaProfissao;
     private String especialistaSenha;
     private String especialistaRepitaSenha;
+
+    public int getIdTipo() {
+        return 1;
+    }
+
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
+    }
 
     public String getEspecialistaCPF() {
         return especialistaCPF;

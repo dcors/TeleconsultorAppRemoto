@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
+import com.example.dehcors.teleconsultorapp.helpers.EspecialistaHelper;
+import com.example.dehcors.teleconsultorapp.models.Especialista;
+
 public class NewEspecialista extends AppCompatActivity {
 
     @Override
@@ -52,6 +56,12 @@ public class NewEspecialista extends AppCompatActivity {
         saveEsp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EspecialistaHelper helper = new EspecialistaHelper(NewEspecialista.this);
+                Especialista especialista = helper.getEspecialista();
+                GenericDAO dao = new GenericDAO(NewEspecialista.this);
+                dao.insereEspecialista(especialista);
+                dao.close();
+                Toast.makeText(NewEspecialista.this,"Especialista " +especialista.getEspecialistaNome()+" Salvo com sucesso",Toast.LENGTH_LONG).show();
                 Intent it = new Intent(NewEspecialista.this, MainActivity.class);
                 startActivity(it);
             }

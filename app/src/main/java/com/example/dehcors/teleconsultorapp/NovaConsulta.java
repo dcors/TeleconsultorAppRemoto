@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
+import com.example.dehcors.teleconsultorapp.helpers.ConsultaHelper;
+import com.example.dehcors.teleconsultorapp.models.Consulta;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -178,6 +182,14 @@ public class NovaConsulta extends AppCompatActivity {
     }
 
     public void salvar_consulta() {
+
+        ConsultaHelper helper = new ConsultaHelper(NovaConsulta.this);
+        Consulta consulta = helper.getConsulta();
+        GenericDAO dao = new GenericDAO(NovaConsulta.this);
+        dao.insereConsulta(consulta);
+        dao.close();
+
+        Toast.makeText(NovaConsulta.this,"Consulta salva com sucesso",Toast.LENGTH_LONG).show();
         Intent it5 = new Intent(NovaConsulta.this, UserDashboard.class);
         startActivity(it5);
     }

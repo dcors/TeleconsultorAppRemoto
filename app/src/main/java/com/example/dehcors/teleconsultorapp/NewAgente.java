@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
 import com.example.dehcors.teleconsultorapp.helpers.SolicitanteHelper;
 import com.example.dehcors.teleconsultorapp.models.Solicitante;
 
@@ -81,7 +82,10 @@ public class NewAgente extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               Solicitante solicitante= solicitanteHelper.pegaSolicitante();
+               Solicitante solicitante = solicitanteHelper.pegaSolicitante();
+                GenericDAO dao = new GenericDAO(NewAgente.this);
+                dao.insereSolicitante(solicitante);
+                dao.close();
                 Toast.makeText(NewAgente.this,"Solicitante "+solicitante.getAgenteNome()+" Salvo",Toast.LENGTH_LONG).show();
                 Intent it = new Intent(NewAgente.this, MainActivity.class);
                 startActivity(it);

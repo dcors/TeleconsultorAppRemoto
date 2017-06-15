@@ -43,13 +43,12 @@ public class SolicitanteHelper {
 
     public Solicitante pegaSolicitante() {
         Solicitante solicitante = new Solicitante();
-
+        solicitante.setIdTipo(1);
         solicitante.setAgenteNome(agenteNome.getText().toString());
         solicitante.setAgenteCPF(agenteCPF.getText().toString());
         solicitante.setAgenteTelefone(agenteTelefone.getText().toString());
         solicitante.setAgenteEmail(agenteEmail.getText().toString());
         solicitante.setAgenteProfissao(agenteProfissao.getSelectedItem().toString());
-        solicitante.setAgenteUnidade(agenteUnidade.getSelectedItem().toString());
         solicitante.setAgenteSenha(agenteSenha.getText().toString());
         solicitante.setAgenteRepitaSenha(agenteRepitaSenha.getText().toString());
         return solicitante;

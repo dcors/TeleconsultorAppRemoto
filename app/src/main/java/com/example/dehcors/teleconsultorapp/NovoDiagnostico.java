@@ -12,6 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
+import com.example.dehcors.teleconsultorapp.helpers.DiagnosticoHelper;
+import com.example.dehcors.teleconsultorapp.models.Diagnostico;
+
 /**
  * Created by cors on 06/06/17.
  */
@@ -95,6 +99,13 @@ public class NovoDiagnostico extends AppCompatActivity {
     }
 
     public void salvar_consulta() {
+        DiagnosticoHelper helper = new DiagnosticoHelper(NovoDiagnostico.this);
+        Diagnostico diagnostico = helper.getDiagnostico();
+        GenericDAO dao = new GenericDAO(NovoDiagnostico.this);
+        dao.insereDiagnostico(diagnostico);
+
+
+        Toast.makeText(NovoDiagnostico.this,"Diagnóstico salvo com sucesso",Toast.LENGTH_LONG).show();
         Intent it5 = new Intent(NovoDiagnostico.this, UserDashboard.class);
         startActivity(it5);
     }

@@ -1,12 +1,15 @@
 package com.example.dehcors.teleconsultorapp;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String url = "http://www.telessaude.uerj.br/nucleorj/";
                 Intent itInfo = new Intent(Intent.ACTION_VIEW);
+
                 itInfo.setData(Uri.parse(url));
                 startActivity(itInfo);
             }

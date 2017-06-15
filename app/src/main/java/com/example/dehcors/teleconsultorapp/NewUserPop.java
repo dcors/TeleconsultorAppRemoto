@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by cors on 01/06/17.
@@ -30,6 +31,7 @@ public class NewUserPop extends Activity {
         new_agent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(NewUserPop.this,"Estou na user Pop", Toast.LENGTH_LONG).show();
                 Intent itnAg = new Intent(NewUserPop.this, NewAgente.class);
                 startActivity(itnAg);
             }

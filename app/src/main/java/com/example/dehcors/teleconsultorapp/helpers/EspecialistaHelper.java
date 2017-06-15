@@ -37,6 +37,7 @@ public class EspecialistaHelper {
         especialista.setEspecialistaProfissao(especialistaProfissao.getSelectedItem().toString());
         especialista.setEspecialistaSenha(especialistaSenha.getText().toString());
         especialista.setEspecialistaRepitaSenha(especialistaRepitaSenha.getText().toString());
+        especialista.setIdTipo(1);
 
         return especialista;
 

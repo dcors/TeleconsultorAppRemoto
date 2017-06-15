@@ -5,6 +5,7 @@ package com.example.dehcors.teleconsultorapp.models;
  */
 
 public class Solicitante {
+    private int idTipo;
     private int idSolicitante;
     private String agenteNome;
     private String AgenteCPF ;
@@ -86,6 +87,14 @@ public class Solicitante {
 
     public void setAgenteRepitaSenha(String agenteRepitaSenha) {
         this.agenteRepitaSenha = agenteRepitaSenha;
+    }
+
+    public int getIdTipo() {
+        return 1;
+    }
+
+    public void setIdTipo(int idTipo) {
+        this.idTipo = idTipo;
     }
 
     public String getUrlFoto() {
