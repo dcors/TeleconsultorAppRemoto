@@ -16,14 +16,7 @@ public class SolicitanteDAO extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String sql ="CREATE TABLE Solicitante(id INTEGER PRIMARY KEY, " +
-                "nomeSolicitante TEXT," +
-                " cpfSolicitante TEXT," +
-                " telefoneSolicitante TEXT," +
-                "profissaoSolicitante TEXT," +
-                "unidadeSolicitante TEXT," +
-                "senhaSolicitante TEXT);";
-        db.execSQL(sql);
+
     }
 
     @Override

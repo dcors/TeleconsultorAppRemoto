@@ -24,6 +24,7 @@
 
 
             <EditText
+                android:id="@+id/especialistacpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -35,6 +36,7 @@
 
 
             <EditText
+                android:id="@+id/especialistanome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -110,6 +112,7 @@
 
 
             <EditText
+                android:id="@+id/especialistasenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -123,6 +126,7 @@
                 tools:ignore="LabelFor"/>
 
             <EditText
+                android:id="@+id/especialistarepitasenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"

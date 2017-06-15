@@ -29,8 +29,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.dehcors.teleconsultorapp.DAO.TeleconsultoriaDAO;
-
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;

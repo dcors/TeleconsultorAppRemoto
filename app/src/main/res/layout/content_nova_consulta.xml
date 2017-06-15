@@ -57,6 +57,7 @@
                 android:textStyle="italic" />
 
             <EditText
+                android:id="@+id/consultacpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"
@@ -64,6 +65,7 @@
                 android:inputType="number" />
 
             <EditText
+                android:id="@+id/consultanomepaciente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -72,6 +74,7 @@
 
 
             <EditText
+                android:id="@+id/consultanascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -95,6 +98,7 @@
                 android:layout_marginTop="24dp">
 
                 <EditText
+
                     android:id="@+id/nvConsul_txCaso"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
@@ -114,6 +118,7 @@
 
 
                 <ImageButton
+
                     style="@android:style/Theme.Material.Voice"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
