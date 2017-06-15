@@ -51,11 +51,12 @@
                 android:layout_weight="1">
 
 
-                <ExpandableListView
+                <ListView
                     android:id="@+id/view_listarConsultas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp" />
+                    android:layout_margin="8dp"
+                    android:background="@color/black"/>
             </FrameLayout>
 
 

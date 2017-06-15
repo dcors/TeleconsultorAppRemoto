@@ -68,4 +68,9 @@ public class Consulta {
     public void setIdParecer(int idParecer) {
         this.idParecer = idParecer;
     }
+
+    @Override
+    public String toString() {
+        return getCpfPaciente()+ " - "+getEspecialidade();
+    }
 }

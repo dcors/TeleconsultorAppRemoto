@@ -8,7 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
+import com.example.dehcors.teleconsultorapp.helpers.ConsultaHelper;
+import com.example.dehcors.teleconsultorapp.models.Consulta;
+
+import java.util.List;
 
 /**
  * Created by cors on 06/06/17.
@@ -23,7 +32,6 @@ public class ConsultaListView extends AppCompatActivity {
         setContentView(R.layout.consulta_list_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         //navegaçao da barra inferior
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.listarArquivos_btNavigation);
@@ -49,11 +57,24 @@ public class ConsultaListView extends AppCompatActivity {
         });
 
         //Lista mostrando consultas
-        ExpandableListView activity_consulta_list_view = (ExpandableListView) findViewById(R.id.view_listarConsultas);
+
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
+
+    public void getConsultas(){
+        GenericDAO dao = new GenericDAO(ConsultaListView.this);
+        List<Consulta> consultas = dao.getConsultas();
+        dao.close();
+
+        ListView listaConsulta = (ListView) findViewById(R.id.view_listarConsultas);
+        ArrayAdapter<Consulta> adapter  = new ArrayAdapter<Consulta>(this,android.R.layout.simple_list_item_1,consultas);
+        listaConsulta.setAdapter(adapter);
+
+    }
+
 
 
 }

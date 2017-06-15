@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -27,6 +28,15 @@ public class NovoDiagnostico extends AppCompatActivity {
         setContentView(R.layout.activity_novo_diagnostico);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Button salvarDiagnostico = (Button) findViewById(R.id.diagnosticoenviar);
+        salvarDiagnostico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                salvar_consulta();
+            }
+        });
+
 
         //spinner genero do paciente
         final Spinner nDgenero = (Spinner) findViewById(R.id.nvDiagno_genPaciente);
@@ -72,6 +82,7 @@ public class NovoDiagnostico extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
 
 
     public void cancel_click(View v) {
