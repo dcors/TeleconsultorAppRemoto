@@ -66,6 +66,7 @@ public class NewEspecialista extends AppCompatActivity {
                     Toast.makeText(NewEspecialista.this,"Especialista " +especialista.getEspecialistaNome()+" Salvo com sucesso",Toast.LENGTH_LONG).show();
                     Intent it = new Intent(NewEspecialista.this, MainActivity.class);
                     startActivity(it);
+                    finish();
                 }else {
 
                     Toast.makeText(NewEspecialista.this,"As senhas devem ser iguais.",Toast.LENGTH_LONG).show();

@@ -43,6 +43,7 @@ public class NewUserPop extends Activity {
             public void onClick(View v) {
                 Intent itnEs = new Intent(NewUserPop.this, NewEspecialista.class);
                 startActivity(itnEs);
+                finish();
             }
         });
 

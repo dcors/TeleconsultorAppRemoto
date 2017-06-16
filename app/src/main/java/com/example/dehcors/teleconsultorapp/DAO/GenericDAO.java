@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.Editable;
+import android.widget.TextView;
 
 import com.example.dehcors.teleconsultorapp.Usuario;
 import com.example.dehcors.teleconsultorapp.models.Consulta;
@@ -164,10 +165,11 @@ public class GenericDAO extends SQLiteOpenHelper {
         Cursor c = db.rawQuery(sql,params);
         if(c.moveToNext()){
             idTipo = c.getInt(c.getColumnIndex("idTipo"));
+            c.close();
 
         }
 
-
+    c.close();
         return idTipo;
     }
 
@@ -233,6 +235,23 @@ public class GenericDAO extends SQLiteOpenHelper {
         ContentValues dados = new ContentValues();
         dados.put("atendida",1);
         db.update("Consulta",dados,"idConsulta =?",params);
+
+    }
+
+
+    public String getTextoParecer(int idConsulta) {
+        String textoParecer ="";
+
+        SQLiteDatabase db = getWritableDatabase();
+        String [] params = {Integer.toString(idConsulta)};
+        String sql = "SELECT textoParecer FROM Parecer WHERE idConsulta=?;";
+        Cursor c = db.rawQuery(sql,params);
+
+        c.moveToNext();
+
+        textoParecer = c.getString(c.getColumnIndex("textoParecer"));
+        c.close();
+        return textoParecer;
 
     }
 }

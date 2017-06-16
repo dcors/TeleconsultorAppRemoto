@@ -5,22 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.dehcors.teleconsultorapp.AtenderActivity">
+    tools:context="com.example.dehcors.teleconsultorapp.VisualizarConsultasActivity">
+
     <LinearLayout
         android:layout_marginTop="16dp"
-       android:layout_marginLeft="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
             android:text="Diagnóstico"
-            android:id="@+id/atendertipoconsulta"
+            android:id="@+id/visualizartipoconsulta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_marginLeft="16dp"
             android:text="44787"
-            android:id="@+id/atenderidconsulta"
+            android:id="@+id/visualizaridconsulta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -39,7 +40,7 @@
         <TextView
             android:layout_marginLeft="16dp"
             android:text="Enfermagem"
-            android:id="@+id/atenderespecialidade"
+            android:id="@+id/visualizarespecialidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -47,25 +48,22 @@
     <TextView
         android:paddingLeft="16dp"
         android:layout_marginTop="40dp"
-        android:id="@+id/atenderduvida"
+        android:id="@+id/visualizarduvida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <EditText
+    <TextView
         android:paddingLeft="16dp"
         android:layout_marginTop="40dp"
-        android:id="@+id/atenderresposta"
+        android:id="@+id/visualizarresposta"
         android:hint="Deixe aqui seu parecer"
         android:layout_width="match_parent"
         android:layout_height="100dp" />
     <Button
         android:layout_marginTop="120dp"
         android:text="Enviar Parecer"
-        android:id="@+id/atendersalvar"
+        android:id="@+id/visualizarsalvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
-
 
 
 </LinearLayout>

@@ -21,17 +21,26 @@ public class ListaDeConsultas extends AppCompatActivity {
 String cpfUsuario = "";
     private ListView listaConsulta;
     private int idTipo;
+    List<Consulta> consultas = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        List<Consulta> consultas = null;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_de_consultas);
 
         Intent intent = getIntent();
         cpfUsuario = intent.getStringExtra("cpfUsuario");
+        carregaConsulta();
 
+
+
+
+
+    }
+
+    public void carregaConsulta(){
         GenericDAO dao = new GenericDAO(this);
         idTipo =  dao.verificaTipo(cpfUsuario);
         if(idTipo==1){
@@ -46,8 +55,12 @@ String cpfUsuario = "";
         registerForContextMenu(listaConsulta);
         ArrayAdapter<Consulta> adapter  = new ArrayAdapter<Consulta>(this,android.R.layout.simple_list_item_1,consultas);
         listaConsulta.setAdapter(adapter);
+    }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregaConsulta();
 
     }
 
@@ -68,13 +81,18 @@ String cpfUsuario = "";
                 Consulta consulta = (Consulta) listaConsulta.getItemAtPosition(info.position);
                 if(idTipo==1){
 
-                    Toast.makeText(ListaDeConsultas.this,"Tela de Visualizar   "+ consulta.getIdConsulta(),Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ListaDeConsultas.this,VisualizarConsultasActivity.class);
+                    intent.putExtra("cpfUsuario",cpfUsuario);
+                    intent.putExtra("idConsulta",consulta.getIdConsulta());
+                    startActivity(intent);
+
 
                 }else{
                     Intent intent = new Intent(ListaDeConsultas.this,AtenderActivity.class);
                     intent.putExtra("cpfUsuario",cpfUsuario);
                     intent.putExtra("idConsulta",consulta.getIdConsulta());
                     startActivity(intent);
+
                 }
 
                 return false;

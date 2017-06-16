@@ -124,5 +124,6 @@ String cpfUsuario = "";
         Intent it5 = new Intent(NovoDiagnostico.this, UserDashboard.class);
         it5.putExtra("cpfUsuario",cpfUsuario);
         startActivity(it5);
+        finish();
     }
 }

@@ -90,6 +90,7 @@ public class NewAgente extends AppCompatActivity {
                     Toast.makeText(NewAgente.this,"Solicitante "+solicitante.getAgenteNome()+" Salvo",Toast.LENGTH_LONG).show();
                     Intent it = new Intent(NewAgente.this, MainActivity.class);
                     startActivity(it);
+                    finish();
                 }else {
                     Toast.makeText(NewAgente.this,"As senhas dever ser iguais.",Toast.LENGTH_LONG).show();
                 }

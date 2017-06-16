@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 itInfo.setData(Uri.parse(url));
                 startActivity(itInfo);
+                finish();
             }
         });
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 do_login();
+                
             }
         });
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent itChat = new Intent(Intent.ACTION_VIEW);
                 itChat.setData(Uri.parse(url));
                 startActivity(itChat);
+                finish();
             }
         });
 
@@ -64,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent itM = new Intent(Intent.ACTION_VIEW);
                 itM.setData(Uri.parse(url));
                 startActivity(itM);
+                finish();
             }
         });
 
@@ -77,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent itO = new Intent(Intent.ACTION_VIEW);
                 itO.setData(Uri.parse(url));
                 startActivity(itO);
+                finish();
             }
         });
 
@@ -89,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent itR = new Intent(Intent.ACTION_VIEW);
                 itR.setData(Uri.parse(url));
                 startActivity(itR);
+                finish();
             }
         });
 
@@ -101,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent itP = new Intent(Intent.ACTION_VIEW);
                 itP.setData(Uri.parse(url));
                 startActivity(itP);
+                finish();
             }
         });
     }
@@ -109,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
     public void do_login() {
         Intent it1 = new Intent(MainActivity.this, UserLogin.class);
         startActivity(it1);
+        finish();
     }
 
 }
