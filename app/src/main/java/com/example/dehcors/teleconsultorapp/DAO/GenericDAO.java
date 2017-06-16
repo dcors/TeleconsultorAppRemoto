@@ -290,23 +290,8 @@ public class GenericDAO extends SQLiteOpenHelper {
     c.close();
     return solicitante;
     }
-<<<<<<< HEAD
-=======
 
-    public int getConsultasSolicitadas() {
-        int total =0;
-        SQLiteDatabase db = getWritableDatabase();
 
-        String sql = "SELECT COUNT(*) AS total FROM Consulta WHERE tipo = Consultoria;";
 
-        Cursor c = db.rawQuery(sql,null);
 
-        if(c.moveToNext()){
-            total = c.getInt(c.getColumnIndex("total"));
-            c.close();
-        }
-        c.close();
-        return total;
-    }
->>>>>>> 4cfbcb39f6f640c6038941dc202475a3047cb10c
 }

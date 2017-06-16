@@ -19,23 +19,7 @@ public class RelatoriosView extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        TextView consultasSolicitadas = (TextView) findViewById(R.id.relatoriosconsultasolicitada);
-        TextView consultasRespondidas = (TextView) findViewById(R.id.relatoriosconsultarespondida);
-        TextView diagnosticosSolicitados = (TextView) findViewById(R.id.relatoriosdiagnosticosolicitado);
-        TextView diagnosticosRespondidos = (TextView) findViewById(R.id.relatoriosdiagnosticorespondido);
-        consultasSolicitadas.setText(getConsultasSolicitadas().toString());
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-    public String getConsultasSolicitadas(){
-        int total =0;
-        String totalizado ="";
-        GenericDAO dao = new GenericDAO(RelatoriosView.this);
-        total = dao.getConsultasSolicitadas();
-        totalizado = Integer.toString(total);
-
-        return totalizado;
-
     }
 
 
