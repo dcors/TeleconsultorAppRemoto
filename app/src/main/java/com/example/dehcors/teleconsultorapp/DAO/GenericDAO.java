@@ -291,7 +291,4 @@ public class GenericDAO extends SQLiteOpenHelper {
     return solicitante;
     }
 
-
-
-
 }

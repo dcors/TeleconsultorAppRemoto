@@ -145,11 +145,15 @@
         </activity>
         <activity
             android:name=".ListaDeConsultas"
-            android:label="@string/consultas" />
+            android:label="@string/consultas"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".AtenderActivity"
-            android:label="@string/atender"/>
+            android:label="@string/atender" />
+
         <activity android:name=".VisualizarConsultasActivity"
-            android:label="@string/visualizarconsultas"></activity>
+            android:label="@string/visualizarconsultas">
+        </activity>
     </application>
 
 </manifest>

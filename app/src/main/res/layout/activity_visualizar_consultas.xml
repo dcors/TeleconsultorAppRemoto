@@ -9,8 +9,6 @@
 
 
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -91,6 +89,7 @@
 
             <TextView
                 android:id="@+id/visualizarresposta"
+                style="@android:style/Widget.DeviceDefault.TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -98,8 +97,9 @@
                 android:hint="@string/parecer"
                 android:minHeight="150dp"
                 android:padding="2dp"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                android:theme="@style/AppTheme" />
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
+                android:textColor="@color/colorAccent"
+                android:visibility="visible" />
 
     <Button
         android:id="@+id/visualizarsalvar"

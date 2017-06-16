@@ -8,8 +8,35 @@
     android:orientation="vertical"
     tools:context="com.example.dehcors.teleconsultorapp.ListaDeConsultas">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                app:layout_anchor="@+id/layout_prin"
+                app:layout_anchorGravity="top|right"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/logoa" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
     <ListView
         android:id="@+id/listadeconsultas"
+        style="@android:style/Widget.DeviceDefault.ExpandableListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
