@@ -258,4 +258,14 @@ public class GenericDAO extends SQLiteOpenHelper {
         return textoParecer;
 
     }
+
+    public void alteraUsuario(Solicitante solicitante) {
+
+        SQLiteDatabase db = getWritableDatabase();
+        String [] params = {solicitante.getAgenteTelefone(),solicitante.getAgenteEmail(),solicitante.getAgenteUnidade(),solicitante.getAgenteSenha()};
+        ContentValues dados = new ContentValues();
+        dados.put("atendida",1);
+        db.update("Consulta",dados,"idConsulta =?",params);
+
+    }
 }

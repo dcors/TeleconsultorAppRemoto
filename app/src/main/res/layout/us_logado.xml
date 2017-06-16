@@ -36,11 +36,15 @@
         android:layout_marginTop="1dp">
 
         <LinearLayout
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
+                android:layout_marginTop="50dp"
+                android:paddingLeft="16dp"
+                android:id="@+id/usuariologadonome"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -49,6 +53,9 @@
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
 
             <TextView
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadotipo"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -56,53 +63,61 @@
                 android:hint="tipo deste usuario recuperado do banco" />
 
             <TextView
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadocpf"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:gravity="center_vertical"
                 android:hint="cpf deste usuario recuperado do banco" />
 
-            <TextView
+            <EditText
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadotelefone"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:gravity="center_vertical"
                 android:hint="telefone deste usuario recuperado do banco" />
 
-            <TextView
+            <EditText
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadoemail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:gravity="center_vertical"
                 android:hint="email deste usuario recuperado do banco" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:gravity="center_vertical"
-                android:hint="profissao deste usuario recuperado banco" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:gravity="center_vertical"
-                android:hint="registro prof recuperado do banco se houver" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:gravity="center_vertical"
-                android:hint="orgao e uf do registro se houver - do banco" />
-
-            <TextView
+            <EditText
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadounidade"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:gravity="center_vertical"
                 android:hint="Unidade de atendimento - se agente ou especialista"/>
+
+            <EditText
+                android:paddingLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:id="@+id/usuariologadosenha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:hint="Aqui virá a  senha"/>
+
+            <Button
+                android:layout_marginTop="8dp"
+                android:id="@+id/usuariologadosalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salvar"/>
 
         </LinearLayout>
     </ScrollView>

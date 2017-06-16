@@ -132,6 +132,7 @@ public class UserDashboard extends AppCompatActivity
             startActivity(itClin);
         } else if (id == R.id.navHeader_altDados) {
             Intent ituser = new Intent(UserDashboard.this, UsuarioLogado.class);
+            ituser.putExtra("cpfUsuario",cpfUsuario);
             startActivity(ituser);
         } else if (id == R.id.navHeader_logOut) {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserDashboard.this);
