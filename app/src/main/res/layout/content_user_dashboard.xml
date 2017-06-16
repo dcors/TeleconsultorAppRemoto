@@ -96,6 +96,7 @@
                 app:srcCompat="@drawable/relatorio1" />
 
             <TextView
+                android:id="@+id/dashboardtxtrelatorio"
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -118,6 +119,7 @@
 
 
             <TextView
+                android:id="@+id/dashboardtxtverarquivo"
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:layout_column="10"

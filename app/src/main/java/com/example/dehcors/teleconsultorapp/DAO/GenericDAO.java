@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.Editable;
 
 import com.example.dehcors.teleconsultorapp.Usuario;
 import com.example.dehcors.teleconsultorapp.models.Consulta;
@@ -30,8 +31,8 @@ public class GenericDAO extends SQLiteOpenHelper {
 
         String sql1 = "CREATE TABLE Anexo(idAnexo INTEGER,urlAnexo TEXT);" ;
         String sql2 = "CREATE TABLE Paciente( cpf TEXT,nomePaciente TEXT,nascimento TEXT,sexo TEXT);" ;
-        String sql3 = "CREATE TABLE Consulta(atendida int,cpfUsuario TEXT,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
-        String sql4 = "CREATE TABLE Parecer(idParecer INTEGER, idAnexo INTEGER,textoParecer TEXT);";
+        String sql3 = "CREATE TABLE Consulta(idConsulta INTEGER PRIMARY KEY AUTOINCREMENT,atendida int,cpfUsuario TEXT,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
+        String sql4 = "CREATE TABLE Parecer(idParecer INTEGER PRIMARY KEY AUTOINCREMENT, idAnexo INTEGER,textoParecer TEXT,idConsulta INTEGER);";
         String sql5 = "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);";
         String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
         String sql7 = "CREATE TABLE TipoUsuario(idTipo INTEGER, nomeTipo TEXT);";
@@ -132,6 +133,7 @@ public class GenericDAO extends SQLiteOpenHelper {
             consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
             consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
             consulta.setCpfUsuario(c.getString(c.getColumnIndex("cpfUsuario")));
+            consulta.setIdConsulta(c.getInt(c.getColumnIndex("idConsulta")));
             consultas.add(consulta);
         }
         c.close();
@@ -172,7 +174,7 @@ public class GenericDAO extends SQLiteOpenHelper {
     public List<Consulta> getConsultasEspecialista() {
 
 
-        String sql = "SELECT * FROM Consulta where atendida = 0 ;";
+        String sql = "SELECT * FROM Consulta where atendida = 0;";
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(sql,null);
         List<Consulta> consultas = new ArrayList<Consulta>();
@@ -184,9 +186,53 @@ public class GenericDAO extends SQLiteOpenHelper {
             consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
             consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
             consulta.setCpfUsuario(c.getString(c.getColumnIndex("cpfUsuario")));
+            consulta.setIdConsulta(c.getInt(c.getColumnIndex("idConsulta")));
             consultas.add(consulta);
         }
         c.close();
         return consultas;
+    }
+
+    public Consulta getConsultaPorId(int idConsulta) {
+
+
+        String[]params ={Integer.toString(idConsulta)};
+        String sql = "SELECT * FROM Consulta where idConsulta=?;";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(sql,params);
+
+            c.moveToNext();
+            Consulta consulta = new Consulta();
+            consulta.setTxCaso(c.getString(c.getColumnIndex("caso")));
+            consulta.setCpfPaciente(c.getString(c.getColumnIndex("cpfPaciente")));
+            consulta.setEspecialidade(c.getString(c.getColumnIndex("especialidade")));
+            consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
+            consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
+            consulta.setCpfUsuario(c.getString(c.getColumnIndex("cpfUsuario")));
+            consulta.setIdConsulta(c.getInt(c.getColumnIndex("idConsulta")));
+
+        c.close();
+        return consulta;
+
+
+    }
+
+
+    public void insereParecer(int idConsulta, String parecer) {
+
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues dados = new ContentValues();
+        dados.put("idConsulta",idConsulta);
+        dados.put("textoParecer",parecer);
+        db.insert("Parecer",null,dados);
+    }
+
+    public void atualizaAtendida(int idConsulta) {
+        SQLiteDatabase db = getWritableDatabase();
+        String [] params = {Integer.toString(idConsulta)};
+        ContentValues dados = new ContentValues();
+        dados.put("atendida",1);
+        db.update("Consulta",dados,"idConsulta =?",params);
+
     }
 }

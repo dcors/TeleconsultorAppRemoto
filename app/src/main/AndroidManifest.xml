@@ -84,7 +84,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity android:name=".ArquivosActivity"></activity>
+        <activity android:name=".ArquivosActivity" />
         <activity
             android:name=".ConsultaListView"
             android:label="@string/title_consult_navigation"
@@ -92,7 +92,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserDashboard"></meta-data>
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
         <activity
             android:name=".DiagnosticoListView"
@@ -101,7 +101,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.dehcors.teleconsultorapp.UserDashboard"></meta-data>
+                android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
 
         <meta-data
@@ -143,10 +143,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity android:name=".ListaDeConsultas"
-            android:label="@string/consultas">
-
-        </activity>
+        <activity
+            android:name=".ListaDeConsultas"
+            android:label="@string/consultas"></activity>
+        <activity android:name=".AtenderActivity"></activity>
     </application>
 
 </manifest>

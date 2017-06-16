@@ -15,6 +15,8 @@ public class Consulta {
     private String txCaso;
     private int atendida;
 
+
+
     public String getCpfUsuario() {
         return cpfUsuario;
     }
@@ -96,6 +98,6 @@ public class Consulta {
             atendida = "Atendida";
         }
 
-        return getTipoConsulta()+"-"+atendida;
+        return getTipoConsulta()+" - "+getIdConsulta()+" "+atendida;
     }
 }

@@ -14,7 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
 
 public class UserDashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,6 +31,16 @@ public class UserDashboard extends AppCompatActivity
         setContentView(R.layout.user_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        TextView arquivos = (TextView) findViewById(R.id.dashboardtxtverarquivo);
+        GenericDAO dao = new GenericDAO(this);
+        int idTipo = dao.verificaTipo(cpfUsuario);
+        if(idTipo ==1){
+
+            arquivos.setText("Visualizar Teleconsultorias");
+        }else {
+            arquivos.setText("Atender Teleconsultorias");
+        }
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.userDash_Sair);
