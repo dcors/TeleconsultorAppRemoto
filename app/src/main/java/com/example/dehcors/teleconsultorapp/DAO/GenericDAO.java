@@ -295,15 +295,15 @@ public class GenericDAO extends SQLiteOpenHelper {
         int total =0;
         SQLiteDatabase db = getWritableDatabase();
 
-        String sql = "SELECT COUNT(*) AS total FROM Consulta WHERE tipo = Consultoria ";
+        String sql = "SELECT COUNT(*) AS total FROM Consulta WHERE tipo = Consultoria;";
 
         Cursor c = db.rawQuery(sql,null);
 
         if(c.moveToNext()){
             total = c.getInt(c.getColumnIndex("total"));
-
+            c.close();
         }
-
+        c.close();
         return total;
     }
 }

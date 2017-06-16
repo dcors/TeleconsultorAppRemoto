@@ -23,7 +23,7 @@ public class RelatoriosView extends AppCompatActivity {
         TextView consultasRespondidas = (TextView) findViewById(R.id.relatoriosconsultarespondida);
         TextView diagnosticosSolicitados = (TextView) findViewById(R.id.relatoriosdiagnosticosolicitado);
         TextView diagnosticosRespondidos = (TextView) findViewById(R.id.relatoriosdiagnosticorespondido);
-        consultasSolicitadas.setText(getConsultasSolicitadas());
+        consultasSolicitadas.setText(getConsultasSolicitadas().toString());
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
