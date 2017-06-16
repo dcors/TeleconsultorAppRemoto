@@ -21,7 +21,7 @@ import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
 
 public class UserDashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-   private String cpfUsuario ="";
+    private String cpfUsuario ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

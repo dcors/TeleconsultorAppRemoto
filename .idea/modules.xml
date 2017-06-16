@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/TCCFinal.iml" filepath="$PROJECT_DIR$/TCCFinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/TeleconsultorApp.iml" filepath="$PROJECT_DIR$/TeleconsultorApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projeto_tcc.iml" filepath="$PROJECT_DIR$/projeto_tcc.iml" />
     </modules>
   </component>
 </project>
