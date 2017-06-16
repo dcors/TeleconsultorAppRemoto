@@ -146,8 +146,10 @@
         <activity
             android:name=".ListaDeConsultas"
             android:label="@string/consultas" />
-        <activity android:name=".AtenderActivity" />
-        <activity android:name=".VisualizarConsultasActivity"></activity>
+        <activity android:name=".AtenderActivity"
+            android:label="@string/atender"/>
+        <activity android:name=".VisualizarConsultasActivity"
+            android:label="@string/visualizarconsultas"></activity>
     </application>
 
 </manifest>

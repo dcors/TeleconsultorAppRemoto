@@ -247,9 +247,13 @@ public class GenericDAO extends SQLiteOpenHelper {
         String sql = "SELECT textoParecer FROM Parecer WHERE idConsulta=?;";
         Cursor c = db.rawQuery(sql,params);
 
-        c.moveToNext();
+        if(c.moveToNext()){
+            textoParecer = c.getString(c.getColumnIndex("textoParecer"));
+            c.close();
+        }else {
+            return null;
+        }
 
-        textoParecer = c.getString(c.getColumnIndex("textoParecer"));
         c.close();
         return textoParecer;
 

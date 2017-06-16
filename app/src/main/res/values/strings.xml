@@ -11,6 +11,9 @@
     <string name="laboratorio">Laboratório de TeleSSaúde</string>
     <string name="suporte">Suporte Online</string>
 
+    <string name="atender">Atendimento de Consultorias</string>
+    <string name="visualizarconsultas">Minha Consultoria</string>
+
     <!-- Strings related to login sccreen-->
     <string name="consultas">Consultas e Diagnósticos</string>
     <string name="title_activity_user_login">Acesse sua Conta</string>

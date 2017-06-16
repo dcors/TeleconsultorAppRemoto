@@ -38,11 +38,16 @@ public class VisualizarConsultasActivity extends AppCompatActivity {
 
         String textoParecer = dao.getTextoParecer(this.idConsulta);
 
-
-        TextView parecer = (TextView) findViewById(R.id.visualizarresposta);
-        parecer.setText(textoParecer);
+        if(textoParecer !=null) {
+            TextView parecer = (TextView) findViewById(R.id.visualizarresposta);
+            parecer.setText(textoParecer);
+        }else {
+            TextView parecer = (TextView) findViewById(R.id.visualizarresposta);
+            parecer.setText("Esta consulta ainda não foi atendida");
+        }
 
         Button voltar = (Button) findViewById(R.id.visualizarsalvar);
+        voltar.setText("Voltar");
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
