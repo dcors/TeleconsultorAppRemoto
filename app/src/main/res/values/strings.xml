@@ -167,6 +167,16 @@
     <string name="title_diagn_navigation">Diagnósticos</string>
 
 
+    <!--Strings relativas a tela Atender -->
+    <string name="atender_a">Consultoria:</string>
+    <string name="bt_enviar_a">ENVIAR PARECER</string>]
+    <string name="a_espec">Especialidade</string>
+    <string name="parecer">Deixe aqui o seu parecer</string>
+    <string name="enf">Enfermagem</string>
+    <!--Strings relativas a visualizar_consultas -->
+    <string name="ver_v">Consultoria:</string>
+    <string name="bt_enviar_v">ENVIAR PARECER</string>
+
     <!--Strings relativas a tela de localizar clinicas -->
     <string name="title_activity_rota">Clínica da Família - Unidades</string>
 

@@ -7,63 +7,107 @@
     android:orientation="vertical"
     tools:context="com.example.dehcors.teleconsultorapp.VisualizarConsultasActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
     <LinearLayout
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:text="Diagnóstico"
             android:id="@+id/visualizartipoconsulta"
+            android:text="@string/ver_v"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:minWidth="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
         <TextView
-            android:layout_marginLeft="16dp"
-            android:text="44787"
             android:id="@+id/visualizaridconsulta"
+            android:text="nº 44787"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:minWidth="100dp" />
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-
+        android:layout_marginEnd="8dp"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
-            android:text="Especialildade:"
+            android:text="@string/a_espec"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:minWidth="150dp"
+            android:layout_gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
         <TextView
-            android:layout_marginLeft="16dp"
-            android:text="Enfermagem"
             android:id="@+id/visualizarespecialidade"
+            android:hint="@string/enf"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:minWidth="100dp"
+            android:gravity="center_vertical"
+            />
 
     </LinearLayout>
+
     <TextView
-        android:paddingLeft="16dp"
-        android:layout_marginTop="40dp"
         android:id="@+id/visualizarduvida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:paddingLeft="16dp"
+        android:padding="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="40dp"
-        android:id="@+id/visualizarresposta"
-        android:hint="Deixe aqui seu parecer"
-        android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_width="wrap_content"
+        android:minWidth="50dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+            <TextView
+                android:id="@+id/visualizarresposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/dColorTest"
+                android:hint="@string/parecer"
+                android:minHeight="150dp"
+                android:padding="2dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
+                android:theme="@style/AppTheme" />
+
     <Button
-        android:layout_marginTop="120dp"
-        android:text="Enviar Parecer"
         android:id="@+id/visualizarsalvar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="@string/bt_enviar_v"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@android:style/Widget.Material.Button.Colored"/>
 
 
+        </LinearLayout>
+</ScrollView>
 </LinearLayout>
