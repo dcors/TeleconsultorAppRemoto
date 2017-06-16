@@ -5,6 +5,7 @@ package com.example.dehcors.teleconsultorapp.models;
  */
 
 public class Consulta {
+    private String cpfUsuario;
     private String tipoConsulta ;
     private int idConsulta ;
     private String cpfPaciente ;
@@ -13,6 +14,14 @@ public class Consulta {
     private int idParecer ;
     private String txCaso;
     private int atendida;
+
+    public String getCpfUsuario() {
+        return cpfUsuario;
+    }
+
+    public void setCpfUsuario(String cpfUsuario) {
+        this.cpfUsuario = cpfUsuario;
+    }
 
     public int getAtendida() {
         return atendida;
@@ -87,6 +96,6 @@ public class Consulta {
             atendida = "Atendida";
         }
 
-        return getTipoConsulta()+ " -- "+atendida;
+        return getTipoConsulta()+"-"+atendida;
     }
 }

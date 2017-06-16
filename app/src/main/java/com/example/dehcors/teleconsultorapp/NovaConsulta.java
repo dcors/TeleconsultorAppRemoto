@@ -24,6 +24,7 @@ import java.util.Locale;
 
 public class NovaConsulta extends AppCompatActivity {
 
+String cpfUsuario ="";
     private EditText nvConsul_txCaso;
 
     @Override
@@ -32,6 +33,8 @@ public class NovaConsulta extends AppCompatActivity {
         setContentView(R.layout.activity_nova_consulta);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Intent intent = getIntent();
+        cpfUsuario = intent.getStringExtra("cpfUsuario");
 
         //lista de genero feminino/masculino
         final Spinner nvCon_spGenero = (Spinner) findViewById(R.id.nvConsul_spGenero);
@@ -185,12 +188,14 @@ public class NovaConsulta extends AppCompatActivity {
 
         ConsultaHelper helper = new ConsultaHelper(NovaConsulta.this);
         Consulta consulta = helper.getConsulta();
+        consulta.setCpfUsuario(cpfUsuario);
         GenericDAO dao = new GenericDAO(NovaConsulta.this);
         dao.insereConsulta(consulta);
         dao.close();
 
         Toast.makeText(NovaConsulta.this,"Consulta salva com sucesso",Toast.LENGTH_LONG).show();
         Intent it5 = new Intent(NovaConsulta.this, UserDashboard.class);
+        it5.putExtra("cpfUsuario",cpfUsuario);
         startActivity(it5);
     }
 

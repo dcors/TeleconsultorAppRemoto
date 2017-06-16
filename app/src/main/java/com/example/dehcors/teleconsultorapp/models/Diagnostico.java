@@ -9,6 +9,15 @@ public class Diagnostico {
     private String prontuario;
     private String especialidade;
     private String caso;
+    private String cpfUsuario;
+
+    public String getCpfUsuario() {
+        return cpfUsuario;
+    }
+
+    public void setCpfUsuario(String cpfUsuario) {
+        this.cpfUsuario = cpfUsuario;
+    }
 
     public String getProntuario() {
         return prontuario;

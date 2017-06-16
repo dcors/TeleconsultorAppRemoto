@@ -16,12 +16,14 @@ public class EspecialistaHelper {
     private final EditText especialistaCPF;
     private final EditText especialistaNome;
     private final Spinner especialistaProfissao;
+    private final EditText especialistaEmail;
 
     private final EditText especialistaRepitaSenha;
     private final EditText especialistaSenha;
 
     public EspecialistaHelper(NewEspecialista activity){
 
+        especialistaEmail = (EditText)activity.findViewById(R.id.especialistaemail);
         especialistaCPF = (EditText) activity.findViewById(R.id.especialistacpf);
         especialistaNome = (EditText) activity.findViewById(R.id.especialistanome) ;
         especialistaProfissao = (Spinner) activity.findViewById(R.id.newEsp_spProfissao) ;
@@ -37,7 +39,8 @@ public class EspecialistaHelper {
         especialista.setEspecialistaProfissao(especialistaProfissao.getSelectedItem().toString());
         especialista.setEspecialistaSenha(especialistaSenha.getText().toString());
         especialista.setEspecialistaRepitaSenha(especialistaRepitaSenha.getText().toString());
-        especialista.setIdTipo(1);
+        especialista.setEspecialistaEmail(especialistaEmail.getText().toString());
+        especialista.setIdTipo(2);
 
         return especialista;
 

@@ -12,6 +12,7 @@
     <string name="suporte">Suporte Online</string>
 
     <!-- Strings related to login sccreen-->
+    <string name="consultas">Consultas e Diagnósticos</string>
     <string name="title_activity_user_login">Acesse sua Conta</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha </string>

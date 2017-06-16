@@ -30,7 +30,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 
         String sql1 = "CREATE TABLE Anexo(idAnexo INTEGER,urlAnexo TEXT);" ;
         String sql2 = "CREATE TABLE Paciente( cpf TEXT,nomePaciente TEXT,nascimento TEXT,sexo TEXT);" ;
-        String sql3 = "CREATE TABLE Consulta(atendida int,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
+        String sql3 = "CREATE TABLE Consulta(atendida int,cpfUsuario TEXT,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
         String sql4 = "CREATE TABLE Parecer(idParecer INTEGER, idAnexo INTEGER,textoParecer TEXT);";
         String sql5 = "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);";
         String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
@@ -87,6 +87,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("cpfUsuario",especialista.getEspecialistaCPF());
         dados.put("profissao",especialista.getEspecialistaProfissao());
         dados.put("senha",especialista.getEspecialistaSennha());
+        dados.put("emailUsuario",especialista.getEspecialistaEmail());
         db.insert("Usuario",null,dados);
     }
 
@@ -99,6 +100,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("especialidade",consulta.getEspecialidade());
         dados.put("tipo","Consultoria");
         dados.put("atendida",0);
+        dados.put("cpfUsuario",consulta.getCpfUsuario());
         db.insert("Consulta",null,dados);
     }
 
@@ -111,14 +113,16 @@ public class GenericDAO extends SQLiteOpenHelper {
         dados.put("especialidade",diagnostico.getEspecialidade());
         dados.put("tipo","Diagnóstico");
         dados.put("atendida",0);
+        dados.put("cpfUsuario",diagnostico.getCpfUsuario());
         db.insert("Consulta",null,dados);
     }
 
-    public List<Consulta> getConsultas() {
+    public List<Consulta> getConsultas(String cpfUsuario) {
 
-        String sql = "SELECT * FROM Consulta";
+        String[]params ={cpfUsuario};
+        String sql = "SELECT * FROM Consulta where cpfUsuario=?;";
         SQLiteDatabase db = getReadableDatabase();
-        Cursor c = db.rawQuery(sql,null);
+        Cursor c = db.rawQuery(sql,params);
         List<Consulta> consultas = new ArrayList<Consulta>();
         while (c.moveToNext()){
             Consulta consulta = new Consulta();
@@ -127,6 +131,7 @@ public class GenericDAO extends SQLiteOpenHelper {
             consulta.setEspecialidade(c.getString(c.getColumnIndex("especialidade")));
             consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
             consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
+            consulta.setCpfUsuario(c.getString(c.getColumnIndex("cpfUsuario")));
             consultas.add(consulta);
         }
         c.close();
@@ -137,7 +142,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         String cpf =null;
         String [] params ={email,senha};
-        String sql = "SELECT cpfUsuario FROM Usuario where emailUsuario =? AND senha =?";
+        String sql = "SELECT cpfUsuario FROM Usuario where emailUsuario =? AND senha =?;";
         Cursor c = db.rawQuery(sql,params);
         if(c.moveToNext()){
 
@@ -147,5 +152,41 @@ public class GenericDAO extends SQLiteOpenHelper {
         c.close();
         return cpf;
 
+    }
+
+    public int verificaTipo(String cpfUsuario) {
+        int idTipo =0;
+        SQLiteDatabase db = getWritableDatabase();
+        String [] params ={cpfUsuario};
+        String sql = "SELECT idTipo FROM Usuario where cpfUsuario =?;";
+        Cursor c = db.rawQuery(sql,params);
+        if(c.moveToNext()){
+            idTipo = c.getInt(c.getColumnIndex("idTipo"));
+
+        }
+
+
+        return idTipo;
+    }
+
+    public List<Consulta> getConsultasEspecialista() {
+
+
+        String sql = "SELECT * FROM Consulta where atendida = 0 ;";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(sql,null);
+        List<Consulta> consultas = new ArrayList<Consulta>();
+        while (c.moveToNext()){
+            Consulta consulta = new Consulta();
+            consulta.setTxCaso(c.getString(c.getColumnIndex("caso")));
+            consulta.setCpfPaciente(c.getString(c.getColumnIndex("cpfPaciente")));
+            consulta.setEspecialidade(c.getString(c.getColumnIndex("especialidade")));
+            consulta.setTipoConsulta(c.getString(c.getColumnIndex("tipo")));
+            consulta.setAtendida(c.getInt(c.getColumnIndex("atendida")));
+            consulta.setCpfUsuario(c.getString(c.getColumnIndex("cpfUsuario")));
+            consultas.add(consulta);
+        }
+        c.close();
+        return consultas;
     }
 }

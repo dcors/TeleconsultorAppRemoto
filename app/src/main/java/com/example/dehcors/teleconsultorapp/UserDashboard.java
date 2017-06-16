@@ -18,9 +18,12 @@ import android.widget.Toast;
 
 public class UserDashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+   private String cpfUsuario ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        cpfUsuario = intent.getStringExtra("cpfUsuario");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -147,16 +150,19 @@ public class UserDashboard extends AppCompatActivity
 
     public void nova_consulta() {
         Intent nc = new Intent(UserDashboard.this, NovaConsulta.class);
+        nc.putExtra("cpfUsuario",cpfUsuario);
         startActivity(nc);
     }
 
     public void novo_diagnostico() {
         Intent nd = new Intent(UserDashboard.this, NovoDiagnostico.class);
+        nd.putExtra("cpfUsuario",cpfUsuario);
         startActivity(nd);
     }
 
     public void listar_consultas() {
         Intent lc = new Intent(UserDashboard.this, ListaDeConsultas.class);
+        lc.putExtra("cpfUsuario",cpfUsuario);
         startActivity(lc);
     }
 

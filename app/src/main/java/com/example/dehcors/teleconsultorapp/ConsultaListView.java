@@ -24,6 +24,8 @@ import java.util.List;
  */
 
 public class ConsultaListView extends AppCompatActivity {
+    Intent intent = getIntent();
+    String cpfUsuario = intent.getStringExtra("cpfUsuario");
 
 
     @Override
@@ -66,7 +68,7 @@ public class ConsultaListView extends AppCompatActivity {
 
     public void getConsultas(){
         GenericDAO dao = new GenericDAO(ConsultaListView.this);
-        List<Consulta> consultas = dao.getConsultas();
+        List<Consulta> consultas = dao.getConsultas(cpfUsuario);
         dao.close();
 
         ListView listaConsulta = (ListView) findViewById(R.id.view_listarConsultas);

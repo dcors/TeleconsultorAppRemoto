@@ -143,7 +143,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dehcors.teleconsultorapp.UserDashboard" />
         </activity>
-        <activity android:name=".ListaDeConsultas"></activity>
+        <activity android:name=".ListaDeConsultas"
+            android:label="@string/consultas">
+
+        </activity>
     </application>
 
 </manifest>

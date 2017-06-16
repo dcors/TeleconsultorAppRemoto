@@ -203,6 +203,7 @@ public class UserLogin extends AppCompatActivity implements LoaderCallbacks<Curs
     if(cpf != null) {
         Toast.makeText(this, "Logado com sucesso", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(UserLogin.this, UserDashboard.class);
+        intent.putExtra("cpfUsuario",cpf.toString());
         startActivity(intent);
     } else {
         Toast.makeText(this, "Email ou Senha incorreto.", Toast.LENGTH_LONG).show();

@@ -51,6 +51,7 @@ public class SolicitanteHelper {
         solicitante.setAgenteProfissao(agenteProfissao.getSelectedItem().toString());
         solicitante.setAgenteSenha(agenteSenha.getText().toString());
         solicitante.setAgenteRepitaSenha(agenteRepitaSenha.getText().toString());
+        solicitante.setIdTipo(1);
         return solicitante;
     }
 }

@@ -22,12 +22,15 @@ import com.example.dehcors.teleconsultorapp.models.Diagnostico;
  */
 public class NovoDiagnostico extends AppCompatActivity {
 
+String cpfUsuario = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_diagnostico);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Intent intent = getIntent();
+         cpfUsuario = intent.getStringExtra("cpfUsuario");
 
         Button salvarDiagnostico = (Button) findViewById(R.id.diagnosticoenviar);
         salvarDiagnostico.setOnClickListener(new View.OnClickListener() {
@@ -112,12 +115,14 @@ public class NovoDiagnostico extends AppCompatActivity {
     public void salvar_consulta() {
         DiagnosticoHelper helper = new DiagnosticoHelper(NovoDiagnostico.this);
         Diagnostico diagnostico = helper.getDiagnostico();
+        diagnostico.setCpfUsuario(cpfUsuario);
         GenericDAO dao = new GenericDAO(NovoDiagnostico.this);
         dao.insereDiagnostico(diagnostico);
 
 
         Toast.makeText(NovoDiagnostico.this,"Diagnóstico salvo com sucesso",Toast.LENGTH_LONG).show();
         Intent it5 = new Intent(NovoDiagnostico.this, UserDashboard.class);
+        it5.putExtra("cpfUsuario",cpfUsuario);
         startActivity(it5);
     }
 }
