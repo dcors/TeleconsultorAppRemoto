@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.example.dehcors.teleconsultorapp.DAO.GenericDAO;
 
 public class RelatoriosView extends AppCompatActivity {
 
@@ -15,7 +18,24 @@ public class RelatoriosView extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_relat);
         setSupportActionBar(toolbar);
 
+
+        TextView consultasSolicitadas = (TextView) findViewById(R.id.relatoriosconsultasolicitada);
+        TextView consultasRespondidas = (TextView) findViewById(R.id.relatoriosconsultarespondida);
+        TextView diagnosticosSolicitados = (TextView) findViewById(R.id.relatoriosdiagnosticosolicitado);
+        TextView diagnosticosRespondidos = (TextView) findViewById(R.id.relatoriosdiagnosticorespondido);
+        consultasSolicitadas.setText(getConsultasSolicitadas());
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    public String getConsultasSolicitadas(){
+        int total =0;
+        String totalizado ="";
+        GenericDAO dao = new GenericDAO(RelatoriosView.this);
+        total = dao.getConsultasSolicitadas();
+        totalizado = Integer.toString(total);
+
+        return totalizado;
+
     }
 
 

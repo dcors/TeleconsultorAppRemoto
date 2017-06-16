@@ -43,13 +43,7 @@ public class UserDashboard extends AppCompatActivity
         }
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.userDash_Sair);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finishAffinity();
-            }
-        });
+
 
         ImageButton userDash_nConsult = (ImageButton) findViewById(R.id.userDash_newConsul);
         userDash_nConsult.setOnClickListener(new View.OnClickListener() {
