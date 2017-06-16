@@ -82,7 +82,7 @@ public class UserDashboard extends AppCompatActivity
             public void onClick(View v) {
                 Intent irelat = new Intent(UserDashboard.this, RelatoriosView.class);
                 startActivity(irelat);
-                finish();
+
             }
         });
 
@@ -167,21 +167,21 @@ public class UserDashboard extends AppCompatActivity
         Intent nc = new Intent(UserDashboard.this, NovaConsulta.class);
         nc.putExtra("cpfUsuario",cpfUsuario);
         startActivity(nc);
-        finish();
+
     }
 
     public void novo_diagnostico() {
         Intent nd = new Intent(UserDashboard.this, NovoDiagnostico.class);
         nd.putExtra("cpfUsuario",cpfUsuario);
         startActivity(nd);
-        finish();
+
     }
 
     public void listar_consultas() {
         Intent lc = new Intent(UserDashboard.this, ListaDeConsultas.class);
         lc.putExtra("cpfUsuario",cpfUsuario);
         startActivity(lc);
-        finish();
+
     }
 
 

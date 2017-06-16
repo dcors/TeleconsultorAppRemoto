@@ -103,6 +103,7 @@
                 android:hint="Unidade de atendimento - se agente ou especialista"/>
 
             <EditText
+                android:inputType="textPassword"
                 android:paddingLeft="16dp"
                 android:layout_marginTop="26dp"
                 android:id="@+id/usuariologadosenha"

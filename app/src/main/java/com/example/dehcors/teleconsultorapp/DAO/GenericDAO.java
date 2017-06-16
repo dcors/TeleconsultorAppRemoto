@@ -35,7 +35,7 @@ public class GenericDAO extends SQLiteOpenHelper {
         String sql3 = "CREATE TABLE Consulta(idConsulta INTEGER PRIMARY KEY AUTOINCREMENT,atendida int,cpfUsuario TEXT,caso TEXT,cpfPaciente TEXT,especialidade TEXT,prontuario TEXT, tipo TEXT);";
         String sql4 = "CREATE TABLE Parecer(idParecer INTEGER PRIMARY KEY AUTOINCREMENT, idAnexo INTEGER,textoParecer TEXT,idConsulta INTEGER);";
         String sql5 = "CREATE TABLE TipoDuvida(idTipoDuvida INTEGER,nomeTipoDuvida TEXT);";
-        String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
+        String sql6 = "CREATE TABLE Usuario(idTipo INTEGER,nomeUsuario TEXT,unidadeUsuario, cpfUsuario TEXT,telefoneUsuario TEXT,emailUsuario TEXT,profissao TEXT,senha TEXT);";
         String sql7 = "CREATE TABLE TipoUsuario(idTipo INTEGER, nomeTipo TEXT);";
 
         /*
@@ -61,10 +61,8 @@ public class GenericDAO extends SQLiteOpenHelper {
 
     }
 
-
     public void insereSolicitante(Solicitante solicitante) {
         SQLiteDatabase db = getWritableDatabase();
-
 
         ContentValues dados = new ContentValues();
         dados.put("idTipo",1);
@@ -238,7 +236,6 @@ public class GenericDAO extends SQLiteOpenHelper {
 
     }
 
-
     public String getTextoParecer(int idConsulta) {
         String textoParecer ="";
 
@@ -262,10 +259,35 @@ public class GenericDAO extends SQLiteOpenHelper {
     public void alteraUsuario(Solicitante solicitante) {
 
         SQLiteDatabase db = getWritableDatabase();
-        String [] params = {solicitante.getAgenteTelefone(),solicitante.getAgenteEmail(),solicitante.getAgenteUnidade(),solicitante.getAgenteSenha()};
+        String [] params = {solicitante.getAgenteCPF()};
         ContentValues dados = new ContentValues();
-        dados.put("atendida",1);
-        db.update("Consulta",dados,"idConsulta =?",params);
+        dados.put("telefoneUsuario",solicitante.getAgenteTelefone());
+        dados.put("unidadeUsuario",solicitante.getAgenteUnidade());
+        dados.put("emailUsuario",solicitante.getAgenteEmail());
+        dados.put("senha",solicitante.getAgenteSenha());
+        db.update("Usuario",dados,"cpfUsuario=?",params);
 
+    }
+
+    public Solicitante buscaUsuario(String cpfUsuario) {
+
+        SQLiteDatabase db = getWritableDatabase();
+        String [] params = {cpfUsuario};
+        String sql = "SELECT * FROM Usuario WHERE cpfUsuario =?";
+
+        Cursor c = db.rawQuery(sql,params);
+
+        c.moveToNext();
+        Solicitante solicitante = new Solicitante();
+        solicitante.setIdTipo(c.getInt(c.getColumnIndex("idTipo")));
+        solicitante.setAgenteTelefone(c.getString(c.getColumnIndex("telefoneUsuario")));
+        solicitante.setAgenteProfissao(c.getString(c.getColumnIndex("profissao")));
+        solicitante.setAgenteUnidade(c.getString(c.getColumnIndex("unidadeUsuario")));
+        solicitante.setAgenteNome(c.getString(c.getColumnIndex("nomeUsuario")));
+        solicitante.setAgenteEmail(c.getString(c.getColumnIndex("emailUsuario")));
+        solicitante.setAgenteCPF(c.getString(c.getColumnIndex("cpfUsuario")));
+
+    c.close();
+    return solicitante;
     }
 }
