@@ -94,6 +94,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
+            android:id="@+id/relatoriosconsultasolicitada"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -127,6 +128,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
+            android:id="@+id/relatoriosconsultarespondida"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -160,6 +162,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
+            android:id="@+id/relatoriosdiagnosticosolicitado"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
@@ -195,6 +198,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
+            android:id="@+id/relatoriosdiagnosticorespondido"
             android:layout_width="70dp"
             android:layout_height="75dp"
             android:gravity="center"
