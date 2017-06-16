@@ -3,6 +3,7 @@ package com.example.dehcors.teleconsultorapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +30,8 @@ String cpfUsuario = "";
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_de_consultas);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         cpfUsuario = intent.getStringExtra("cpfUsuario");
@@ -37,7 +40,7 @@ String cpfUsuario = "";
 
 
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void carregaConsulta(){

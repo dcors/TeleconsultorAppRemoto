@@ -290,8 +290,7 @@ public class GenericDAO extends SQLiteOpenHelper {
     c.close();
     return solicitante;
     }
-<<<<<<< HEAD
-=======
+
 
     public int getConsultasSolicitadas() {
         int total =0;
@@ -308,5 +307,5 @@ public class GenericDAO extends SQLiteOpenHelper {
 
         return total;
     }
->>>>>>> 4cfbcb39f6f640c6038941dc202475a3047cb10c
+
 }

@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context="com.example.dehcors.teleconsultorapp.AtenderActivity">
 
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -84,17 +86,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
 
-    <EditText
-        android:id="@+id/atenderresposta"
-        android:hint="@string/parecer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="2dp"
-        android:gravity="top"
-        android:layout_margin="8dp"
-        android:minHeight="150dp"
-        android:theme="@style/AppTheme"
-        android:background="@color/dColorTest" />
+            <EditText
+                android:id="@+id/atenderresposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/dColorTest"
+                android:gravity="top"
+                android:hint="@string/parecer"
+                android:minHeight="150dp"
+
+                android:padding="2dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText" />
 
     <Button
         android:id="@+id/atendersalvar"
