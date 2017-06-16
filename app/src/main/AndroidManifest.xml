@@ -149,12 +149,10 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".AtenderActivity"
-            android:label="@string/atender"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:label="@string/atender" />
 
         <activity android:name=".VisualizarConsultasActivity"
-            android:label="@string/visualizarconsultas"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/visualizarconsultas">
         </activity>
     </application>
 
